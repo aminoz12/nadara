@@ -60,14 +60,14 @@ export default function Cart() {
 
           {/* Cart Sidebar */}
           <motion.div
-            initial={{ x: language === 'ar' ? '-100%' : '100%' }}
+            initial={{ x: locale === 'ar' ? '-100%' : '100%' }}
             animate={{ x: 0 }}
-            exit={{ x: language === 'ar' ? '-100%' : '100%' }}
+            exit={{ x: locale === 'ar' ? '-100%' : '100%' }}
             transition={{ type: 'spring', damping: 25 }}
             className={`fixed top-0 bottom-0 w-full max-w-md bg-cream-50 shadow-2xl z-50 flex flex-col ${
-              language === 'ar' ? 'left-0' : 'right-0'
+              locale === 'ar' ? 'left-0' : 'right-0'
             }`}
-            style={{ direction: language === 'ar' ? 'rtl' : 'ltr' }}
+            style={{ direction: locale === 'ar' ? 'rtl' : 'ltr' }}
           >
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-beige-200">
