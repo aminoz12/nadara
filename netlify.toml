@@ -11,10 +11,9 @@
   package = "@netlify/plugin-nextjs"
 
 [[redirects]]
-  from = "/"
-  to = "/fr"
-  status = 301
-  force = true
+  from = "/_next/static/*"
+  to = "/_next/static/:splat"
+  status = 200
 
 [[redirects]]
   from = "/:lang(en|fr|ar)"
@@ -32,13 +31,8 @@
   status = 200
 
 [[redirects]]
-  from = "/_next/static/*"
-  to = "/_next/static/:splat"
-  status = 200
-
-[[redirects]]
   from = "/*"
-  to = "/fr/:splat"
+  to = "/:splat"
   status = 200
 
 [[headers]]
