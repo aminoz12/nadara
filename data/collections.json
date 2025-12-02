@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Savon",
+    "slug": "savon",
+    "description": "Savons naturels artisanaux aux extraits botaniques",
+    "image": "/savon.png"
+  },
+  {
+    "id": 2,
+    "name": "Shampoing",
+    "slug": "shampoing",
+    "description": "Shampoings naturels pour cheveux sains et brillants",
+    "image": "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=800&q=80"
+  },
+  {
+    "id": 3,
+    "name": "Crème",
+    "slug": "creme",
+    "description": "Crèmes hydratantes riches pour une nutrition profonde",
+    "image": "/creme.png"
+  },
+  {
+    "id": 4,
+    "name": "Poudre",
+    "slug": "poudre",
+    "description": "Poudres naturelles pour le visage et le corps",
+    "image": "/poudre.png"
+  },
+  {
+    "id": 5,
+    "name": "Sérum",
+    "slug": "serum",
+    "description": "Sérums concentrés pour des résultats ciblés",
+    "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&q=80"
+  }
+]
