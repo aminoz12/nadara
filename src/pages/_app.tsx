@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app';
-import { NextIntlClientProvider } from 'next-intl';
+import { IntlProvider } from 'next-intl';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { Layout } from '@/components';
@@ -20,12 +20,12 @@ export default function App({ Component, pageProps }: AppProps) {
   }, [locale]);
 
   return (
-    <NextIntlClientProvider messages={messages} locale={locale}>
+    <IntlProvider messages={messages} locale={locale}>
       <CartProvider>
         <Layout>
           <Component {...pageProps} />
         </Layout>
       </CartProvider>
-    </NextIntlClientProvider>
+    </IntlProvider>
   );
 }
