@@ -19,7 +19,7 @@ export default function Cart() {
   const t = useTranslations();
   const locale = useLocale();
 
-  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '1234567890';
+  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '+212649327825';
 
   const generateWhatsAppMessage = () => {
     let message = t('whatsapp.orderMessage');

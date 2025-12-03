@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl';
 
 export default function Footer() {
   const t = useTranslations();
-  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '1234567890';
+  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '+212649327825';
 
   const footerLinks = {
     shop: [
