@@ -46,7 +46,7 @@ function CarouselProductCard({ product, index, isVisible }: { product: Product; 
         >
           <Link href={`/products/${product.slug}`}>
             <motion.article
-              className="group relative bg-white rounded-lg overflow-hidden"
+              className="group relative bg-white rounded-lg overflow-hidden h-full flex flex-col"
               whileHover={{ 
                 y: -10,
                 boxShadow: '0 30px 60px -15px rgba(0, 0, 0, 0.15)',
@@ -100,14 +100,14 @@ function CarouselProductCard({ product, index, isVisible }: { product: Product; 
               </div>
 
               {/* Content */}
-              <div className="p-3 md:p-5">
+              <div className="p-3 md:p-5 flex-1 flex flex-col">
                 <span className="text-[10px] md:text-xs font-sans tracking-wider uppercase text-olive-600 mb-1 md:mb-2 block">
                   {product.category}
                 </span>
                 <h3 className="font-serif text-base md:text-lg lg:text-xl text-charcoal-900 mb-1 md:mb-2 group-hover:text-olive-700 transition-colors line-clamp-1">
                   {product.name}
                 </h3>
-                <p className="text-xs md:text-sm text-charcoal-500 line-clamp-2 mb-2 md:mb-3 hidden sm:block">
+                <p className="text-xs md:text-sm text-charcoal-500 line-clamp-2 mb-2 md:mb-3 hidden sm:block flex-1">
                   {product.shortDescription}
                 </p>
                 <div className="flex items-center justify-between mb-2 md:mb-3">
@@ -119,7 +119,7 @@ function CarouselProductCard({ product, index, isVisible }: { product: Product; 
                 {/* Add to Cart Button */}
                 <motion.button
                   onClick={handleAddToCart}
-                  className="w-full py-2 md:py-2.5 bg-olive-600 text-cream-50 font-sans text-xs tracking-wide uppercase rounded-sm hover:bg-olive-700 transition-colors flex items-center justify-center gap-2"
+                  className="w-full py-2 md:py-2.5 bg-olive-600 text-cream-50 font-sans text-xs tracking-wide uppercase rounded-sm hover:bg-olive-700 transition-colors flex items-center justify-center gap-2 mt-auto"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
