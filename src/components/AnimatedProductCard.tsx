@@ -36,10 +36,11 @@ export default function AnimatedProductCard({
         delay: index * 0.1,
         ease: [0.25, 0.4, 0.25, 1],
       }}
+      className="h-full"
     >
       <Link href={`/products/${product.slug}`}>
         <motion.article
-          className="group relative bg-white rounded-lg overflow-hidden perspective-1000"
+          className="group relative bg-white rounded-lg overflow-hidden perspective-1000 h-full flex flex-col"
           initial={{ rotateY: 0 }}
           whileHover={{ 
             y: -10,
@@ -129,7 +130,7 @@ export default function AnimatedProductCard({
 
           {/* Content */}
           <motion.div 
-            className="p-5"
+            className="p-5 flex-1 flex flex-col"
             initial={{ y: 0 }}
             whileHover={{ y: -5 }}
             transition={{ duration: 0.3 }}
@@ -143,7 +144,7 @@ export default function AnimatedProductCard({
             <h3 className="font-serif text-lg md:text-xl text-charcoal-900 mb-2 group-hover:text-olive-700 transition-colors duration-300">
               {product.name}
             </h3>
-            <p className="text-sm text-charcoal-500 line-clamp-2 mb-3">
+            <p className="text-sm text-charcoal-500 line-clamp-2 mb-3 flex-1">
               {product.shortDescription}
             </p>
             <div className="flex items-center justify-between mb-3">
@@ -173,7 +174,7 @@ export default function AnimatedProductCard({
             {/* Add to Cart Button */}
             <motion.button
               onClick={handleAddToCart}
-              className="w-full py-2.5 bg-olive-600 text-cream-50 font-sans text-xs tracking-wide uppercase rounded-sm hover:bg-olive-700 transition-colors flex items-center justify-center gap-2"
+              className="w-full py-2.5 bg-olive-600 text-cream-50 font-sans text-xs tracking-wide uppercase rounded-sm hover:bg-olive-700 transition-colors flex items-center justify-center gap-2 mt-auto"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
