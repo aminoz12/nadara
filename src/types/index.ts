@@ -9,6 +9,7 @@ export interface Product {
   benefits: string[];
   ingredients: string;
   popular: boolean;
+  usageInstructions?: string[];
 }
 
 export interface Collection {

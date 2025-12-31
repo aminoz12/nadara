@@ -39,9 +39,9 @@ export default function Filters({
 
   const priceRanges = [
     { value: [0, 200] as [number, number], label: 'All Prices' },
-    { value: [0, 50] as [number, number], label: 'Under $50' },
-    { value: [50, 100] as [number, number], label: '$50 - $100' },
-    { value: [100, 200] as [number, number], label: 'Over $100' },
+    { value: [0, 50] as [number, number], label: 'Under 50 MAD' },
+    { value: [50, 100] as [number, number], label: '50 - 100 MAD' },
+    { value: [100, 200] as [number, number], label: 'Over 100 MAD' },
   ];
 
   const FilterDropdown = ({

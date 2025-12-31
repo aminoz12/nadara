@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Check, Leaf } from 'lucide-react';
+import { ArrowLeft, Check, Leaf, Info } from 'lucide-react';
 import { ProductGallery, AnimatedProductCard, ProductActions } from '@/components';
 import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from '@/components/variants';
 import { Product } from '@/types';
@@ -75,7 +75,7 @@ export default function ProductPage({
               </h1>
 
               <p className="font-serif text-3xl text-charcoal-900 mb-6">
-                ${product.price}
+                {product.price} MAD
               </p>
 
               <p className="body-md text-charcoal-600 mb-8">
@@ -120,6 +120,34 @@ export default function ProductPage({
                   {product.ingredients}
                 </p>
               </div>
+
+              {/* Usage Instructions */}
+              {product.usageInstructions && product.usageInstructions.length > 0 && (
+                <div className="border-t border-beige-200 pt-8">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Info className="w-5 h-5 text-olive-600" />
+                    <h3 className="font-serif text-lg text-charcoal-900">
+                      Conseils d'utilisation
+                    </h3>
+                  </div>
+                  <ul className="space-y-3">
+                    {product.usageInstructions.map((instruction, index) => (
+                      <motion.li
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                        className="flex items-start gap-3"
+                      >
+                        <Check className="w-5 h-5 text-olive-600 flex-shrink-0 mt-0.5" />
+                        <span className="text-charcoal-700 font-sans">
+                          {instruction}
+                        </span>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               {/* Trust Badges */}
               <motion.div

@@ -27,12 +27,12 @@ export default function Cart() {
     items.forEach((item, index) => {
       message += `${index + 1}. ${item.product.name}\n`;
       message += `   ${t('cart.quantity')}: ${item.quantity}\n`;
-      message += `   ${t('cart.unitPrice')}: $${item.product.price}\n`;
-      message += `   ${t('cart.subtotal')}: $${item.product.price * item.quantity}\n\n`;
+      message += `   ${t('cart.unitPrice')}: ${item.product.price} MAD\n`;
+      message += `   ${t('cart.subtotal')}: ${item.product.price * item.quantity} MAD\n\n`;
     });
 
     message += `---\n`;
-    message += `${t('cart.total')}: $${totalPrice.toFixed(2)}\n\n`;
+    message += `${t('cart.total')}: ${totalPrice.toFixed(2)} MAD\n\n`;
     message += t('whatsapp.thankYou');
 
     return encodeURIComponent(message);
@@ -113,7 +113,7 @@ export default function Cart() {
                           {item.product.name}
                         </h3>
                         <p className="text-xs text-charcoal-500 mb-2">
-                          ${item.product.price}
+                          {item.product.price} MAD
                         </p>
                         <div className="flex items-center gap-3">
                           <div className="flex items-center gap-2 border border-beige-200 rounded">
@@ -159,7 +159,7 @@ export default function Cart() {
                     {t('cart.total')}:
                   </span>
                   <span className="font-serif text-2xl text-charcoal-900">
-                    ${totalPrice.toFixed(2)}
+                    {totalPrice.toFixed(2)} MAD
                   </span>
                 </div>
                 <motion.button

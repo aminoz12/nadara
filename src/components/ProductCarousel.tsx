@@ -112,7 +112,7 @@ function CarouselProductCard({ product, index, isVisible }: { product: Product; 
                 </p>
                 <div className="flex items-center justify-between mb-2 md:mb-3">
                   <p className="font-serif text-lg md:text-xl text-charcoal-900">
-                    ${product.price}
+                    {product.price} MAD
                   </p>
                 </div>
                 

@@ -151,7 +151,7 @@ export default function AnimatedProductCard({
                 className="font-serif text-xl text-charcoal-900"
                 whileHover={{ scale: 1.1, x: 5 }}
               >
-                ${product.price}
+{product.price} MAD
               </motion.p>
               <motion.div
                 className="flex gap-1"
