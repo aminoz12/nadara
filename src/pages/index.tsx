@@ -9,7 +9,8 @@ import {
   Ingredients,
   ProductionProcess,
   FAQ,
-  Stats
+  Stats,
+  Packs
 } from '@/components';
 import { Product, Collection, Testimonial } from '@/types';
 import productsData from '../../data/products.json';
@@ -50,22 +51,25 @@ export default function HomePage({
         products={popularProducts}
       />
       
-      {/* 4. Ingredients & Benefits */}
+      {/* 4. Découvrir Nos Packs */}
+      <Packs />
+      
+      {/* 5. Ingredients & Benefits */}
       <Ingredients />
       
-      {/* 5. Stats Counter */}
+      {/* 6. Stats Counter */}
       <Stats />
       
-      {/* 6. Our Values */}
+      {/* 7. Our Values */}
       <Values />
       
-      {/* 6. Production Process */}
+      {/* 8. Production Process */}
       <ProductionProcess />
       
-      {/* 7. Testimonials */}
+      {/* 9. Testimonials */}
       <Testimonials testimonials={testimonials} />
       
-      {/* 8. FAQ */}
+      {/* 10. FAQ */}
       <FAQ />
     </>
   );

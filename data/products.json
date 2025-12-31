@@ -54,5 +54,195 @@
       "Rincer abondamment en cas de contact avec les yeux",
       "Ne pas ingérer et ne pas utiliser en cas d'allergie à l'un des ingrédients"
     ]
+  },
+  {
+    "id": 3,
+    "name": "Shampoing solide - Cheveux fins et pellicules grasses",
+    "slug": "shampoing-solide-cheveux-fins-pellicules-grasses",
+    "price": 75,
+    "images": [
+      "/fins1.jpeg",
+      "/fins2.jpeg",
+      "/fins3.jpeg"
+    ],
+    "shortDescription": "0% sulfate / 100% biodégradable / Huiles Essentielles. Ce shampoing antipelliculaire assainit le cuir chevelu, régule le sébum et fortifie les cheveux. 100 grs",
+    "category": "Shampoing",
+    "benefits": [
+      "0% sulfate",
+      "100% biodégradable",
+      "Huiles Essentielles",
+      "Antipelliculaire",
+      "Assainit le cuir chevelu",
+      "Régule le sébum",
+      "Fortifie les cheveux",
+      "Economique et facile à utiliser",
+      "Poids: 100 grs",
+      "À conserver à l'air et au sec"
+    ],
+    "ingredients": "Tensioactif SCI, Aqua, Reetha, Neem, Huile de nigelle, Miel, Vitamine E, Huile essentielle de romarin, Huile essentielle d'arbre à thé",
+    "popular": true,
+    "usageInstructions": [
+      "Faire mousser le produit",
+      "Répartir sur le cuir chevelu",
+      "Shampouiner et rincer",
+      "Conserver à l'air et au sec"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Savon Saponifié à Froid - Savon Nigelle & Argile rose",
+    "slug": "savon-saponifie-a-froid-nigelle-argile-rose",
+    "price": 75,
+    "images": [
+      "/argile1.png",
+      "/argile2.png"
+    ],
+    "shortDescription": "Purifiant visage et corps. Sans colorant, sans conservateur, sans huile de palme. 115 grs",
+    "category": "Savon",
+    "benefits": [
+      "Purifiant visage et corps",
+      "Sans colorant, sans conservateur",
+      "Sans huile de palme",
+      "Poids: 115 grs",
+      "À conserver à l'abri de la lumière et de l'humidité"
+    ],
+    "ingredients": "Huile d'olive, Huile colza, Beurre de karité, Huile de coco, Huile ricin, Nigelle, Argile rose, Eau, Soude, Glycérine (naturellement produite pendant la saponification)",
+    "popular": true,
+    "usageInstructions": [
+      "À conserver à l'abri de la lumière et de l'humidité",
+      "Passer le savon sous l'eau, le faire mousser sur votre peau puis rincer",
+      "Pour que son utilisation dure plus longtemps, veillez à le faire sécher après chaque utilisation",
+      "Rincer abondamment en cas de contact avec les yeux",
+      "Ne pas ingérer et ne pas utiliser en cas d'allergie à l'un des ingrédients"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Savon Saponifié à Froid - Savon Café",
+    "slug": "savon-saponifie-a-froid-cafe",
+    "price": 75,
+    "images": [
+      "/cafe1.jpeg",
+      "/cafe2.png"
+    ],
+    "shortDescription": "Exfoliant visage et corps. Sans colorant, sans conservateur, sans huile de palme. 115 grs",
+    "category": "Savon",
+    "benefits": [
+      "Exfoliant visage et corps",
+      "Sans colorant, sans conservateur",
+      "Sans huile de palme",
+      "Poids: 115 grs",
+      "À conserver à l'abri de la lumière et de l'humidité"
+    ],
+    "ingredients": "Huile d'olive, Huile colza, Beurre de karité, Huile de coco, Huile ricin, Café, Eau, Soude, Glycérine (naturellement produite pendant la saponification)",
+    "popular": true,
+    "usageInstructions": [
+      "À conserver à l'abri de la lumière et de l'humidité",
+      "Passer le savon sous l'eau, le faire mousser sur votre peau puis rincer",
+      "Pour que son utilisation dure plus longtemps, veillez à le faire sécher après chaque utilisation",
+      "Rincer abondamment en cas de contact avec les yeux",
+      "Ne pas ingérer et ne pas utiliser en cas d'allergie à l'un des ingrédients"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Shampoing solide - Fortifiant & Stimulant",
+    "slug": "shampoing-solide-fortifiant-stimulant",
+    "price": 75,
+    "images": [
+      "/fortifant1.jpeg",
+      "/fortifant2.jpeg",
+      "/fortifant3.jpeg"
+    ],
+    "shortDescription": "0% sulfate / 100% biodégradable / Huiles Essentielles. Ce shampoing démêle les cheveux, stimule la pousse et donne du volume. 100 grs",
+    "category": "Shampoing",
+    "benefits": [
+      "0% sulfate",
+      "100% biodégradable",
+      "Huiles Essentielles",
+      "Démêle les cheveux",
+      "Stimule la pousse",
+      "Donne du volume",
+      "Economique et facile à utiliser",
+      "Poids: 100 grs",
+      "À conserver à l'air et au sec"
+    ],
+    "ingredients": "Tensioactif SCI, Aqua, Shikakai, Kapoor Kachli, Beurre de karité, Huile de coco, Miel, Vitamine E, Protéine de blé hydrolysée WLM, Huile essentielle de menthe verte, Huile essentielle d'arbre de thé",
+    "popular": true,
+    "usageInstructions": [
+      "Faire mousser le produit",
+      "Répartir sur le cuir chevelu",
+      "Shampouiner et rincer",
+      "Conserver à l'air et au sec"
+    ],
+    "equivalence": "1 shampoing solide = 2 bouteilles de shampoing de 250 ml"
+  },
+  {
+    "id": 7,
+    "name": "Shampoing solide - Cheveux Normaux/Mixtes",
+    "slug": "shampoing-solide-cheveux-normaux-mixtes",
+    "price": 75,
+    "images": [
+      "/mixtes1.jpeg",
+      "/mixtes2.jpeg",
+      "/mixtes3.jpeg"
+    ],
+    "shortDescription": "0% sulfate / 100% biodégradable / Huiles Essentielles. Ce shampoing lave et absorbe le sébum; donne du volume et la brillance aux cheveux. 100 grs",
+    "category": "Shampoing",
+    "benefits": [
+      "0% sulfate",
+      "100% biodégradable",
+      "Huiles Essentielles",
+      "Lave et absorbe le sébum",
+      "Donne du volume",
+      "Apporte de la brillance",
+      "Economique et facile à utiliser",
+      "Poids: 100 grs",
+      "À conserver à l'air et au sec"
+    ],
+    "ingredients": "Tensioactif SCI, Aqua, Ghassoul, Argile rose, Jujubier (Sidr), Huile de nigelle, Huile de coco, Miel, Vitamine E, Huile essentielle de romarin",
+    "popular": true,
+    "usageInstructions": [
+      "Faire mousser le produit",
+      "Répartir sur le cuir chevelu",
+      "Shampouiner et rincer",
+      "Conserver à l'air et au sec"
+    ],
+    "equivalence": "1 shampoing solide = 2 bouteilles de shampoing de 250 ml"
+  },
+  {
+    "id": 8,
+    "name": "Shampoing solide - Cheveux Secs",
+    "slug": "shampoing-solide-cheveux-secs",
+    "price": 75,
+    "images": [
+      "/sec1.jpeg",
+      "/sec2.jpeg",
+      "/sec3.jpeg"
+    ],
+    "shortDescription": "0% sulfate / 100% biodégradable / Huiles Essentielles. Ce shampoing démêle les cheveux, les fait briller, stimule leur croissance et prévient l'apparition des fourches. 100 grs",
+    "category": "Shampoing",
+    "benefits": [
+      "0% sulfate",
+      "100% biodégradable",
+      "Huiles Essentielles",
+      "Démêle les cheveux",
+      "Fait briller les cheveux",
+      "Stimule la croissance",
+      "Prévient les fourches",
+      "Economique et facile à utiliser",
+      "Poids: 100 grs",
+      "À conserver à l'air et au sec"
+    ],
+    "ingredients": "Tensioactif SCI, Aqua, Poudre d'hibiscus, Huile d'amande douce, Huile de coco, Protéine de blé hydrolysée WLM, Glycérine, Huile essentielle d'arbre de thé, Huile essentielle de romarin",
+    "popular": true,
+    "usageInstructions": [
+      "Faire mousser le produit",
+      "Répartir sur le cuir chevelu",
+      "Shampouiner et rincer",
+      "Conserver à l'air et au sec",
+      "Pour les cheveux difficiles à démeler, faire un soin après le shampoing"
+    ],
+    "equivalence": "1 shampoing solide = 2 bouteilles de shampoing de 250 ml"
   }
 ]

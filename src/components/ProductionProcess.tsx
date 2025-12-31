@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import { Leaf, Droplets, Hand, Package } from 'lucide-react';
+import { Leaf, Droplets, Hand, Package, CheckCircle, Box } from 'lucide-react';
 import { fadeInUp, staggerContainer } from './variants';
 import { useTranslations } from 'next-intl';
 
@@ -13,34 +13,50 @@ export default function ProductionProcess() {
     {
       number: '01',
       icon: Leaf,
-      title: t('process.rawIngredients'),
-      description: t('process.rawIngredientsDesc'),
+      title: 'Sélection des Matières Premières',
+      description: 'Choix d\'ingrédients naturels de qualité premium. Sélection d\'huiles végétales vierges, beurres bio, hydrolats purs, fragrances autorisées.',
       image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80',
       color: 'from-green-400 to-olive-600',
     },
     {
       number: '02',
       icon: Droplets,
-      title: t('process.coldPressing'),
-      description: t('process.coldPressingDesc'),
+      title: 'Préparation & Pesée',
+      description: 'Désinfection du laboratoire, matériel et contenants. Pesée précise des matières premières selon la formule certifiée. Mise en bain-marie des phases grasses et préparation de la phase aqueuse.',
       image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80',
       color: 'from-blue-400 to-cyan-600',
     },
     {
       number: '03',
       icon: Hand,
-      title: t('process.handMixing'),
-      description: t('process.handMixingDesc'),
+      title: 'Fabrication / Mélange',
+      description: 'Selon le type de produit : ✔ Savons SAF - Fonte des huiles et beurres, Préparation de la solution de soude, Mélange, trace, ajout des actifs, Coulage dans les moules, Démoulage et cure 4–6 semaines. ✔ Shampoings & Baumes sans eau - Fusion à faible température, Incorporation des actifs sensibles à froid, Mise en moule, Refroidissement et solidification. ✔ Crèmes & Sérums - Émulsion chaude ou à froid, Homogénéisation, Ajustement du pH, Ajout du conservateur.',
       image: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&q=80',
       color: 'from-terracotta-400 to-orange-600',
     },
     {
       number: '04',
-      icon: Package,
-      title: t('process.ecoPackaging'),
-      description: t('process.ecoPackagingDesc'),
+      icon: CheckCircle,
+      title: 'Contrôle Qualité',
+      description: 'Chaque lot est contrôlé : pH (idéal 5.0–5.5 pour soins visage/corps), Texture, couleur, parfum.',
       image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=80',
       color: 'from-purple-400 to-indigo-600',
+    },
+    {
+      number: '05',
+      icon: Package,
+      title: 'Conditionnement',
+      description: 'Choix d\'emballages adaptés : pots, flacons, sticks, sachets. Nettoyage et désinfection des contenants. Remplissage manuel ou semi-automatique. Étiquetage conforme : INCI, lot, MHD, précautions, utilisation.',
+      image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=80',
+      color: 'from-yellow-400 to-amber-600',
+    },
+    {
+      number: '06',
+      icon: Box,
+      title: 'Stockage',
+      description: 'Produits conservés à l\'abri de l\'humidité, chaleur, et lumière. Vérification régulière : texture, odeur, stabilité.',
+      image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=80',
+      color: 'from-teal-400 to-cyan-600',
     },
   ];
   const containerRef = useRef<HTMLDivElement>(null);
@@ -66,19 +82,19 @@ export default function ProductionProcess() {
             variants={fadeInUp}
             className="text-xs md:text-sm font-sans tracking-[0.2em] md:tracking-[0.3em] uppercase text-olive-600 mb-3 md:mb-4 block"
           >
-            {t('process.subtitle')}
+            Processus de production
           </motion.span>
           <motion.h2
             variants={fadeInUp}
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-charcoal-900 mb-3 md:mb-4"
           >
-            {t('process.title')}
+            Processus de production
           </motion.h2>
           <motion.p
             variants={fadeInUp}
             className="text-sm md:text-base lg:text-lg text-charcoal-600 max-w-xs sm:max-w-md md:max-w-2xl mx-auto"
           >
-            {t('process.description')}
+            Notre processus de fabrication artisanale garantit des produits de la plus haute qualité
           </motion.p>
         </motion.div>
 

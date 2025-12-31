@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Plus, Minus, ShieldCheck, Truck, Leaf } from 'lucide-react';
+import { Plus, Minus, ShieldCheck, Truck, Leaf, Clock, Package, Heart, Award, Globe, RefreshCw } from 'lucide-react';
 import { fadeInUp, staggerContainer } from './variants';
 import { useTranslations } from 'next-intl';
 
@@ -12,19 +12,45 @@ export default function FAQ() {
   const faqs = [
     {
       icon: ShieldCheck,
-      question: t('faq.sensitiveSkin'),
-      answer: t('faq.sensitiveSkinAnswer'),
+      question: 'Vos produits sont-ils adaptés aux peaux sensibles ?',
+      answer: 'Oui, tous nos produits sont formulés avec des ingrédients naturels doux et sans agents irritants. Cependant, nous recommandons toujours de faire un test cutané sur une petite zone avant la première utilisation.',
     },
     {
       icon: Truck,
-      question: t('faq.deliveryReturns'),
-      answer: t('faq.deliveryReturnsAnswer'),
+      question: 'Quels sont vos délais de livraison et conditions de retour ?',
+      answer: 'Nous expédions sous 24-48h. La livraison prend 2-5 jours ouvrables. Les retours sont acceptés sous 14 jours si les produits sont non utilisés et dans leur emballage d\'origine.',
     },
     {
       icon: Leaf,
-      question: t('faq.ingredientsTransparency'),
-      answer: t('faq.ingredientsTransparencyAnswer'),
+      question: 'Utilisez-vous des ingrédients naturels et bio ?',
+      answer: 'Oui, nous privilégions les ingrédients naturels, bio et locaux lorsque c\'est possible. Tous nos produits sont sans parabènes, sans sulfates, sans huile de palme et sans colorants synthétiques.',
     },
+    {
+      icon: Clock,
+      question: 'Combien de temps durent vos produits ?',
+      answer: 'Nos savons durent 4-6 semaines en cure, puis 12-24 mois d\'utilisation. Les crèmes et sérums ont une durée de conservation de 6-12 mois après ouverture. Stockez-les à l\'abri de la chaleur et de l\'humidité.',
+    },
+    {
+      icon: Package,
+      question: 'Vos emballages sont-ils écologiques ?',
+      answer: 'Oui, nous utilisons des emballages recyclables, biodégradables ou réutilisables. Nos pots sont en verre ou en plastique recyclé, et nous minimisons les emballages superflus.',
+    },
+    {
+      icon: Heart,
+      question: 'Vos produits sont-ils testés dermatologiquement ?',
+      answer: 'Oui, tous nos produits sont testés dermatologiquement sous contrôle médical pour garantir leur sécurité et leur tolérance. Nous ne testons jamais sur les animaux et nos formules sont validées par des volontaires.',
+    },
+    {
+      icon: Award,
+      question: 'Vos produits sont-ils certifiés bio ?',
+      answer: 'Nous utilisons majoritairement des ingrédients certifiés bio et nous sommes en processus de certification Ecocert pour notre gamme complète. Tous nos produits respectent les normes cosmétiques bio.',
+    },
+    {
+      icon: Globe,
+      question: 'Expédiez-vous à l\'international ?',
+      answer: 'Oui, nous expédions dans toute l\'Europe et dans de nombreux pays internationaux. Les frais de port varient selon la destination. Contactez-nous pour les envois hors Europe.',
+    },
+    
   ];
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -43,33 +69,27 @@ export default function FAQ() {
           variants={staggerContainer}
           className="text-center mb-10 md:mb-16"
         >
-          <motion.span
-            variants={fadeInUp}
-            className="text-xs md:text-sm font-sans tracking-[0.2em] md:tracking-[0.3em] uppercase text-olive-600 mb-3 md:mb-4 block"
-          >
-            {t('faq.subtitle')}
-          </motion.span>
           <motion.h2
             variants={fadeInUp}
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-charcoal-900 mb-3 md:mb-4"
           >
-            {t('faq.title')}
+            Questions Fréquemment Posées
           </motion.h2>
           <motion.p
             variants={fadeInUp}
             className="text-sm md:text-base lg:text-lg text-charcoal-600 max-w-xs sm:max-w-md md:max-w-2xl mx-auto"
           >
-            {t('faq.description')}
+            Retrouvez les réponses aux questions les plus courantes sur nos produits et notre démarche
           </motion.p>
         </motion.div>
 
-        {/* FAQ Items */}
+        {/* FAQ Items - Grid Layout */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={staggerContainer}
-          className="max-w-3xl mx-auto space-y-3 md:space-y-4"
+          className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6"
         >
           {faqs.map((faq, index) => (
             <motion.div
@@ -132,7 +152,7 @@ export default function FAQ() {
           className="text-center mt-8 md:mt-12"
         >
           <p className="text-charcoal-600 font-sans mb-3 md:mb-4 text-sm md:text-base">
-            {t('faq.contactCTA')}
+            Vous ne trouvez pas votre réponse ? Contactez-nous directement !
           </p>
           <a
             href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '1234567890'}?text=Hello, I have a question about your products`}
@@ -140,7 +160,7 @@ export default function FAQ() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-olive-600 font-sans font-medium hover:text-olive-700 transition-colors text-sm md:text-base"
           >
-            {t('faq.chatWhatsApp')}
+            Discuter sur WhatsApp
           </a>
         </motion.div>
       </div>
