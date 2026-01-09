@@ -71,16 +71,14 @@ export default function Navbar() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <motion.span
-                  className={`font-serif text-2xl md:text-3xl tracking-tight transition-colors duration-300 block ${
-                    showDarkNav ? 'text-charcoal-900' : 'text-cream-50'
-                  }`}
+                <motion.img
+                  src="/logo.png"
+                  alt="Nadara"
+                  className="h-12 md:h-16 w-auto transition-all duration-300"
                   initial={{ y: 40 }}
                   animate={{ y: 0 }}
                   transition={{ delay: 0.2, duration: 0.6 }}
-                >
-                  Nadara
-                </motion.span>
+                />
               </motion.div>
             </Link>
 

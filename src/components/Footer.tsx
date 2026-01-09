@@ -45,7 +45,13 @@ export default function Footer() {
           {/* Brand Column */}
           <motion.div variants={fadeInUp} className="col-span-2 md:col-span-3 lg:col-span-2">
             <Link href="/">
-              <span className="font-serif text-2xl md:text-3xl text-cream-50">Nadara</span>
+              <motion.img
+                src="/logo.png"
+                alt="Nadara"
+                className="h-14 md:h-20 w-auto mb-4 md:mb-6"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              />
             </Link>
             <p className="mt-4 md:mt-6 text-cream-300 font-sans leading-relaxed max-w-sm text-sm md:text-base">
               {t('footer.description')}
