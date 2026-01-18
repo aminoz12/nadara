@@ -30,3 +30,18 @@ export interface Testimonial {
   avatar: string;
 }
 
+export interface Pack {
+  id: number;
+  name: string;
+  slug: string;
+  price: number;
+  images: string[];
+  shortDescription: string;
+  category: string;
+  items: string[];
+  benefits: string[];
+  ingredients: string;
+  popular: boolean;
+  usageInstructions?: string[];
+}
+

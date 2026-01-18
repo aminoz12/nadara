@@ -63,14 +63,14 @@ export default function HomePage({
       {/* 7. Our Values */}
       <Values />
       
-      {/* 8. Production Process */}
-      <ProductionProcess />
-      
-      {/* 9. Testimonials */}
+      {/* 8. Testimonials */}
       <Testimonials testimonials={testimonials} />
       
-      {/* 10. FAQ */}
+      {/* 9. FAQ */}
       <FAQ />
+      
+      {/* 10. Skincare Tips - Before Footer */}
+      <ProductionProcess />
     </>
   );
 }

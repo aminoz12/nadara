@@ -1,0 +1,156 @@
+[
+  {
+    "id": 1,
+    "name": "Pack Essentiel Cheveux",
+    "slug": "pack-essentiel-cheveux",
+    "price": 199,
+    "images": [
+      "/pack1.jpeg"
+    ],
+    "shortDescription": "Shampoing solide + leave in. Le duo parfait pour des cheveux nourris et brillants au quotidien.",
+    "category": "Pack",
+    "items": [
+      "1 Shampoing solide au choix",
+      "Leave-in Coconut"
+    ],
+    "benefits": [
+      "Duo essentiel pour cheveux nourris",
+      "Shampoing solide 0% sulfate",
+      "Leave-in hydratant à la noix de coco",
+      "Économique et pratique",
+      "100% naturel"
+    ],
+    "ingredients": "Shampoing: Tensioactif SCI, Aqua, Huiles essentielles. Leave-in: Huile de coco vierge, Vitamine E",
+    "popular": true,
+    "usageInstructions": [
+      "Utiliser le shampoing solide 2-3 fois par semaine",
+      "Appliquer le leave-in sur cheveux humides après le shampoing",
+      "Conserver les produits à l'abri de l'humidité"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Pack Soin Profond",
+    "slug": "pack-soin-profond",
+    "price": 199,
+    "images": [
+      "/PACK2.jpg"
+    ],
+    "shortDescription": "Baume + sérum + eau de rose gratuit. Une routine complète pour nourrir et régénérer votre peau en profondeur.",
+    "category": "Pack",
+    "items": [
+      "1 Baume capillaire",
+      "Sérum Acide Hyaluronique & Collagène",
+      "Eau de Rose OFFERT"
+    ],
+    "benefits": [
+      "Soin intensif pour la peau",
+      "Baume nourrissant multi-usage",
+      "Sérum anti-âge à l'acide hyaluronique",
+      "Eau de rose tonifiante OFFERTE",
+      "Hydratation longue durée"
+    ],
+    "ingredients": "Baume: Beurre de karité, Huiles végétales. Sérum: Acide hyaluronique, Collagène, Vitamine E. Eau de rose: 100% pure eau florale de rose",
+    "popular": true,
+    "usageInstructions": [
+      "Appliquer le sérum matin et soir sur peau propre",
+      "Utiliser le baume en soin de nuit ou sur zones sèches",
+      "Vaporiser l'eau de rose comme tonique après le nettoyage"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Pack Routine Cheveux",
+    "slug": "pack-routine-cheveux",
+    "price": 199,
+    "images": [
+      "/PACK3.jpg"
+    ],
+    "shortDescription": "Savon + 2 shampoings solides + leave in coconut. La routine capillaire complète pour des cheveux sains et sublimes.",
+    "category": "Pack",
+    "items": [
+      "1 Savon au choix",
+      "2 Shampoings solides",
+      "Leave-in Coconut"
+    ],
+    "benefits": [
+      "Routine capillaire complète",
+      "Savon artisanal pour le corps",
+      "2 shampoings pour alterner selon vos besoins",
+      "Leave-in hydratant",
+      "Économie de plus de 30%"
+    ],
+    "ingredients": "Savon: Huiles végétales, Beurre de karité. Shampoings: Tensioactif SCI, Huiles essentielles. Leave-in: Huile de coco vierge",
+    "popular": true,
+    "usageInstructions": [
+      "Utiliser le savon pour le corps quotidiennement",
+      "Alterner les shampoings selon l'état de vos cheveux",
+      "Appliquer le leave-in sur les longueurs et pointes"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Pack Découverte Savons",
+    "slug": "pack-decouverte-savons",
+    "price": 199,
+    "images": [
+      "/PACK4.jpg"
+    ],
+    "shortDescription": "4 types de savons artisanaux. Découvrez notre gamme complète de savons saponifiés à froid.",
+    "category": "Pack",
+    "items": [
+      "Savon Charbon Actif",
+      "Savon Miel & Avoine",
+      "Savon Nigelle & Argile",
+      "Savon Café"
+    ],
+    "benefits": [
+      "4 savons artisanaux différents",
+      "Saponification à froid",
+      "Sans colorant, sans conservateur",
+      "Sans huile de palme",
+      "Idéal pour découvrir nos savons"
+    ],
+    "ingredients": "Huile d'olive, Huile colza, Beurre de karité, Huile de coco, Huile ricin, actifs naturels variés (Charbon, Miel, Avoine, Nigelle, Argile, Café)",
+    "popular": true,
+    "usageInstructions": [
+      "Conserver à l'abri de la lumière et de l'humidité",
+      "Faire sécher après chaque utilisation",
+      "Utiliser sur visage et corps selon le type de savon"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Pack Complet Visage",
+    "slug": "pack-complet-visage",
+    "price": 199,
+    "images": [
+      "/PACK5.jpg"
+    ],
+    "shortDescription": "Savon + shampoing + leave in + sérum + eau de rose gratuit. Notre pack le plus complet pour une routine beauté intégrale.",
+    "category": "Pack",
+    "items": [
+      "1 Savon au choix",
+      "1 Shampoing solide",
+      "Leave-in Coconut",
+      "Sérum Acide Hyaluronique & Collagène",
+      "Eau de Rose OFFERT"
+    ],
+    "benefits": [
+      "Pack le plus complet",
+      "Routine visage et cheveux",
+      "5 produits premium",
+      "Eau de rose OFFERTE",
+      "Économie exceptionnelle"
+    ],
+    "ingredients": "Savon et shampoing artisanaux, Sérum à l'acide hyaluronique et collagène, Leave-in à l'huile de coco, Eau florale de rose 100% pure",
+    "popular": true,
+    "usageInstructions": [
+      "Nettoyer le visage avec le savon matin et soir",
+      "Appliquer le sérum après le nettoyage",
+      "Utiliser le shampoing et leave-in pour les cheveux",
+      "Tonifier avec l'eau de rose"
+    ]
+  }
+]
+

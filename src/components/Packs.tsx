@@ -1,36 +1,68 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { fadeInUp, staggerContainer } from './variants';
 
 const packs = [
   {
     id: 1,
+    name: 'Pack Essentiel Cheveux',
+    slug: 'pack-essentiel-cheveux',
+    description: 'Shampoing solide + leave in',
+    price: 199,
+    items: [
+      '1 Shampoing solide au choix',
+      'Leave-in Coconut'
+    ],
+    image: '/pack1.jpeg'
+  },
+  {
+    id: 2,
+    name: 'Pack Soin Profond',
+    slug: 'pack-soin-profond',
+    description: 'Baume + sérum + eau de rose gratuit',
+    price: 199,
+    items: [
+      '1 Baume capillaire',
+      'Sérum Acide Hyaluronique & Collagène',
+      'Eau de Rose OFFERT'
+    ],
+    image: '/PACK2.jpg'
+  },
+  {
+    id: 3,
+    name: 'Pack Routine Cheveux',
+    slug: 'pack-routine-cheveux',
+    description: 'Savon + 2 shampoings solides + leave in coconut',
+    price: 199,
+    items: [
+      '1 Savon au choix',
+      '2 Shampoings solides',
+      'Leave-in Coconut'
+    ],
+    image: '/PACK3.jpg'
+  },
+  {
+    id: 4,
     name: 'Pack Découverte Savons',
+    slug: 'pack-decouverte-savons',
     description: '4 types de savons artisanaux',
+    price: 199,
     items: [
       'Savon Charbon Actif',
       'Savon Miel & Avoine', 
       'Savon Nigelle & Argile',
       'Savon Café'
     ],
-    image: '/pack1.jpg' // Placeholder - replace with actual pack image
+    image: '/PACK4.jpg'
   },
   {
-    id: 2,
-    name: 'Pack Routine Cheveux',
-    description: 'Savon + 2 shampoings solides + leave in coconut',
-    items: [
-      '1 Savon au choix',
-      '2 Shampoings solides',
-      'Leave-in Coconut'
-    ],
-    image: '/pack2.jpg' // Placeholder - replace with actual pack image
-  },
-  {
-    id: 3,
+    id: 5,
     name: 'Pack Complet Visage',
+    slug: 'pack-complet-visage',
     description: 'Savon + shampoing + leave in + sérum + eau de rose gratuit',
+    price: 199,
     items: [
       '1 Savon au choix',
       '1 Shampoing solide',
@@ -38,28 +70,7 @@ const packs = [
       'Sérum Acide Hyaluronique & Collagène',
       'Eau de Rose OFFERT'
     ],
-    image: '/pack3.jpg' // Placeholder - replace with actual pack image
-  },
-  {
-    id: 4,
-    name: 'Pack Soin Profond',
-    description: 'Baume + sérum + eau de rose gratuit',
-    items: [
-      '1 Baume capillaire',
-      'Sérum Acide Hyaluronique & Collagène',
-      'Eau de Rose OFFERT'
-    ],
-    image: '/pack4.jpg' // Placeholder - replace with actual pack image
-  },
-  {
-    id: 5,
-    name: 'Pack Essentiel Cheveux',
-    description: 'Shampoing solide + leave in',
-    items: [
-      '1 Shampoing solide au choix',
-      'Leave-in Coconut'
-    ],
-    image: '/pack5.jpg' // Placeholder - replace with actual pack image
+    image: '/PACK5.jpg'
   }
 ];
 
@@ -153,7 +164,7 @@ export default function Packs() {
                   {pack.name}
                 </motion.h3>
                 <motion.p
-                  className="text-sm text-charcoal-600 mb-3 font-sans"
+                  className="text-sm text-charcoal-600 mb-2 font-sans"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
@@ -161,6 +172,11 @@ export default function Packs() {
                 >
                   {pack.description}
                 </motion.p>
+                
+                {/* Price */}
+                <p className="text-xl font-serif text-olive-700 font-bold mb-3">
+                  {pack.price} MAD
+                </p>
                 
                 {/* Items List */}
                 <ul className="space-y-1 mb-4 flex-1">
@@ -172,13 +188,15 @@ export default function Packs() {
                 </ul>
 
                 {/* CTA Button */}
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full py-2 px-3 bg-olive-600 text-white font-sans text-xs font-medium rounded-lg hover:bg-olive-700 transition-colors duration-300 mt-auto"
-                >
-                  Choisir ce pack
-                </motion.button>
+                <Link href={`/packs/${pack.slug}`}>
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="w-full py-2 px-3 bg-olive-600 text-white font-sans text-xs font-medium rounded-lg hover:bg-olive-700 transition-colors duration-300 mt-auto"
+                  >
+                    Choisir ce pack
+                  </motion.button>
+                </Link>
               </div>
             </motion.div>
           ))}
