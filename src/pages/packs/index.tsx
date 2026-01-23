@@ -49,7 +49,7 @@ export default function PacksPage({ packs }: PacksPageProps) {
               className="body-lg text-charcoal-600"
             >
               Des combinaisons parfaites pour prendre soin de vous avec des produits naturels et efficaces. 
-              Chaque pack à <span className="font-bold text-olive-700">199 MAD</span> seulement !
+              À partir de <span className="font-bold font-price text-olive-700">129 MAD</span> !
             </motion.p>
           </motion.div>
         </div>
@@ -84,7 +84,7 @@ export default function PacksPage({ packs }: PacksPageProps) {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       
                       {/* Price Badge */}
-                      <div className="absolute top-4 right-4 bg-olive-600 text-white px-4 py-2 rounded-full font-serif text-lg font-bold shadow-lg">
+                      <div className="absolute top-4 right-4 bg-olive-600 text-white px-4 py-2 rounded-full font-price text-lg font-bold shadow-lg">
                         {pack.price} MAD
                       </div>
 
@@ -123,7 +123,7 @@ export default function PacksPage({ packs }: PacksPageProps) {
 
                       {/* CTA */}
                       <div className="flex items-center justify-between pt-4 border-t border-beige-200">
-                        <span className="font-serif text-xl text-olive-700 font-bold">
+                        <span className="font-price text-xl text-olive-700 font-bold">
                           {pack.price} MAD
                         </span>
                         <span className="inline-flex items-center gap-2 text-olive-600 font-medium group-hover:gap-3 transition-all">
@@ -158,7 +158,7 @@ export default function PacksPage({ packs }: PacksPageProps) {
                 Prix Unique
               </h3>
               <p className="text-charcoal-600">
-                Tous nos packs à 199 MAD, une économie garantie sur vos produits préférés
+                Des packs économiques pour vos produits préférés
               </p>
             </motion.div>
 
@@ -201,4 +201,8 @@ export const getStaticProps: GetStaticProps<PacksPageProps> = async () => {
     },
   };
 };
+
+
+
+
 

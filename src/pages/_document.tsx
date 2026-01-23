@@ -10,6 +10,10 @@ export default function Document() {
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=TASA+Explorer:wght@700&display=swap"
+          rel="stylesheet"
+        />
         <meta
           name="description"
           content="Nadara - Premium Moroccan skincare rooted in nature. Discover the transformative power of ancient botanical wisdom."

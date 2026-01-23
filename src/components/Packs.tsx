@@ -10,7 +10,7 @@ const packs = [
     name: 'Pack Essentiel Cheveux',
     slug: 'pack-essentiel-cheveux',
     description: 'Shampoing solide + leave in',
-    price: 199,
+    price: 129,
     items: [
       '1 Shampoing solide au choix',
       'Leave-in Coconut'
@@ -22,7 +22,7 @@ const packs = [
     name: 'Pack Soin Profond',
     slug: 'pack-soin-profond',
     description: 'Baume + sérum + eau de rose gratuit',
-    price: 199,
+    price: 145,
     items: [
       '1 Baume capillaire',
       'Sérum Acide Hyaluronique & Collagène',
@@ -35,7 +35,7 @@ const packs = [
     name: 'Pack Routine Cheveux',
     slug: 'pack-routine-cheveux',
     description: 'Savon + 2 shampoings solides + leave in coconut',
-    price: 199,
+    price: 245,
     items: [
       '1 Savon au choix',
       '2 Shampoings solides',
@@ -62,7 +62,7 @@ const packs = [
     name: 'Pack Complet Visage',
     slug: 'pack-complet-visage',
     description: 'Savon + shampoing + leave in + sérum + eau de rose gratuit',
-    price: 199,
+    price: 329,
     items: [
       '1 Savon au choix',
       '1 Shampoing solide',
@@ -174,7 +174,7 @@ export default function Packs() {
                 </motion.p>
                 
                 {/* Price */}
-                <p className="text-xl font-serif text-olive-700 font-bold mb-3">
+                <p className="text-xl font-price text-olive-700 font-bold mb-3">
                   {pack.price} MAD
                 </p>
                 

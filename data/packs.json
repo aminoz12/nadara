@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Pack Essentiel Cheveux",
     "slug": "pack-essentiel-cheveux",
-    "price": 199,
+    "price": 129,
     "images": [
       "/pack1.jpeg"
     ],
@@ -32,7 +32,7 @@
     "id": 2,
     "name": "Pack Soin Profond",
     "slug": "pack-soin-profond",
-    "price": 199,
+    "price": 145,
     "images": [
       "/PACK2.jpg"
     ],
@@ -62,7 +62,7 @@
     "id": 3,
     "name": "Pack Routine Cheveux",
     "slug": "pack-routine-cheveux",
-    "price": 199,
+    "price": 245,
     "images": [
       "/PACK3.jpg"
     ],
@@ -123,7 +123,7 @@
     "id": 5,
     "name": "Pack Complet Visage",
     "slug": "pack-complet-visage",
-    "price": 199,
+    "price": 329,
     "images": [
       "/PACK5.jpg"
     ],
@@ -153,4 +153,3 @@
     ]
   }
 ]
-

@@ -59,7 +59,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-12 md:py-20 lg:py-28 bg-white">
+    <section id="faq" className="py-12 md:py-20 lg:py-28 bg-white">
       <div className="container-custom px-4 sm:px-6">
         {/* Section Header */}
         <motion.div

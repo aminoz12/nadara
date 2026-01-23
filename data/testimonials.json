@@ -2,47 +2,46 @@
   {
     "id": 1,
     "name": "Amira Hassan",
-    "location": "Dubai, UAE",
-    "text": "The Prickly Pear Elixir has completely transformed my skin. After years of trying luxury brands, I finally found something that truly works. My dark circles have faded and my skin glows like never before.",
+    "location": "Casablanca, Maroc",
+    "text": "Le savon au charbon actif a complètement transformé ma peau. Après des années à essayer différentes marques, j'ai enfin trouvé quelque chose qui fonctionne vraiment. Ma peau est purifiée et lumineuse comme jamais.",
     "rating": 5,
-    "product": "Prickly Pear Elixir",
+    "product": "Savon Charbon Actif",
     "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&q=80"
   },
   {
     "id": 2,
     "name": "Sophie Laurent",
     "location": "Paris, France",
-    "text": "I discovered these products during my trip to Morocco and haven't looked back. The Moroccan Rose Facial Oil is now an essential part of my evening ritual. Pure luxury.",
+    "text": "J'ai découvert ces produits et je ne reviens plus en arrière. Le shampoing solide fortifiant est devenu un essentiel de ma routine capillaire. Mes cheveux sont plus forts et brillants. Du pur bonheur !",
     "rating": 5,
-    "product": "Moroccan Rose Facial Oil",
+    "product": "Shampoing Fortifiant",
     "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&q=80"
   },
   {
     "id": 3,
-    "name": "Elena Rodriguez",
-    "location": "Barcelona, Spain",
-    "text": "The Argan Glow Serum absorbs beautifully and leaves my skin feeling nourished without any greasy residue. I've received so many compliments on my skin since I started using it.",
+    "name": "Nadia Benali",
+    "location": "Rabat, Maroc",
+    "text": "Le sérum au collagène et acide hyaluronique s'absorbe parfaitement et laisse ma peau nourrie sans aucun résidu gras. J'ai reçu tellement de compliments sur mon teint depuis que j'ai commencé à l'utiliser.",
     "rating": 5,
-    "product": "Argan Glow Serum",
+    "product": "Sérum Collagène",
     "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&q=80"
   },
   {
     "id": 4,
-    "name": "James Mitchell",
-    "location": "London, UK",
-    "text": "Finally, a brand that understands quality ingredients. The Men's Essentials Gift Set was the perfect introduction. The beard oil is exceptional - natural scent and incredible results.",
+    "name": "Karim El Idrissi",
+    "location": "Marrakech, Maroc",
+    "text": "Enfin une marque qui comprend la qualité des ingrédients naturels. Le Pack Découverte Savons était parfait pour tester la gamme. Le savon au café est exceptionnel - un parfum naturel et des résultats incroyables !",
     "rating": 5,
-    "product": "Men's Essentials Gift Set",
+    "product": "Pack Découverte Savons",
     "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80"
   },
   {
     "id": 5,
-    "name": "Fatima Al-Rashid",
-    "location": "Casablanca, Morocco",
-    "text": "Growing up in Morocco, I've always known the power of these traditional ingredients. This brand captures that heritage beautifully. The Saharan Clay Mask reminds me of my grandmother's recipes.",
+    "name": "Fatima Zohra",
+    "location": "Fès, Maroc",
+    "text": "Le Leave In Coconut a sauvé mes cheveux secs ! Facile à appliquer, il démêle parfaitement et garde mes cheveux hydratés toute la journée. Un produit indispensable que je recommande à toutes mes amies.",
     "rating": 5,
-    "product": "Saharan Clay Mask",
+    "product": "Leave In Coconut",
     "avatar": "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=150&q=80"
   }
 ]
-

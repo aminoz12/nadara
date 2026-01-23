@@ -112,7 +112,7 @@ export default function Cart() {
                         <h3 className="font-serif text-sm text-charcoal-900 mb-1 truncate">
                           {item.product.name}
                         </h3>
-                        <p className="text-xs text-charcoal-500 mb-2">
+                        <p className="text-xs text-charcoal-500 mb-2 font-price">
                           {item.product.price} MAD
                         </p>
                         <div className="flex items-center gap-3">
@@ -158,7 +158,7 @@ export default function Cart() {
                   <span className="font-sans text-charcoal-600">
                     {t('cart.total')}:
                   </span>
-                  <span className="font-serif text-2xl text-charcoal-900">
+                  <span className="font-price text-2xl text-charcoal-900">
                     {totalPrice.toFixed(2)} MAD
                   </span>
                 </div>

@@ -1,37 +1,38 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Sparkles, Droplet, Moon, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 import { fadeInUp, staggerContainer } from './variants';
 
 export default function ProductionProcess() {
   const skincareTips = [
     {
-      icon: Droplet,
       title: 'Hydratation Quotidienne',
       subtitle: 'Le secret d\'une peau éclatante',
       description: 'Une peau bien hydratée est la base d\'un teint lumineux. Appliquez votre crème hydratante sur peau légèrement humide pour maximiser l\'absorption. Nos sérums à base d\'huiles végétales naturelles pénètrent en profondeur pour nourrir votre peau de l\'intérieur.',
-      tip: 'Astuce : Buvez au moins 2L d\'eau par jour',
-      image: 'https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=600&q=80',
+      tip: '💡 Astuce : Buvez au moins 2L d\'eau par jour ',
+      image: '/blog1.png',
       accent: '#7C9A6B',
+      link: '/products/serum-collagene-acide-hyaluronique-b5',
     },
     {
-      icon: Moon,
       title: 'Routine du Soir',
       subtitle: 'Réparez pendant la nuit',
       description: 'La nuit, votre peau se régénère naturellement. Nettoyez toujours votre visage avant de dormir pour éliminer impuretés et maquillage. Nos savons artisanaux SAF respectent le film hydrolipidique tout en purifiant en douceur.',
-      tip: 'Astuce : Changez votre taie d\'oreiller régulièrement',
-      image: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&q=80',
+      tip: '💡 Astuce : Changez votre taie d\'oreiller régulièrement',
+      image: '/blog2.png',
       accent: '#9B7B5E',
+      link: '/products?category=Savon',
     },
     {
-      icon: Sparkles,
       title: 'Protection Naturelle',
       subtitle: 'Préservez votre capital jeunesse',
       description: 'Protégez votre peau des agressions extérieures avec des soins riches en antioxydants. Nos formules à base d\'ingrédients bio créent une barrière protectrice tout en nourrissant intensément votre épiderme jour après jour.',
-      tip: 'Astuce : Évitez l\'eau trop chaude sur le visage',
-      image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80',
+      tip: '💡 Astuce : Évitez l\'eau trop chaude sur le visage',
+      image: '/blog3.png',
       accent: '#C4A77D',
+      link: '/products/poudre-eclaircissante',
     },
   ];
 
@@ -80,18 +81,18 @@ export default function ProductionProcess() {
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
           variants={staggerContainer}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-start"
         >
           {skincareTips.map((tip, index) => (
             <motion.article
               key={tip.title}
               variants={fadeInUp}
               custom={index}
-              className="group relative bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_48px_rgba(0,0,0,0.12)] transition-all duration-500"
+              className="group relative bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_48px_rgba(0,0,0,0.12)] transition-all duration-500 h-full flex flex-col"
             >
               {/* Image Container */}
               <div className="relative h-52 md:h-56 lg:h-64 overflow-hidden">
-                <motion.div
+            <motion.div
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                   style={{ backgroundImage: `url(${tip.image})` }}
                 />
@@ -99,15 +100,6 @@ export default function ProductionProcess() {
                   className="absolute inset-0 opacity-30 group-hover:opacity-20 transition-opacity duration-500"
                   style={{ background: `linear-gradient(180deg, transparent 0%, ${tip.accent}40 100%)` }}
                 />
-                
-                {/* Floating Icon */}
-                <motion.div
-                  className="absolute top-4 right-4 w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-xl md:rounded-2xl backdrop-blur-md bg-white/80 shadow-lg"
-                  whileHover={{ scale: 1.1, rotate: 10 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                >
-                  <tip.icon className="w-5 h-5 md:w-6 md:h-6" style={{ color: tip.accent }} />
-                </motion.div>
 
                 {/* Article number */}
                 <div className="absolute bottom-4 left-4">
@@ -118,10 +110,10 @@ export default function ProductionProcess() {
                     0{index + 1}
                   </span>
                 </div>
-              </div>
+          </div>
 
               {/* Content */}
-              <div className="p-5 md:p-6 lg:p-8">
+              <div className="p-5 md:p-6 lg:p-8 flex-1 flex flex-col">
                 <span 
                   className="text-xs font-medium tracking-wider uppercase mb-2 block"
                   style={{ color: tip.accent }}
@@ -141,19 +133,20 @@ export default function ProductionProcess() {
                   style={{ backgroundColor: `${tip.accent}10` }}
                 >
                   <p className="text-xs md:text-sm font-medium" style={{ color: tip.accent }}>
-                    💡 {tip.tip}
+                    {tip.tip}
                   </p>
                 </div>
 
-                {/* Read More Link */}
-                <motion.a
-                  href="#"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-[#7C9A6B] group/link"
-                  whileHover={{ x: 5 }}
-                >
-                  En savoir plus
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
-                </motion.a>
+                {/* CTA Link */}
+                <Link href={tip.link} className="mt-auto">
+                  <motion.span
+                    className="inline-flex items-center gap-2 text-sm font-medium text-[#7C9A6B] group/link cursor-pointer"
+                    whileHover={{ x: 5 }}
+                  >
+                    Profitez de l'Offre
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                  </motion.span>
+                </Link>
               </div>
 
               {/* Bottom accent line */}
@@ -163,29 +156,30 @@ export default function ProductionProcess() {
               />
             </motion.article>
           ))}
-        </motion.div>
+                  </motion.div>
 
         {/* Bottom CTA */}
-        <motion.div
+                <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+                  viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.6 }}
           className="text-center mt-12 md:mt-16"
         >
           <p className="text-[#6B7B6D] mb-6 text-sm md:text-base">
             Tous nos produits sont formulés avec des ingrédients naturels pour accompagner votre routine beauté
           </p>
-          <motion.a
-            href="#products"
-            className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-[#7C9A6B] text-white font-medium rounded-full hover:bg-[#6B8A5A] transition-colors duration-300 shadow-lg hover:shadow-xl"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            Découvrir nos produits
-            <ArrowRight className="w-4 h-4" />
-          </motion.a>
-        </motion.div>
+          <Link href="/products">
+            <motion.span
+              className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-[#7C9A6B] text-white font-medium rounded-full hover:bg-[#6B8A5A] transition-colors duration-300 shadow-lg hover:shadow-xl cursor-pointer"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              Découvrir nos produits
+              <ArrowRight className="w-4 h-4" />
+            </motion.span>
+          </Link>
+              </motion.div>
       </div>
     </section>
   );

@@ -9,54 +9,54 @@ import { Leaf, Heart, Globe, Sparkles, ArrowRight } from 'lucide-react';
 const story = [
   {
     year: '2018',
-    title: 'The Beginning',
+    title: 'Le Commencement',
     description:
-      'Founded in the heart of Marrakech, Nadara was born from a deep love for Moroccan botanical traditions and a vision to share them with the world.',
+      'Fondée au cœur de Marrakech, Nadara est née d\'un profond amour pour les traditions botaniques marocaines et d\'une vision de les partager avec le monde.',
   },
   {
     year: '2019',
-    title: 'First Collection',
+    title: 'Première Collection',
     description:
-      'Launched our signature Argan and Rose collections, partnering directly with women-led cooperatives in the Atlas Mountains.',
+      'Lancement de nos collections signature Argan et Rose, en partenariat direct avec des coopératives dirigées par des femmes dans les montagnes de l\'Atlas.',
   },
   {
     year: '2021',
-    title: 'Global Reach',
+    title: 'Portée Mondiale',
     description:
-      'Expanded to serve customers across Europe, North America, and the Middle East, staying true to our artisanal roots.',
+      'Expansion pour servir les clients à travers l\'Europe, l\'Amérique du Nord et le Moyen-Orient, en restant fidèles à nos racines artisanales.',
   },
   {
     year: '2024',
-    title: 'Sustainability Pledge',
+    title: 'Engagement Qualité',
     description:
-      'Achieved 100% recyclable packaging and carbon-neutral shipping, reinforcing our commitment to the planet.',
+      'Renforcement de notre engagement envers la qualité et l\'authenticité, en préservant les méthodes traditionnelles de fabrication.',
   },
 ];
 
 const values = [
   {
     icon: Leaf,
-    title: 'Pure Ingredients',
+    title: 'Ingrédients Purs',
     description:
-      'We never compromise on quality. Every ingredient is carefully sourced, organic, and traceable to its origin.',
+      'Nous ne transigeons jamais sur la qualité. Chaque ingrédient est soigneusement sélectionné, biologique et traçable jusqu\'à son origine.',
   },
   {
     icon: Heart,
-    title: 'Community First',
+    title: 'Communauté d\'Abord',
     description:
-      'We support local Moroccan communities, paying fair wages and investing in education and infrastructure.',
+      'Nous soutenons les communautés marocaines locales, en payant des salaires équitables et en investissant dans l\'éducation et les infrastructures.',
   },
   {
     icon: Globe,
-    title: 'Planet Positive',
+    title: 'Planète Positive',
     description:
-      'From biodegradable formulas to carbon-neutral shipping, sustainability guides every decision we make.',
+      'Des formules biodégradables aux emballages écologiques, la durabilité guide chaque décision que nous prenons.',
   },
   {
     icon: Sparkles,
-    title: 'Timeless Wisdom',
+    title: 'Sagesse Intemporelle',
     description:
-      'We honor centuries of beauty knowledge, blending ancient recipes with modern skincare science.',
+      'Nous honorons des siècles de connaissances en beauté, en mélangeant les recettes ancestrales avec la science moderne des soins de la peau.',
   },
 ];
 
@@ -73,10 +73,10 @@ export default function AboutPage() {
   return (
     <>
       <Head>
-        <title>Our Story | Nadara</title>
+        <title>Notre Histoire | Nadara</title>
         <meta
           name="description"
-          content="Discover the story behind Nadara - premium Moroccan skincare rooted in tradition and crafted with care."
+          content="Découvrez l'histoire de Nadara - soins de la peau marocains premium enracinés dans la tradition et fabriqués avec soin."
         />
       </Head>
 
@@ -88,7 +88,7 @@ export default function AboutPage() {
         <motion.div className="absolute inset-0" style={{ y }}>
           <Image
             src="https://images.unsplash.com/photo-1600428877878-1a0fd85beda8?w=1920&q=80"
-            alt="Moroccan landscape"
+            alt="Paysage marocain"
             fill
             className="object-cover"
             priority
@@ -106,7 +106,7 @@ export default function AboutPage() {
             transition={{ delay: 0.2 }}
             className="text-sm font-sans tracking-[0.3em] uppercase text-cream-100 mb-4 block"
           >
-            Our Story
+            Notre Histoire
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -114,7 +114,7 @@ export default function AboutPage() {
             transition={{ delay: 0.4 }}
             className="heading-xl text-cream-50 mb-6"
           >
-            Rooted in <span className="italic">Tradition</span>
+            Enracinés dans la <span className="italic">Tradition</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -122,8 +122,7 @@ export default function AboutPage() {
             transition={{ delay: 0.6 }}
             className="body-lg text-cream-200 max-w-2xl mx-auto"
           >
-            A journey from the ancient beauty rituals of Morocco to your daily
-            skincare sanctuary.
+            Un voyage des rituels de beauté ancestraux du Maroc à votre sanctuaire de soins quotidiens.
           </motion.p>
         </motion.div>
       </section>
@@ -139,30 +138,30 @@ export default function AboutPage() {
               variants={fadeInLeft}
             >
               <span className="text-sm font-sans tracking-[0.3em] uppercase text-olive-600 mb-4 block">
-                The Nadara Promise
+                La Promesse Nadara
               </span>
               <h2 className="heading-lg text-charcoal-900 mb-6">
-                Where Ancient Wisdom Meets{' '}
-                <span className="italic">Modern Beauty</span>
+                Où la Sagesse Ancienne Rencontre la{' '}
+                <span className="italic">Beauté Moderne</span>
               </h2>
               <div className="space-y-4 text-charcoal-600 font-sans leading-relaxed">
                 <p>
-                  Nadara was founded on a simple belief: that the most effective
-                  skincare comes from nature itself. Our journey began in the
-                  sun-drenched valleys of Morocco, where generations of women have
-                  guarded the secrets of botanical beauty.
+                  Nadara a été fondée sur une croyance simple : que les soins de la peau les plus efficaces
+                  proviennent de la nature elle-même. Notre voyage a commencé dans les
+                  vallées ensoleillées du Maroc, où des générations de femmes ont
+                  gardé les secrets de la beauté botanique.
                 </p>
                 <p>
-                  We partner directly with women-led cooperatives, ensuring fair
-                  trade practices while preserving traditional extraction methods
-                  that have been perfected over centuries. Every drop of our oils,
-                  every gram of our clay masks, carries the essence of this
-                  heritage.
+                  Nous travaillons directement avec des coopératives dirigées par des femmes, garantissant des pratiques de
+                  commerce équitable tout en préservant les méthodes d'extraction traditionnelles
+                  qui ont été perfectionnées au fil des siècles. Chaque goutte de nos huiles,
+                  chaque gramme de nos masques d'argile, porte l'essence de ce
+                  patrimoine.
                 </p>
                 <p>
-                  Today, Nadara brings these treasures to discerning customers
-                  worldwide, never compromising on purity, potency, or our
-                  commitment to the planet.
+                  Aujourd'hui, Nadara apporte ces trésors à des clients exigeants
+                  dans le monde entier, sans jamais compromettre la pureté, la puissance ou notre
+                  engagement envers la planète.
                 </p>
               </div>
             </motion.div>
@@ -177,7 +176,7 @@ export default function AboutPage() {
               <div className="relative aspect-[4/5] rounded-sm overflow-hidden">
                 <Image
                   src="https://images.unsplash.com/photo-1617897903246-719242758050?w=800&q=80"
-                  alt="Moroccan beauty ingredients"
+                  alt="Ingrédients de beauté marocains"
                   fill
                   className="object-cover"
                 />
@@ -208,13 +207,13 @@ export default function AboutPage() {
               variants={fadeInUp}
               className="text-sm font-sans tracking-[0.3em] uppercase text-olive-600 mb-4 block"
             >
-              Our Journey
+              Notre Parcours
             </motion.span>
             <motion.h2
               variants={fadeInUp}
               className="heading-lg text-charcoal-900"
             >
-              Milestones Along <span className="italic">the Way</span>
+              Jalons le Long du <span className="italic">Chemin</span>
             </motion.h2>
           </motion.div>
 
@@ -278,13 +277,13 @@ export default function AboutPage() {
               variants={fadeInUp}
               className="text-sm font-sans tracking-[0.3em] uppercase text-olive-600 mb-4 block"
             >
-              What We Stand For
+              Ce Pour Quoi Nous Nous Battons
             </motion.span>
             <motion.h2
               variants={fadeInUp}
               className="heading-lg text-charcoal-900"
             >
-              Our Core <span className="italic">Values</span>
+              Nos Valeurs <span className="italic">Fondamentales</span>
             </motion.h2>
           </motion.div>
 
@@ -320,81 +319,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Sustainability */}
-      <section
-        id="sustainability"
-        className="section-padding bg-charcoal-950 text-cream-50"
-      >
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeInLeft}
-              className="relative aspect-square lg:aspect-[4/5] rounded-sm overflow-hidden"
-            >
-              <Image
-                src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80"
-                alt="Sustainable practices"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
-
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeInRight}
-            >
-              <span className="text-sm font-sans tracking-[0.3em] uppercase text-olive-400 mb-4 block">
-                Sustainability
-              </span>
-              <h2 className="heading-lg text-cream-50 mb-6">
-                Beauty That Cares for{' '}
-                <span className="italic">Our Planet</span>
-              </h2>
-              <div className="space-y-4 text-cream-300 font-sans leading-relaxed mb-8">
-                <p>
-                  Sustainability isn&apos;t an afterthought—it&apos;s woven into
-                  every aspect of what we do. From sourcing to shipping, we
-                  minimize our environmental footprint without compromising on
-                  quality.
-                </p>
-                <p>
-                  Our packaging is made from recycled and recyclable materials.
-                  We use glass bottles, biodegradable labels, and plastic-free
-                  shipping materials. Our formulas are biodegradable and never
-                  tested on animals.
-                </p>
-              </div>
-
-              <ul className="space-y-4 mb-10">
-                {[
-                  '100% recyclable packaging',
-                  'Carbon-neutral shipping',
-                  'Cruelty-free certified',
-                  'Biodegradable formulas',
-                ].map((item, index) => (
-                  <motion.li
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="flex items-center gap-3 text-cream-200"
-                  >
-                    <div className="w-2 h-2 bg-olive-400 rounded-full" />
-                    {item}
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="section-padding bg-cream-100">
         <div className="container-custom">
@@ -409,15 +333,15 @@ export default function AboutPage() {
               variants={fadeInUp}
               className="heading-lg text-charcoal-900 mb-6"
             >
-              Ready to Begin Your{' '}
-              <span className="italic">Beauty Journey?</span>
+              Prêt à Commencer Votre{' '}
+              <span className="italic">Voyage Beauté ?</span>
             </motion.h2>
             <motion.p
               variants={fadeInUp}
               className="body-md text-charcoal-600 mb-8"
             >
-              Explore our collection of premium Moroccan skincare and discover
-              the transformative power of pure, natural ingredients.
+              Explorez notre collection de soins de la peau marocains premium et découvrez
+              le pouvoir transformateur d'ingrédients purs et naturels.
             </motion.p>
             <motion.div variants={fadeInUp}>
               <Link href="/products">
@@ -426,7 +350,7 @@ export default function AboutPage() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  Shop Now
+                  Découvrir Nos Produits
                   <ArrowRight className="w-4 h-4" />
                 </motion.span>
               </Link>
@@ -437,4 +361,3 @@ export default function AboutPage() {
     </>
   );
 }
-

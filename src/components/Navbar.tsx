@@ -66,8 +66,13 @@ export default function Navbar() {
       >
         <nav className="container-custom">
           <div className="flex items-center justify-between h-20 md:h-24">
-            {/* Logo */}
-            <Link href="/" className="relative z-10">
+            {/* Mobile: Language Switcher on Left */}
+            <div className="md:hidden flex items-center">
+              <LanguageSwitcher />
+            </div>
+
+            {/* Logo - Centered on Mobile, Left on Desktop */}
+            <Link href="/" className="relative z-10 md:mr-0 mx-auto md:mx-0">
               <motion.div
                 className="overflow-hidden"
                 whileHover={{ scale: 1.05 }}
@@ -175,7 +180,6 @@ export default function Navbar() {
 
             {/* Mobile Actions */}
             <div className="md:hidden flex items-center gap-2">
-              <LanguageSwitcher />
               <motion.button
                 onClick={() => setIsOpen(true)}
                 className={`p-2 rounded-lg transition-colors duration-300 relative ${

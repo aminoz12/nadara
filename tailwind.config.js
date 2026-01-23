@@ -66,6 +66,7 @@ module.exports = {
       fontFamily: {
         serif: ['Playfair Display', 'Georgia', 'serif'],
         sans: ['DM Sans', 'system-ui', 'sans-serif'],
+        price: ['"TASA Explorer"', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

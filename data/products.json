@@ -3,9 +3,9 @@
     "id": 1,
     "name": "Savon Saponifié à Froid - Savon Charbon Actif",
     "slug": "savon-saponifie-a-froid-charbon-actif",
-    "price": 75,
+    "price": 49,
     "images": [
-      "/charbon1.png",
+      "/charbon1.jpg",
       "/charbon2.jpeg"
     ],
     "shortDescription": "Purifiant visage et corps. Sans colorant, sans conservateur, sans huile de palme. 115 grs",
@@ -31,7 +31,7 @@
     "id": 2,
     "name": "Savon Saponifié à Froid - Savon Miel & Avoine",
     "slug": "savon-saponifie-a-froid-miel-avoine",
-    "price": 75,
+    "price": 59,
     "images": [
       "/avoine1.jpeg",
       "/avoine2.jpeg"
@@ -59,7 +59,7 @@
     "id": 3,
     "name": "Shampoing solide - Cheveux fins et pellicules grasses",
     "slug": "shampoing-solide-cheveux-fins-pellicules-grasses",
-    "price": 75,
+    "price": 70,
     "images": [
       "/fins1.jpeg",
       "/fins2.jpeg",
@@ -92,7 +92,7 @@
     "id": 4,
     "name": "Savon Saponifié à Froid - Savon Nigelle & Argile rose",
     "slug": "savon-saponifie-a-froid-nigelle-argile-rose",
-    "price": 75,
+    "price": 62,
     "images": [
       "/argile1.png",
       "/argile2.png"
@@ -120,7 +120,7 @@
     "id": 5,
     "name": "Savon Saponifié à Froid - Savon Café",
     "slug": "savon-saponifie-a-froid-cafe",
-    "price": 75,
+    "price": 49,
     "images": [
       "/cafe1.jpeg",
       "/cafe2.png"
@@ -148,7 +148,7 @@
     "id": 6,
     "name": "Shampoing solide - Fortifiant & Stimulant",
     "slug": "shampoing-solide-fortifiant-stimulant",
-    "price": 75,
+    "price": 70,
     "images": [
       "/fortifant1.jpeg",
       "/fortifant2.jpeg",
@@ -181,7 +181,7 @@
     "id": 7,
     "name": "Shampoing solide - Cheveux Normaux/Mixtes",
     "slug": "shampoing-solide-cheveux-normaux-mixtes",
-    "price": 75,
+    "price": 55,
     "images": [
       "/mixtes1.jpeg",
       "/mixtes2.jpeg",
@@ -214,7 +214,7 @@
     "id": 8,
     "name": "Shampoing solide - Cheveux Secs",
     "slug": "shampoing-solide-cheveux-secs",
-    "price": 75,
+    "price": 70,
     "images": [
       "/sec1.jpeg",
       "/sec2.jpeg",
@@ -244,5 +244,122 @@
       "Pour les cheveux difficiles à démeler, faire un soin après le shampoing"
     ],
     "equivalence": "1 shampoing solide = 2 bouteilles de shampoing de 250 ml"
+  },
+  {
+    "id": 9,
+    "name": "Poudre éclaircissante",
+    "slug": "poudre-eclaircissante",
+    "price": 30,
+    "images": [
+      "/poudre1.jpg",
+      "/poudre2.jpg"
+    ],
+    "shortDescription": "Masque éclaircissant naturel pour tous types de peau. Illumine et unifie le teint en douceur. 100g",
+    "category": "Poudre",
+    "benefits": [
+      "Éclaircit et illumine le teint",
+      "Unifie la peau naturellement",
+      "Convient à tous types de peau",
+      "100% naturel",
+      "Poids: 100g"
+    ],
+    "ingredients": "Poudre de riz, Lait en poudre, Poudre d'avoine, Poudre de pois chiche, Poudre de réglisse, Noix de coco en poudre",
+    "popular": true,
+    "usageInstructions": [
+      "Mettre 1 cuillère à café de poudre dans un petit récipient",
+      "Ajouter 1 à 2 cuillères à café d'eau (ou jus de pomme de terre / yaourt naturel)",
+      "Mélanger pour obtenir un mélange homogène",
+      "Appliquer sur le visage en évitant les lèvres et le contour des yeux",
+      "Laisser poser 10 minutes",
+      "Rincer abondamment"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Baume Précieux 3 en 1 - Soin Après Solaire",
+    "slug": "baume-precieux-3-en-1-soin-apres-solaire",
+    "price": 62,
+    "images": [
+      "/baume1.jpg"
+    ],
+    "shortDescription": "Soin après solaire apaisant sur peaux asséchées. Baume profond pour le corps à base d'huiles pressées à froid et de beurres végétaux. SANS CONSERVATEUR",
+    "category": "Crème",
+    "benefits": [
+      "Soin après solaire apaisant",
+      "Nourrit et répare la peau en profondeur",
+      "Texture riche mais rapidement absorbée",
+      "Convient à toutes les peaux (jeunes aux plus matures)",
+      "Peut s'utiliser seul ou associé à un autre soin",
+      "SANS CONSERVATEUR"
+    ],
+    "ingredients": "Beurre de karité, Beurre de cacao, Huile de nigelle, Huile d'amande douce, Huile de coco, Cire d'abeille, Lanette O, IPM, Vitamine E",
+    "popular": true,
+    "usageInstructions": [
+      "Appliquer sur le corps après le bain",
+      "Utiliser matin et soir si souhaité",
+      "Masser bien afin de faire pénétrer le produit en profondeur",
+      "Peut s'utiliser seul ou en association avec un autre soin"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Leave In Coconut - Hair Conditioner",
+    "slug": "leave-in-coconut-hair-conditioner",
+    "price": 85,
+    "images": [
+      "/leavin.jpg"
+    ],
+    "shortDescription": "Soin conditionneur hydratant sans rinçage pour cheveux secs ou poreux. 100% Huile de Coco Vierge + Panthénol. 200ml",
+    "category": "Crème",
+    "benefits": [
+      "Hydratant sans rinçage",
+      "Facilite le démêlage",
+      "Maintient les cheveux hydratés et nourris",
+      "Apporte douceur aux cheveux",
+      "Combat la sécheresse des cheveux",
+      "Cheveux brillants et parfaitement démêlés",
+      "100% Huile de Coco Vierge",
+      "Enrichi en Panthénol",
+      "Convient à tous types de cheveux",
+      "Contenance: 200ml"
+    ],
+    "ingredients": "Aqua, Glycerin, Cocos Nucifera Oil, Ricinus Communis Seed Oil, Isopropyl Myristate, Behentrimonium Methosulfate et Cetearyl Alcohol, Cetearyl Olivate, Sorbitan Olivate, Tocopherol, Panthenol, Benzyl Alcohol, Dehydroacetic Acid, Parfum",
+    "popular": true,
+    "usageInstructions": [
+      "Appliquer sur cheveux propres et humides",
+      "Ne pas rincer",
+      "Démêler délicatement avec les doigts ou un peigne",
+      "Peut être utilisé quotidiennement",
+      "Convient à tous types de cheveux"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Sérum Collagène 2% & Acide Hyaluronique 2% + B5",
+    "slug": "serum-collagene-acide-hyaluronique-b5",
+    "price": 119,
+    "images": [
+      "/serum.png"
+    ],
+    "shortDescription": "Sérum anti-âge et hydratant au Collagène 2% et Acide Hyaluronique 2% + B5. Convient à tous types de peaux. 30ml",
+    "category": "Sérum",
+    "benefits": [
+      "Anti-âge puissant",
+      "Hydratation intense",
+      "Collagène 2% pour la fermeté",
+      "Acide Hyaluronique 2% pour l'hydratation",
+      "Vitamine B5 (Panthénol) apaisante",
+      "Convient à tous types de peaux",
+      "Contenance: 30ml"
+    ],
+    "ingredients": "Aloe Barbadensis Leaf Water, Boswellia Carterii Water, Glycerin, Panthenol, Hydrolyzed Elastin, Sodium Hyaluronate, Benzyl Alcohol, Dehydroacetic Acid",
+    "popular": true,
+    "usageInstructions": [
+      "Lavez votre visage avec un nettoyant et/ou un tonique",
+      "Ne séchez pas votre visage après l'avoir nettoyé ou tonifié",
+      "Appliquez quelques gouttes de sérum sur votre visage humide",
+      "Faites pénétrer en massant délicatement",
+      "Utiliser matin et soir pour de meilleurs résultats"
+    ]
   }
 ]

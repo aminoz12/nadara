@@ -74,7 +74,7 @@ export default function PackPage({
                 {pack.name}
               </h1>
 
-              <p className="font-serif text-3xl text-olive-700 mb-6">
+              <p className="font-price text-3xl text-olive-700 mb-6">
                 {pack.price} MAD
               </p>
 
@@ -242,7 +242,7 @@ export default function PackPage({
                         <h3 className="font-serif text-lg text-charcoal-900 mb-1 group-hover:text-olive-600 transition-colors">
                           {relatedPack.name}
                         </h3>
-                        <p className="font-serif text-olive-700 font-bold">
+                        <p className="font-price text-olive-700 font-bold">
                           {relatedPack.price} MAD
                         </p>
                       </div>
@@ -294,4 +294,8 @@ export const getStaticProps: GetStaticProps<PackPageProps> = async ({
     },
   };
 };
+
+
+
+
 

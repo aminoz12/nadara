@@ -74,7 +74,7 @@ export default function ProductPage({
                 {product.name}
               </h1>
 
-              <p className="font-serif text-3xl text-charcoal-900 mb-6">
+              <p className="font-price text-3xl text-charcoal-900 mb-6">
                 {product.price} MAD
               </p>
 

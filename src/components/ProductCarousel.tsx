@@ -111,7 +111,7 @@ function CarouselProductCard({ product, index, isVisible }: { product: Product; 
                   {product.shortDescription}
                 </p>
                 <div className="flex items-center justify-between mb-2 md:mb-3">
-                  <p className="font-serif text-lg md:text-xl text-charcoal-900">
+                  <p className="font-price text-lg md:text-xl text-charcoal-900">
                     {product.price} MAD
                   </p>
                 </div>

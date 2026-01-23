@@ -13,21 +13,16 @@ export default function Footer() {
   const footerLinks = {
     shop: [
       { label: t('footer.allProducts'), href: '/products' },
-      { label: t('footer.soaps'), href: '/products?category=Soaps' },
-      { label: t('footer.oils'), href: '/products?category=Oils' },
-      { label: t('footer.creams'), href: '/products?category=Creams' },
-      { label: t('footer.hairCare'), href: '/products?category=Hair+Care' },
-    ],
-    company: [
-      { label: t('footer.ourStory'), href: '/about' },
-      { label: t('footer.ingredients'), href: '/about#ingredients' },
-      { label: t('footer.sustainability'), href: '/about#sustainability' },
-      { label: t('footer.contactUs'), href: '/contact' },
+      { label: 'Savon', href: '/products?category=Savon' },
+      { label: 'Shampoing', href: '/products?category=Shampoing' },
+      { label: 'Crème', href: '/products?category=Crème' },
+      { label: 'Poudre', href: '/products?category=Poudre' },
+      { label: 'Sérum', href: '/products?category=Sérum' },
     ],
     support: [
-      { label: t('footer.shippingInfo'), href: '/contact' },
-      { label: t('footer.returns'), href: '/contact' },
-      { label: t('footer.faq'), href: '/contact' },
+      { label: t('footer.shippingInfo'), href: '/shipping-returns' },
+      { label: t('footer.returns'), href: '/shipping-returns' },
+      { label: t('footer.faq'), href: '/#faq' },
     ],
   };
 
@@ -40,7 +35,7 @@ export default function Footer() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={staggerContainer}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-6 lg:gap-8"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-6 lg:gap-8"
         >
           {/* Brand Column */}
           <motion.div variants={fadeInUp} className="col-span-2 md:col-span-3 lg:col-span-2">
@@ -112,24 +107,6 @@ export default function Footer() {
 
           <motion.div variants={fadeInUp}>
             <h4 className="font-sans text-xs md:text-sm tracking-[0.15em] md:tracking-[0.2em] uppercase text-cream-50 mb-4 md:mb-6">
-              {t('footer.company')}
-            </h4>
-            <ul className="space-y-2 md:space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-cream-400 hover:text-cream-50 font-sans text-xs md:text-sm transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          <motion.div variants={fadeInUp} className="hidden md:block">
-            <h4 className="font-sans text-xs md:text-sm tracking-[0.15em] md:tracking-[0.2em] uppercase text-cream-50 mb-4 md:mb-6">
               {t('footer.support')}
             </h4>
             <ul className="space-y-2 md:space-y-3">
@@ -151,24 +128,10 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-charcoal-800">
         <div className="container-custom py-4 md:py-6 px-4 sm:px-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 md:gap-4">
-            <p className="text-xs md:text-sm text-charcoal-500 font-sans text-center sm:text-left">
-              © {new Date().getFullYear()} Nadara. {t('footer.copyright')}.
+          <div className="flex items-center justify-center">
+            <p className="text-xs md:text-sm text-charcoal-500 font-sans text-center">
+              © 2026 Nadara. Tous droits réservés.
             </p>
-            <div className="flex items-center gap-4 md:gap-6">
-              <Link
-                href="/contact"
-                className="text-xs md:text-sm text-charcoal-500 hover:text-cream-300 font-sans transition-colors"
-              >
-                {t('footer.privacy')}
-              </Link>
-              <Link
-                href="/contact"
-                className="text-xs md:text-sm text-charcoal-500 hover:text-cream-300 font-sans transition-colors"
-              >
-                {t('footer.terms')}
-              </Link>
-            </div>
           </div>
         </div>
       </div>
