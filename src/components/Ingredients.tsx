@@ -121,13 +121,13 @@ export default function Ingredients() {
           </motion.p>
         </motion.div>
 
-        {/* Ingredients Grid */}
+        {/* Ingredients Grid - Reduced spacing */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
           variants={staggerContainer}
-          className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-12 md:mb-20"
+          className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-6 md:mb-8"
         >
           {ingredients.map((ingredient, index) => (
             <motion.div
@@ -150,55 +150,56 @@ export default function Ingredients() {
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                     sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, 25vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/70 via-charcoal-950/20 to-transparent" />
-                </div>
-
-                {/* Content Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 md:p-5">
-                  <span className="text-[10px] sm:text-xs font-sans tracking-wider uppercase text-cream-200 mb-0.5 md:mb-1 block">
-                    {ingredient.origin}
-                  </span>
-                  <h3 className="font-serif text-sm sm:text-base md:text-lg lg:text-xl text-cream-50 mb-1 md:mb-2">
-                    {ingredient.name}
-                  </h3>
-                  <p className="text-[10px] sm:text-xs md:text-sm text-cream-200 line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden sm:block">
-                    {ingredient.description}
-                  </p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/80 via-charcoal-950/30 to-transparent" />
+                  
+                  {/* Visible Title Badge */}
+                  <div className="absolute top-3 left-3 right-3">
+                    <span className="inline-block px-3 py-1.5 bg-olive-600/95 backdrop-blur-sm text-white font-serif text-xs md:text-sm font-bold rounded-full shadow-lg">
+                      {ingredient.name}
+                    </span>
+                  </div>
                 </div>
               </motion.div>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Ingredients Advantages - Detailed Cards */}
+        {/* Ingredients Advantages - FAQ Style Alignment */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={staggerContainer}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 md:mb-20"
+          className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-12 md:mb-20"
         >
           {ingredients.map((ingredient, index) => (
             <motion.div
               key={`${ingredient.name}-advantages`}
               variants={fadeInUp}
               custom={index}
-              className="bg-cream-50 p-6 md:p-8 rounded-xl md:rounded-2xl"
+              className="border border-beige-200 rounded-lg overflow-hidden bg-cream-50"
             >
-              <h3 className="font-serif text-xl md:text-2xl text-charcoal-900 mb-4">
-                {ingredient.name}
-              </h3>
-              <p className="text-charcoal-600 font-sans text-sm md:text-base mb-4 leading-relaxed">
-                {ingredient.description}
-              </p>
-              <ul className="space-y-2">
-                {ingredient.advantages.map((advantage, advIndex) => (
-                  <li key={advIndex} className="flex items-start gap-2 text-sm text-charcoal-700 font-sans">
-                    <span className="text-olive-600 mt-1">✓</span>
-                    <span>{advantage}</span>
-                  </li>
-                ))}
-              </ul>
+              {/* Question/Title Section */}
+              <div className="p-4 md:p-6 bg-cream-50">
+                <h3 className="font-serif text-lg md:text-xl lg:text-2xl text-charcoal-900 mb-3">
+                  {ingredient.name}
+                </h3>
+                <p className="text-charcoal-600 font-sans text-sm md:text-base leading-relaxed mb-4">
+                  {ingredient.description}
+                </p>
+              </div>
+
+              {/* Answer/Advantages Section */}
+              <div className="p-4 md:p-6 pt-0 bg-cream-50">
+                <ul className="space-y-2">
+                  {ingredient.advantages.map((advantage, advIndex) => (
+                    <li key={advIndex} className="flex items-start gap-2 text-sm md:text-base text-charcoal-700 font-sans">
+                      <span className="text-olive-600 mt-1 font-bold">✓</span>
+                      <span>{advantage}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </motion.div>
           ))}
         </motion.div>

@@ -42,8 +42,8 @@ export default function FAQ() {
     },
     {
       icon: Award,
-      question: 'Vos produits sont-ils certifiés bio ?',
-      answer: 'Nous utilisons majoritairement des ingrédients certifiés bio et nous sommes en processus de certification Ecocert pour notre gamme complète. Tous nos produits respectent les normes cosmétiques bio.',
+      question: 'Comment utiliser vos produits pour de meilleurs résultats ?',
+      answer: 'Pour des résultats optimaux, nous recommandons d\'utiliser nos savons sur peau humide en faisant mousser doucement. Les sérums s\'appliquent sur peau propre et légèrement humide. Les shampoings solides se frottent directement sur cheveux mouillés. Consultez les instructions spécifiques sur chaque produit ou contactez-nous pour des conseils personnalisés.',
     },
     {
       icon: Globe,
