@@ -8,28 +8,56 @@ import { useTranslations } from 'next-intl';
 
 const ingredients = [
   {
-    name: 'Argan Oil',
-    origin: 'Morocco',
-    description: 'Liquid gold of Morocco, rich in Vitamin E and fatty acids for deep nourishment.',
-    image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&q=80',
+    name: 'Nigelle',
+    origin: 'Maroc',
+    description: 'La graine noire aux mille vertus. Antioxydante, anti-inflammatoire et purifiante, la nigelle régénère la peau et renforce les cheveux.',
+    advantages: [
+      'Antioxydante puissante',
+      'Anti-inflammatoire naturelle',
+      'Purifie et régénère la peau',
+      'Renforce les cheveux',
+      'Riche en acides gras essentiels'
+    ],
+    image: '/nigelle.png',
   },
   {
-    name: 'Prickly Pear',
-    origin: 'Atlas Mountains',
-    description: 'The rarest oil in the world with the highest Vitamin E content for anti-aging.',
-    image: 'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=400&q=80',
+    name: 'Huile de Colza',
+    origin: 'Naturel',
+    description: 'Huile végétale riche en oméga-3 et vitamine E. Nourrit en profondeur, adoucit la peau et protège la barrière cutanée.',
+    advantages: [
+      'Riche en oméga-3',
+      'Source de vitamine E',
+      'Nourrit en profondeur',
+      'Adoucit et hydrate',
+      'Protège la barrière cutanée'
+    ],
+    image: '/colza.png',
   },
   {
-    name: 'Shea Butter',
-    origin: 'West Africa',
-    description: 'Ultra-rich butter that melts into skin for intense moisture and protection.',
-    image: 'https://images.unsplash.com/photo-1599305090598-fe179d501227?w=400&q=80',
+    name: 'Argile Rose',
+    origin: 'Maroc',
+    description: 'Argile douce et purifiante idéale pour les peaux sensibles. Nettoie en douceur, matifie et illumine le teint naturellement.',
+    advantages: [
+      'Purifiante et nettoyante',
+      'Idéale pour peaux sensibles',
+      'Matifie la peau',
+      'Illumine le teint',
+      'Régule la production de sébum'
+    ],
+    image: '/argile.png',
   },
   {
-    name: 'Rose Damascena',
-    origin: 'Valley of Roses',
-    description: 'Queen of flowers, calming and regenerating for sensitive skin.',
-    image: 'https://images.unsplash.com/photo-1518882605630-8eb392e8317b?w=400&q=80',
+    name: 'Reetha',
+    origin: 'Inde',
+    description: 'Fruit du savonnier, naturellement moussant. Nettoie en douceur les cheveux, les rend brillants et soyeux sans agresser.',
+    advantages: [
+      'Nettoyant naturel',
+      'Mousse douce et abondante',
+      'Rend les cheveux brillants',
+      'Soie et douceur',
+      'Sans sulfates agressifs'
+    ],
+    image: '/reetha.png',
   },
 ];
 
@@ -138,6 +166,39 @@ export default function Ingredients() {
                   </p>
                 </div>
               </motion.div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Ingredients Advantages - Detailed Cards */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 md:mb-20"
+        >
+          {ingredients.map((ingredient, index) => (
+            <motion.div
+              key={`${ingredient.name}-advantages`}
+              variants={fadeInUp}
+              custom={index}
+              className="bg-cream-50 p-6 md:p-8 rounded-xl md:rounded-2xl"
+            >
+              <h3 className="font-serif text-xl md:text-2xl text-charcoal-900 mb-4">
+                {ingredient.name}
+              </h3>
+              <p className="text-charcoal-600 font-sans text-sm md:text-base mb-4 leading-relaxed">
+                {ingredient.description}
+              </p>
+              <ul className="space-y-2">
+                {ingredient.advantages.map((advantage, advIndex) => (
+                  <li key={advIndex} className="flex items-start gap-2 text-sm text-charcoal-700 font-sans">
+                    <span className="text-olive-600 mt-1">✓</span>
+                    <span>{advantage}</span>
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           ))}
         </motion.div>
