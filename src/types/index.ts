@@ -44,4 +44,3 @@ export interface Pack {
   popular: boolean;
   usageInstructions?: string[];
 }
-

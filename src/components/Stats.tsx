@@ -41,10 +41,10 @@ export default function Stats() {
   const t = useTranslations();
 
   const stats = [
-    { number: 50000, suffix: '+', label: t('stats.happyCustomers') },
+    { number: 2000, suffix: '+', label: t('stats.happyCustomers') },
     { number: 100, suffix: '%', label: t('stats.naturalIngredients') },
-    { number: 15, suffix: '+', label: t('stats.yearsHeritage') },
-    { number: 30, suffix: '+', label: t('stats.countriesShipped') },
+    { number: 5, suffix: '+', label: t('stats.yearsHeritage') },
+    { number: 10, suffix: '+', label: t('stats.countriesShipped') },
   ];
 
   return (

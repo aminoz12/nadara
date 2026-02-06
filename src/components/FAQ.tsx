@@ -18,7 +18,7 @@ export default function FAQ() {
     {
       icon: Truck,
       question: 'Quels sont vos délais de livraison et conditions de retour ?',
-      answer: 'Nous expédions sous 24-48h. La livraison prend 2-5 jours ouvrables. Les retours sont acceptés sous 14 jours si les produits sont non utilisés et dans leur emballage d\'origine.',
+      answer: ' Nous expédions sous 24-48h. La livraison prend 2-5 jours ouvrables selon la destination. ',
     },
     {
       icon: Leaf,
@@ -28,22 +28,17 @@ export default function FAQ() {
     {
       icon: Clock,
       question: 'Combien de temps durent vos produits ?',
-      answer: 'Nos savons durent 4-6 semaines en cure, puis 12-24 mois d\'utilisation. Les crèmes et sérums ont une durée de conservation de 6-12 mois après ouverture. Stockez-les à l\'abri de la chaleur et de l\'humidité.',
+      answer: 'Nos Savons à froids durent 4-6 semaines en cure, puis 12-24 mois d\'utilisation. Les Crèmess et sérums ont une durée de conservation de 6-12 mois après ouverture. Stockez-les à l\'abri de la chaleur et de l\'humidité.',
     },
     {
       icon: Package,
       question: 'Vos emballages sont-ils écologiques ?',
-      answer: 'Oui, nous utilisons des emballages recyclables, biodégradables ou réutilisables. Nos pots sont en verre ou en plastique recyclé, et nous minimisons les emballages superflus.',
-    },
-    {
-      icon: Heart,
-      question: 'Vos produits sont-ils testés dermatologiquement ?',
-      answer: 'Oui, tous nos produits sont testés dermatologiquement sous contrôle médical pour garantir leur sécurité et leur tolérance. Nous ne testons jamais sur les animaux et nos formules sont validées par des volontaires.',
+      answer: 'Oui, pour la majorité des produits, nous utilisons des pots en verre et des sachets en plastiques et nous minimisons les emballages superflus.',
     },
     {
       icon: Award,
       question: 'Comment utiliser vos produits pour de meilleurs résultats ?',
-      answer: 'Pour des résultats optimaux, nous recommandons d\'utiliser nos savons sur peau humide en faisant mousser doucement. Les sérums s\'appliquent sur peau propre et légèrement humide. Les shampoings solides se frottent directement sur cheveux mouillés. Consultez les instructions spécifiques sur chaque produit ou contactez-nous pour des conseils personnalisés.',
+      answer: 'Pour des résultats optimaux, nous recommandons d\'utiliser nos Savons à froids sur peau humide en faisant mousser doucement. Les sérums s\'appliquent sur peau propre et légèrement humide. Les shampoings solides se frottent directement sur cheveux mouillés. Consultez les instructions spécifiques sur chaque produit ou contactez-nous pour des conseils personnalisés.',
     },
     {
       icon: Globe,

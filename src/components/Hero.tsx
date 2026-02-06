@@ -94,7 +94,6 @@ export default function Hero() {
             transition={{ duration: 1, ease: "easeInOut" }}
           />
         </AnimatePresence>
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal-950/50 via-charcoal-950/30 to-cream-50" />
       </motion.div>
 
       {/* Animated Particles - Hidden on mobile for performance */}
@@ -121,79 +120,97 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* Decorative Blobs - Smaller on mobile */}
-      <motion.div
-        className="absolute top-10 left-5 md:top-20 md:left-10 w-40 h-40 md:w-80 md:h-80 bg-olive-300/20 rounded-full blur-3xl"
-        animate={{
-          x: [0, 30, 0],
-          y: [0, -20, 0],
-          scale: [1, 1.2, 1],
-        }}
-        transition={{
-          duration: 12,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
-      />
-      <motion.div
-        className="absolute bottom-20 right-5 md:bottom-40 md:right-20 w-48 h-48 md:w-96 md:h-96 bg-terracotta-300/20 rounded-full blur-3xl"
-        animate={{
-          x: [0, -40, 0],
-          y: [0, 30, 0],
-          scale: [1, 1.3, 1],
-        }}
-        transition={{
-          duration: 15,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
-      />
+      {/* Decorative Blobs - Hidden on serum slide so second picture stays clear */}
+      {currentImageIndex === 0 && (
+        <>
+          <motion.div
+            className="absolute top-10 left-5 md:top-20 md:left-10 w-40 h-40 md:w-80 md:h-80 bg-olive-300/20 rounded-full blur-3xl"
+            animate={{
+              x: [0, 30, 0],
+              y: [0, -20, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+          />
+          <motion.div
+            className="absolute bottom-20 right-5 md:bottom-40 md:right-20 w-48 h-48 md:w-96 md:h-96 bg-terracotta-300/20 rounded-full blur-3xl"
+            animate={{
+              x: [0, -40, 0],
+              y: [0, 30, 0],
+              scale: [1, 1.3, 1],
+            }}
+            transition={{
+              duration: 15,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+          />
+        </>
+      )}
 
-      {/* Content */}
+      {/* Content - first slide: pushed down on mobile; second slide: pushed down more on mobile only */}
       <motion.div
-        className="relative z-10 container-custom text-center px-4 sm:px-6"
+        className="relative z-10 container-custom text-center px-4 sm:px-6 pt-56 sm:pt-64 md:pt-0"
         style={{ opacity, y: textY }}
       >
         <motion.div className="max-w-5xl mx-auto">
-          {/* Tagline */}
-          <motion.div
-            initial={{ opacity: 0, y: 30, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-6 md:mb-8"
-          >
-            <motion.span
-              className="inline-block px-4 py-2 md:px-6 md:py-2 border border-cream-200/50 text-cream-100 font-sans text-xs md:text-sm tracking-[0.2em] md:tracking-[0.4em] uppercase backdrop-blur-sm"
-              whileHover={{ scale: 1.05, borderColor: 'rgba(255,255,255,0.8)' }}
-            >
-              {t('hero.tagline')}
-            </motion.span>
-          </motion.div>
+          <AnimatePresence mode="wait">
+            {currentImageIndex === 0 ? (
+              <motion.div
+                key="hero-default"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="contents"
+              >
+                {/* Main Title with Letter Animation */}
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-medium text-cream-50 mb-2 md:mb-4 overflow-hidden leading-tight">
+                  <AnimatedText text={t('hero.title1')} />
+                </h1>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-medium text-cream-50 mb-6 md:mb-10 overflow-hidden leading-tight">
+                  <motion.span
+                    initial={{ opacity: 0, y: 80 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.8, duration: 1, ease: [0.25, 0.4, 0.25, 1] }}
+                    className="italic inline-block"
+                  >
+                    {t('hero.title2')}
+                  </motion.span>
+                </h1>
 
-          {/* Main Title with Letter Animation */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-medium text-cream-50 mb-2 md:mb-4 overflow-hidden leading-tight">
-            <AnimatedText text={t('hero.title1')} />
-          </h1>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-medium text-cream-50 mb-6 md:mb-10 overflow-hidden leading-tight">
-            <motion.span
-              initial={{ opacity: 0, y: 80 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 1, ease: [0.25, 0.4, 0.25, 1] }}
-              className="italic inline-block"
-            >
-              {t('hero.title2')}
-            </motion.span>
-          </h1>
-
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2, duration: 0.8 }}
-            className="text-base sm:text-lg md:text-xl text-cream-200 max-w-xs sm:max-w-md md:max-w-2xl mx-auto mb-8 md:mb-14 leading-relaxed px-4"
-          >
-            {t('hero.subtitle')}
-          </motion.p>
+                {/* Subtitle - same color & type as NADARA / Le Rituel Beauté Au Naturel */}
+                <motion.p
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.2, duration: 0.8 }}
+                  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-medium text-cream-50 max-w-lg sm:max-w-xl md:max-w-2xl mx-auto mb-8 md:mb-14 leading-relaxed px-4 italic"
+                >
+                  {t('hero.subtitle')}
+                </motion.p>
+              </motion.div>
+            ) : (
+              <motion.div
+                key="hero-serum"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="mb-8 md:mb-14 pt-40 sm:pt-48 md:pt-0"
+              >
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-medium text-cream-50 leading-tight mb-2 md:mb-4">
+                  {t('hero.serumTitle1')}
+                </h1>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-medium text-cream-50 leading-tight max-w-4xl mx-auto italic">
+                  {t('hero.serumTitle2')}
+                </h1>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
           {/* CTA Buttons */}
           <motion.div

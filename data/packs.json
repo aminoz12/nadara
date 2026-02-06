@@ -1,17 +1,17 @@
 [
   {
     "id": 1,
-    "name": "Pack Essentiel Cheveux",
+    "name": "Coffret - Rituel Beauté Cheveux",
     "slug": "pack-essentiel-cheveux",
     "price": 129,
     "images": [
       "/pack1.jpeg"
     ],
-    "shortDescription": "Shampoing solide + leave in. Le duo parfait pour des cheveux nourris et brillants au quotidien.",
+    "shortDescription": "1 Shampoing solide au choix + Leave-in",
     "category": "Pack",
     "items": [
       "1 Shampoing solide au choix",
-      "Leave-in Coconut"
+      "Leave-in"
     ],
     "benefits": [
       "Duo essentiel pour cheveux nourris",
@@ -20,7 +20,7 @@
       "Économique et pratique",
       "100% naturel"
     ],
-    "ingredients": "Shampoing: Tensioactif SCI, Aqua, Huiles essentielles. Leave-in: Huile de coco vierge, Vitamine E",
+    "ingredients": "Shampoings Solides: Tensioactif SCI, Aqua, Huiles essentielles. Leave-in: Huile de coco vierge, Vitamine E",
     "popular": true,
     "usageInstructions": [
       "Utiliser le shampoing solide 2-3 fois par semaine",
@@ -60,81 +60,81 @@
   },
   {
     "id": 3,
-    "name": "Pack Routine Cheveux",
+    "name": "Coffret - Rituel Purifiant",
     "slug": "pack-routine-cheveux",
     "price": 245,
     "images": [
       "/PACK3.jpg"
     ],
-    "shortDescription": "Savon + 2 shampoings solides + leave in coconut. La routine capillaire complète pour des cheveux sains et sublimes.",
+    "shortDescription": "Savon au choix + 2 Shampoings solides au choix + Leave-in",
     "category": "Pack",
     "items": [
       "1 Savon au choix",
-      "2 Shampoings solides",
-      "Leave-in Coconut"
+      "2 Shampoings solides au choix",
+      "Leave-in"
     ],
     "benefits": [
       "Routine capillaire complète",
-      "Savon artisanal pour le corps",
+      "Savons à froid artisanal pour le corps",
       "2 shampoings pour alterner selon vos besoins",
       "Leave-in hydratant",
       "Économie de plus de 30%"
     ],
-    "ingredients": "Savon: Huiles végétales, Beurre de karité. Shampoings: Tensioactif SCI, Huiles essentielles. Leave-in: Huile de coco vierge",
+    "ingredients": "Savons à froid: Huiles végétales, Beurre de karité. Shampoings: Tensioactif SCI, Huiles essentielles. Leave-in: Huile de coco vierge",
     "popular": true,
     "usageInstructions": [
-      "Utiliser le savon pour le corps quotidiennement",
+      "Utiliser le Savons à froid pour le corps quotidiennement",
       "Alterner les shampoings selon l'état de vos cheveux",
       "Appliquer le leave-in sur les longueurs et pointes"
     ]
   },
   {
     "id": 4,
-    "name": "Pack Découverte Savons",
-    "slug": "pack-decouverte-savons",
+    "name": "Coffret - Savons Précieux",
+    "slug": "pack-decouverte-Savons à froids",
     "price": 199,
     "images": [
       "/PACK4.jpg"
     ],
-    "shortDescription": "4 types de savons artisanaux. Découvrez notre gamme complète de savons saponifiés à froid.",
+    "shortDescription": "4 Savons au choix",
     "category": "Pack",
     "items": [
-      "Savon Charbon Actif",
-      "Savon Miel & Avoine",
-      "Savon Nigelle & Argile",
-      "Savon Café"
+      "Savon à froid Charbon Actif",
+      "Savon à froid Miel & Avoine",
+      "Savon à froid Nigelle & Argile",
+      "Savon à froid Café"
     ],
     "benefits": [
-      "4 savons artisanaux différents",
+      "4 Savons à froids artisanaux différents",
       "Saponification à froid",
       "Sans colorant, sans conservateur",
       "Sans huile de palme",
-      "Idéal pour découvrir nos savons"
+      "Idéal pour découvrir nos Savons à froids"
     ],
     "ingredients": "Huile d'olive, Huile colza, Beurre de karité, Huile de coco, Huile ricin, actifs naturels variés (Charbon, Miel, Avoine, Nigelle, Argile, Café)",
     "popular": true,
     "usageInstructions": [
       "Conserver à l'abri de la lumière et de l'humidité",
       "Faire sécher après chaque utilisation",
-      "Utiliser sur visage et corps selon le type de savon"
+      "Utiliser sur visage et corps selon le type de Savons à froid"
     ]
   },
   {
     "id": 5,
-    "name": "Pack Complet Visage",
+    "name": "Coffret - Rituel de Bien-Être",
     "slug": "pack-complet-visage",
     "price": 329,
     "images": [
       "/PACK5.jpg"
     ],
-    "shortDescription": "Savon + shampoing + leave in + sérum + eau de rose gratuit. Notre pack le plus complet pour une routine beauté intégrale.",
+    "shortDescription": "Savon au choix + Shampoing solide au choix + Leave-in + Sérum + Eau de rose offert",
     "category": "Pack",
     "items": [
       "1 Savon au choix",
-      "1 Shampoing solide",
-      "Leave-in Coconut",
+      "1 Shampoing solide au choix",
+      "Leave-in",
       "Sérum Acide Hyaluronique & Collagène",
-      "Eau de Rose OFFERT"
+      "Eau de Rose offert"
     ],
     "benefits": [
       "Pack le plus complet",
@@ -143,12 +143,12 @@
       "Eau de rose OFFERTE",
       "Économie exceptionnelle"
     ],
-    "ingredients": "Savon et shampoing artisanaux, Sérum à l'acide hyaluronique et collagène, Leave-in à l'huile de coco, Eau florale de rose 100% pure",
+    "ingredients": "Savons à froid et shampoings solides artisanaux, Sérum à l'acide hyaluronique et collagène, Leave-in à l'huile de coco, Eau florale de rose 100% pure",
     "popular": true,
     "usageInstructions": [
-      "Nettoyer le visage avec le savon matin et soir",
+      "Nettoyer le visage avec le Savons à froid matin et soir",
       "Appliquer le sérum après le nettoyage",
-      "Utiliser le shampoing et leave-in pour les cheveux",
+      "Utiliser le shampoing solide et leave-in pour les cheveux",
       "Tonifier avec l'eau de rose"
     ]
   }

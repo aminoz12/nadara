@@ -51,7 +51,7 @@ export default function HomePage({
         products={popularProducts}
       />
       
-      {/* 4. Découvrir Nos Packs */}
+      {/* 4. Découvrir Plusieurs Produits Nadara En Un Seul Coffret */}
       <Packs />
       
       {/* 5. Ingredients & Benefits */}

@@ -13,9 +13,9 @@ export default function Footer() {
   const footerLinks = {
     shop: [
       { label: t('footer.allProducts'), href: '/products' },
-      { label: 'Savon', href: '/products?category=Savon' },
-      { label: 'Shampoing', href: '/products?category=Shampoing' },
-      { label: 'Crème', href: '/products?category=Crème' },
+      { label: 'Savons à froid', href: '/products?category=Savons à froid' },
+      { label: 'Shampoings Solides', href: '/products?category=Shampoings Solides' },
+      { label: 'Crèmes', href: '/products?category=Crèmes' },
       { label: 'Poudre', href: '/products?category=Poudre' },
       { label: 'Sérum', href: '/products?category=Sérum' },
     ],

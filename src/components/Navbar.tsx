@@ -293,16 +293,6 @@ export default function Navbar() {
                   </ul>
                 </nav>
 
-                <motion.div 
-                  className="py-8 border-t border-beige-200"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.5 }}
-                >
-                  <p className="text-sm text-charcoal-500 font-sans mb-4">
-                    {t('hero.tagline')}
-                  </p>
-                </motion.div>
               </div>
             </motion.div>
           </motion.div>

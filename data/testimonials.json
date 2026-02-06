@@ -3,9 +3,9 @@
     "id": 1,
     "name": "Amira Hassan",
     "location": "Casablanca, Maroc",
-    "text": "Le savon au charbon actif a complètement transformé ma peau. Après des années à essayer différentes marques, j'ai enfin trouvé quelque chose qui fonctionne vraiment. Ma peau est purifiée et lumineuse comme jamais.",
+    "text": "Le Savons à froid au charbon actif a complètement transformé ma peau. Après des années à essayer différentes marques, j'ai enfin trouvé quelque chose qui fonctionne vraiment. Ma peau est purifiée et lumineuse comme jamais.",
     "rating": 5,
-    "product": "Savon Charbon Actif",
+    "product": "Savons à froid Charbon Actif",
     "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&q=80"
   },
   {
@@ -14,7 +14,7 @@
     "location": "Paris, France",
     "text": "J'ai découvert ces produits et je ne reviens plus en arrière. Le shampoing solide fortifiant est devenu un essentiel de ma routine capillaire. Mes cheveux sont plus forts et brillants. Du pur bonheur !",
     "rating": 5,
-    "product": "Shampoing Fortifiant",
+    "product": "Shampoings Solides solide Fortifiant",
     "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&q=80"
   },
   {
@@ -30,9 +30,9 @@
     "id": 4,
     "name": "Karim El Idrissi",
     "location": "Marrakech, Maroc",
-    "text": "Enfin une marque qui comprend la qualité des ingrédients naturels. Le Pack Découverte Savons était parfait pour tester la gamme. Le savon au café est exceptionnel - un parfum naturel et des résultats incroyables !",
+    "text": "Enfin une marque qui comprend la qualité des ingrédients naturels. Le Pack Savons Précieux à froids était parfait pour tester la gamme. Le Savons à froid au café est exceptionnel - un parfum naturel et des résultats incroyables !",
     "rating": 5,
-    "product": "Pack Découverte Savons",
+    "product": "Pack Découverte Savons à froids",
     "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80"
   },
   {

@@ -1,23 +1,23 @@
 [
   {
     "id": 1,
-    "name": "Savon",
-    "slug": "savon",
-    "description": "Savons naturels artisanaux aux extraits botaniques",
-    "image": "/savon.png"
+    "name": "Savons à froid",
+    "slug": "Savons à froid",
+    "description": "Savons saponifiés à froid aux extraits botaniques",
+    "image": "/Savon.png"
   },
   {
     "id": 2,
-    "name": "Shampoing",
+    "name": "Shampoings Solides",
     "slug": "shampoing",
     "description": "Shampoings naturels pour cheveux sains et brillants",
     "image": "/shampoocat.png"
   },
   {
     "id": 3,
-    "name": "Crème",
+    "name": "Crèmes",
     "slug": "creme",
-    "description": "Crèmes hydratantes riches pour une nutrition profonde",
+    "description": "Crèmes (corps et cheveux) riches en huiles et actifs.",
     "image": "/creme.png"
   },
   {

@@ -8,15 +8,17 @@
   },
   "hero": {
     "tagline": "Enraciné dans la Nature, Créé avec Soin",
-    "title1": "Beauté Ancienne",
-    "title2": "Réimaginée",
-    "subtitle": "Découvrez le pouvoir transformateur des botaniques marocaines. Rituels de soin purs, puissants et précieux.",
+    "title1": "NADARA",
+    "title2": "Le Rituel Beauté Au Naturel",
+    "subtitle": "Chaque produit, fait main avec amour pour prendre soin de vous",
+    "serumTitle1": "Nadara",
+    "serumTitle2": "l'alliance parfaite du collagène & de l'acide hyaluronique",
     "explore": "Explorer la Collection",
     "story": "Notre Histoire"
   },
   "categories": {
     "title": "Catégories de Produits",
-    "subtitle": "Sélectionnés pour Votre Rituel",
+    "subtitle": "Nos Collections",
     "explore": "Explorer"
   },
   "products": {
@@ -113,9 +115,9 @@
     "company": "Entreprise",
     "support": "Support",
     "allProducts": "Tous les Produits",
-    "soaps": "Savons",
+    "soaps": "Savons à froids",
     "oils": "Huiles",
-    "creams": "Crèmes",
+    "creams": "Crèmess",
     "hairCare": "Soins Capillaires",
     "ourStory": "Notre Histoire",
     "ingredients": "Ingrédients",

@@ -49,7 +49,7 @@ const ingredients = [
   {
     name: 'Reetha',
     origin: 'Inde',
-    description: 'Fruit du savonnier, naturellement moussant. Nettoie en douceur les cheveux, les rend brillants et soyeux sans agresser.',
+    description: 'Fruit du Savons à froidnier, naturellement moussant. Nettoie en douceur les cheveux, les rend brillants et soyeux sans agresser.',
     advantages: [
       'Nettoyant naturel',
       'Mousse douce et abondante',

@@ -10,7 +10,7 @@ export default function ProductionProcess() {
     {
       title: 'Hydratation Quotidienne',
       subtitle: 'Le secret d\'une peau éclatante',
-      description: 'Une peau bien hydratée est la base d\'un teint lumineux. Appliquez votre crème hydratante sur peau légèrement humide pour maximiser l\'absorption. Nos sérums à base d\'huiles végétales naturelles pénètrent en profondeur pour nourrir votre peau de l\'intérieur.',
+      description: 'Une peau bien hydratée est la base d\'un teint lumineux. Appliquez votre Crèmes hydratante sur peau légèrement humide pour maximiser l\'absorption. Nos sérums à base d\'huiles végétales naturelles pénètrent en profondeur pour nourrir votre peau de l\'intérieur.',
       tip: '💡 Astuce : Buvez au moins 2L d\'eau par jour ',
       image: '/blog1.png',
       accent: '#7C9A6B',
@@ -19,11 +19,11 @@ export default function ProductionProcess() {
     {
       title: 'Routine du Soir',
       subtitle: 'Réparez pendant la nuit',
-      description: 'La nuit, votre peau se régénère naturellement. Nettoyez toujours votre visage avant de dormir pour éliminer impuretés et maquillage. Nos savons artisanaux SAF respectent le film hydrolipidique tout en purifiant en douceur.',
+      description: 'La nuit, votre peau se régénère naturellement. Nettoyez toujours votre visage avant de dormir pour éliminer impuretés et maquillage. Nos Savons à froids artisanaux SAF respectent le film hydrolipidique tout en purifiant en douceur.',
       tip: '💡 Astuce : Changez votre taie d\'oreiller régulièrement',
       image: '/blog2.png',
       accent: '#9B7B5E',
-      link: '/products?category=Savon',
+      link: '/products?category=Savons à froid',
     },
     {
       title: 'Protection Naturelle',

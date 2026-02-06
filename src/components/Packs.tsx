@@ -2,18 +2,20 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { Gift } from 'lucide-react';
 import { fadeInUp, staggerContainer } from './variants';
 
 const packs = [
   {
     id: 1,
-    name: 'Pack Essentiel Cheveux',
+    name: 'Coffret - Rituel Beauté',
+    nameLine2: 'Cheveux',
     slug: 'pack-essentiel-cheveux',
-    description: 'Shampoing solide + leave in',
+    description: '1 Shampoing solide au choix + Leave-in',
     price: 129,
     items: [
       '1 Shampoing solide au choix',
-      'Leave-in Coconut'
+      'Leave-in'
     ],
     image: '/pack1.jpeg'
   },
@@ -22,6 +24,7 @@ const packs = [
     name: 'Pack Soin Profond',
     slug: 'pack-soin-profond',
     description: 'Baume + sérum + eau de rose gratuit',
+    showGiftIcon: true,
     price: 145,
     items: [
       '1 Baume capillaire',
@@ -32,43 +35,43 @@ const packs = [
   },
   {
     id: 3,
-    name: 'Pack Routine Cheveux',
+    name: 'Coffret - Rituel',
+    nameLine2: 'Purifiant',
     slug: 'pack-routine-cheveux',
-    description: 'Savon + 2 shampoings solides + leave in coconut',
+    description: 'Savon au choix + 2 Shampoings solides au choix + Leave-in',
     price: 245,
     items: [
       '1 Savon au choix',
-      '2 Shampoings solides',
-      'Leave-in Coconut'
+      '2 Shampoings solides au choix',
+      'Leave-in'
     ],
     image: '/PACK3.jpg'
   },
   {
     id: 4,
-    name: 'Pack Découverte Savons',
-    slug: 'pack-decouverte-savons',
-    description: '4 types de savons artisanaux',
+    name: 'Coffret - Savons',
+    nameLine2: 'Précieux',
+    slug: 'pack-decouverte-Savons à froids',
+    description: '4 Savons au choix',
     price: 199,
     items: [
-      'Savon Charbon Actif',
-      'Savon Miel & Avoine', 
-      'Savon Nigelle & Argile',
-      'Savon Café'
+      '4 Savons au choix'
     ],
     image: '/PACK4.jpg'
   },
   {
     id: 5,
-    name: 'Pack Complet Visage',
+    name: 'Coffret - Rituel de Bien-Être',
     slug: 'pack-complet-visage',
-    description: 'Savon + shampoing + leave in + sérum + eau de rose gratuit',
+    description: 'Savon au choix + Shampoing solide au choix + Leave-in + Sérum + Eau de rose offert',
+    showGiftIcon: true,
     price: 329,
     items: [
       '1 Savon au choix',
-      '1 Shampoing solide',
-      'Leave-in Coconut',
+      '1 Shampoing solide au choix',
+      'Leave-in',
       'Sérum Acide Hyaluronique & Collagène',
-      'Eau de Rose OFFERT'
+      'Eau de Rose offert'
     ],
     image: '/PACK5.jpg'
   }
@@ -102,7 +105,7 @@ export default function Packs() {
             variants={fadeInUp}
             className="text-sm md:text-base lg:text-lg text-charcoal-600 max-w-xs sm:max-w-md md:max-w-2xl mx-auto"
           >
-            Des combinaisons parfaites pour prendre soin de vous avec des produits naturels et efficaces
+            Idéal pour offrir ou se faire plaisir
           </motion.p>
         </motion.div>
 
@@ -112,7 +115,7 @@ export default function Packs() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={staggerContainer}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-8"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-8 items-stretch"
         >
           {packs.map((pack, index) => (
             <motion.div
@@ -154,49 +157,49 @@ export default function Packs() {
                 </motion.div>
               </div>
 
-              {/* Pack Text Content */}
-              <div className="text-center flex-1 flex flex-col">
+              {/* Pack Text Content - flex-1 + min-h-0 so button row aligns across cards */}
+              <div className="text-center flex-1 flex flex-col min-h-0">
                 <motion.h3
                   className="font-serif text-lg md:text-xl text-charcoal-900 mb-2"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.2 }}
                 >
                   {pack.name}
+                  {'nameLine2' in pack && pack.nameLine2 && (
+                    <>
+                      <br />
+                      {pack.nameLine2}
+                    </>
+                  )}
                 </motion.h3>
                 <motion.p
-                  className="text-sm text-charcoal-600 mb-2 font-sans"
+                  className="text-sm text-charcoal-600 mb-2 font-sans flex items-center justify-center gap-1.5 flex-wrap"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.1 }}
                 >
                   {pack.description}
+                  {'showGiftIcon' in pack && pack.showGiftIcon && (
+                    <span className="inline-flex" aria-hidden><Gift className="w-4 h-4 text-olive-600 flex-shrink-0" /></span>
+                  )}
                 </motion.p>
                 
-                {/* Price */}
-                <p className="text-xl font-price text-olive-700 font-bold mb-3">
-                  {pack.price} MAD
-                </p>
-                
-                {/* Items List */}
-                <ul className="space-y-1 mb-4 flex-1">
-                  {pack.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="text-xs text-charcoal-500 font-sans">
-                      • {item}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* CTA Button */}
-                <Link href={`/packs/${pack.slug}`}>
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full py-2 px-3 bg-olive-600 text-white font-sans text-xs font-medium rounded-lg hover:bg-olive-700 transition-colors duration-300 mt-auto"
-                  >
-                    Choisir ce pack
-                  </motion.button>
-                </Link>
+                {/* Price + CTA - same line across all cards (mt-auto on wrapper) */}
+                <div className="mt-auto pt-2">
+                  <p className="text-xl font-price text-olive-700 font-bold mb-3">
+                    {pack.price} MAD
+                  </p>
+                  <Link href={`/packs/${pack.slug}`} className="block w-full">
+                    <motion.button
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="w-full py-2 px-3 bg-olive-600 text-white font-sans text-xs font-medium rounded-lg hover:bg-olive-700 transition-colors duration-300 whitespace-nowrap"
+                    >
+                      Choisir Ce Coffret
+                    </motion.button>
+                  </Link>
+                </div>
               </div>
             </motion.div>
           ))}

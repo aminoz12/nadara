@@ -18,7 +18,7 @@ export default function PacksPage({ packs }: PacksPageProps) {
         <title>Nos Packs | Nadara</title>
         <meta
           name="description"
-          content="Découvrez nos packs économiques - des combinaisons parfaites de produits naturels pour prendre soin de vous."
+          content="Découvrir Plusieurs Produits Nadara En Un Seul Coffret. Idéal pour offrir ou se faire plaisir."
         />
       </Head>
 
@@ -48,7 +48,7 @@ export default function PacksPage({ packs }: PacksPageProps) {
               variants={fadeInUp}
               className="body-lg text-charcoal-600"
             >
-              Des combinaisons parfaites pour prendre soin de vous avec des produits naturels et efficaces. 
+              Idéal pour offrir ou se faire plaisir 
               À partir de <span className="font-bold font-price text-olive-700">129 MAD</span> !
             </motion.p>
           </motion.div>
@@ -63,17 +63,17 @@ export default function PacksPage({ packs }: PacksPageProps) {
             whileInView="visible"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch"
           >
             {packs.map((pack, index) => (
               <motion.div
                 key={pack.id}
                 variants={fadeInUp}
                 custom={index}
-                className="group"
+                className="group h-full flex flex-col"
               >
-                <Link href={`/packs/${pack.slug}`}>
-                  <div className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 h-full flex flex-col">
+                <Link href={`/packs/${pack.slug}`} className="h-full flex flex-col block">
+                  <div className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex-1 flex flex-col min-h-0">
                     {/* Image */}
                     <div className="relative aspect-square overflow-hidden">
                       <img
@@ -97,12 +97,12 @@ export default function PacksPage({ packs }: PacksPageProps) {
                       </div>
                     </div>
 
-                    {/* Content */}
-                    <div className="p-6 flex-1 flex flex-col">
+                    {/* Content - flex-1 min-h-0 so CTA block aligns at bottom */}
+                    <div className="p-6 flex-1 flex flex-col min-h-0">
                       <h2 className="font-serif text-2xl text-charcoal-900 mb-2 group-hover:text-olive-600 transition-colors">
                         {pack.name}
                       </h2>
-                      <p className="text-charcoal-600 mb-4 flex-1">
+                      <p className="text-charcoal-600 mb-4 flex-1 min-h-0">
                         {pack.shortDescription}
                       </p>
 
@@ -121,14 +121,14 @@ export default function PacksPage({ packs }: PacksPageProps) {
                         )}
                       </ul>
 
-                      {/* CTA */}
-                      <div className="flex items-center justify-between pt-4 border-t border-beige-200">
-                        <span className="font-price text-xl text-olive-700 font-bold">
+                      {/* Price & CTA - same position as homepage */}
+                      <div className="pt-4 border-t border-beige-200 mt-auto space-y-3">
+                        <p className="font-price text-xl text-olive-700 font-bold">
                           {pack.price} MAD
-                        </span>
-                        <span className="inline-flex items-center gap-2 text-olive-600 font-medium group-hover:gap-3 transition-all">
-                          Voir le pack
-                          <ArrowRight className="w-4 h-4" />
+                        </p>
+                        <span className="inline-flex items-center justify-center gap-2 w-full py-2 px-3 bg-olive-600 text-white font-sans text-xs font-medium rounded-lg hover:bg-olive-700 transition-colors duration-300 whitespace-nowrap">
+                          Choisir Ce Coffret
+                          <ArrowRight className="w-4 h-4 flex-shrink-0" />
                         </span>
                       </div>
                     </div>
