@@ -16,6 +16,7 @@ export { default as FAQ } from './FAQ';
 export { default as Stats } from './Stats';
 export { default as Packs } from './Packs';
 export { default as ScrollProgress } from './ScrollProgress';
+export { SplashScreen } from './SplashScreen';
 export { default as LanguageSwitcher } from './LanguageSwitcher';
 export { default as Cart } from './Cart';
 export { default as ProductActions } from './ProductActions';

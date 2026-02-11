@@ -25,12 +25,6 @@ export default function Collections({ collections }: CollectionsProps) {
           variants={staggerContainer}
           className="text-center mb-10 md:mb-16"
         >
-          <motion.span
-            variants={fadeInUp}
-            className="text-xs md:text-sm font-sans tracking-[0.2em] md:tracking-[0.3em] uppercase text-olive-600 mb-3 md:mb-4 block"
-          >
-            {t('categories.title')}
-          </motion.span>
           <motion.h2
             variants={fadeInUp}
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-charcoal-900"

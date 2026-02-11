@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
 
 const letterAnimation = {
@@ -57,7 +58,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -120,6 +121,32 @@ export default function Hero() {
         ))}
       </div>
 
+      {/* Hero image navigation */}
+      <div className="absolute inset-y-0 left-0 z-20 flex items-center justify-start px-2 sm:px-4">
+        <motion.button
+          type="button"
+          aria-label="Image précédente"
+          onClick={() => setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length)}
+          className="flex h-12 w-12 items-center justify-center rounded-full bg-black/30 text-cream-50 backdrop-blur-sm transition hover:bg-black/50 focus:outline-none focus:ring-2 focus:ring-cream-50/50"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <ChevronLeft className="h-7 w-7" />
+        </motion.button>
+      </div>
+      <div className="absolute inset-y-0 right-0 z-20 flex items-center justify-end px-2 sm:px-4">
+        <motion.button
+          type="button"
+          aria-label="Image suivante"
+          onClick={() => setCurrentImageIndex((prev) => (prev + 1) % images.length)}
+          className="flex h-12 w-12 items-center justify-center rounded-full bg-black/30 text-cream-50 backdrop-blur-sm transition hover:bg-black/50 focus:outline-none focus:ring-2 focus:ring-cream-50/50"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <ChevronRight className="h-7 w-7" />
+        </motion.button>
+      </div>
+
       {/* Decorative Blobs - Hidden on serum slide so second picture stays clear */}
       {currentImageIndex === 0 && (
         <>
@@ -154,7 +181,7 @@ export default function Hero() {
 
       {/* Content - first slide: pushed down on mobile; second slide: pushed down more on mobile only */}
       <motion.div
-        className="relative z-10 container-custom text-center px-4 sm:px-6 pt-56 sm:pt-64 md:pt-0"
+        className="relative z-10 container-custom text-center px-4 sm:px-6 pt-[28rem] sm:pt-[32rem] md:pt-0"
         style={{ opacity, y: textY }}
       >
         <motion.div className="max-w-5xl mx-auto">
@@ -169,10 +196,10 @@ export default function Hero() {
                 className="contents"
               >
                 {/* Main Title with Letter Animation */}
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-medium text-cream-50 mb-2 md:mb-4 overflow-hidden leading-tight">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-medium mb-2 md:mb-4 overflow-hidden leading-tight" style={{ color: '#0d7133' }}>
                   <AnimatedText text={t('hero.title1')} />
                 </h1>
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-medium text-cream-50 mb-6 md:mb-10 overflow-hidden leading-tight">
+                <h1 className="text-lg sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-medium mb-8 md:mb-14 overflow-hidden leading-tight whitespace-nowrap sm:whitespace-normal" style={{ color: '#0d7133' }}>
                   <motion.span
                     initial={{ opacity: 0, y: 80 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -182,16 +209,6 @@ export default function Hero() {
                     {t('hero.title2')}
                   </motion.span>
                 </h1>
-
-                {/* Subtitle - same color & type as NADARA / Le Rituel Beauté Au Naturel */}
-                <motion.p
-                  initial={{ opacity: 0, y: 40 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1.2, duration: 0.8 }}
-                  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-medium text-cream-50 max-w-lg sm:max-w-xl md:max-w-2xl mx-auto mb-8 md:mb-14 leading-relaxed px-4 italic"
-                >
-                  {t('hero.subtitle')}
-                </motion.p>
               </motion.div>
             ) : (
               <motion.div
@@ -200,7 +217,7 @@ export default function Hero() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="mb-8 md:mb-14 pt-40 sm:pt-48 md:pt-0"
+                className="mb-8 md:mb-14 pt-[20rem] sm:pt-96 md:pt-0"
               >
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-medium text-cream-50 leading-tight mb-2 md:mb-4">
                   {t('hero.serumTitle1')}

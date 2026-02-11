@@ -8,31 +8,31 @@ import { fadeInUp, staggerContainer } from './variants';
 export default function ProductionProcess() {
   const skincareTips = [
     {
-      title: 'Hydratation Quotidienne',
-      subtitle: 'Le secret d\'une peau éclatante',
-      description: 'Une peau bien hydratée est la base d\'un teint lumineux. Appliquez votre Crèmes hydratante sur peau légèrement humide pour maximiser l\'absorption. Nos sérums à base d\'huiles végétales naturelles pénètrent en profondeur pour nourrir votre peau de l\'intérieur.',
-      tip: '💡 Astuce : Buvez au moins 2L d\'eau par jour ',
+      title: 'Routine Quotidienne',
+      subtitle: 'Les 4 étapes essentielles',
+      description: '🧼 1. Nettoyage\nUtilisez un nettoyant doux (par exemple : savon naturel de la gamme Nadara) pour débarrasser la peau des impuretés sans l\'assécher.\n\n💦 2. Tonique\nUtilisez l\'eau de rose Nadara, un tonique naturel, pour rééquilibrer le pH et resserrer les pores.\n\n💧 3. Hydratation\nAppliquez le sérum hydratant, anti-âge Nadara sur peau humide, il est adapté à tout type de peau.\n\n☀️ 4. Protection solaire\nToujours finir avec une crème solaire si tu sors (tu peux utiliser un produit naturel si disponible).',
+      tip: '💡 Ordre idéal : Nettoyage → Tonique → Hydratation → Protection',
       image: '/blog1.png',
       accent: '#7C9A6B',
       link: '/products/serum-collagene-acide-hyaluronique-b5',
     },
     {
-      title: 'Routine du Soir',
-      subtitle: 'Réparez pendant la nuit',
-      description: 'La nuit, votre peau se régénère naturellement. Nettoyez toujours votre visage avant de dormir pour éliminer impuretés et maquillage. Nos Savons à froids artisanaux SAF respectent le film hydrolipidique tout en purifiant en douceur.',
-      tip: '💡 Astuce : Changez votre taie d\'oreiller régulièrement',
+      title: 'Routine Cheveux',
+      subtitle: 'Soins naturels en 3 étapes',
+      description: '👉 1. Avant-shampoing (pré-traitement)\nMasque ou huile naturelle.\n→ Appliquez sur cheveux secs ou légèrement humides, surtout aux longueurs & pointes\n→ Temps de pose : 30 min à 2 h.\n\n👉 2. Shampooing naturel\nShampoing solide Nadara\n→ Massez doucement le cuir chevelu\n→ Rincez abondamment à l\'eau tiède.\n\n👉 3. Après-shampoing / soin sans rinçage\nObjectif : démêler, hydrater, protéger.\n\nAprès-shampoing naturel Nadara\n→ Appliquez surtout sur longueurs',
+      tip: '💡 Astuce : Appliquez l\'après-shampoing surtout sur les longueurs et pointes',
       image: '/blog2.png',
       accent: '#9B7B5E',
-      link: '/products?category=Savons à froid',
+      link: '/products?category=Shampoings Solides',
     },
     {
-      title: 'Protection Naturelle',
-      subtitle: 'Préservez votre capital jeunesse',
-      description: 'Protégez votre peau des agressions extérieures avec des soins riches en antioxydants. Nos formules à base d\'ingrédients bio créent une barrière protectrice tout en nourrissant intensément votre épiderme jour après jour.',
-      tip: '💡 Astuce : Évitez l\'eau trop chaude sur le visage',
+      title: 'Routine purifiante',
+      subtitle: 'Soins purifiants 1–2× / semaine',
+      description: 'Masque purifiant Nadara poudre\n1 cuillère à café de poudre exfoliante Nadara\n1 cuillère à soupe de miel et/ou Yarout\n\n📝 Préparation\nMélangez tous les ingrédients dans un petit bol.\nObtienez une texture crémeuse, pas trop épaisse\n\n🧖‍♀️ Application\nSur visage propre et légèrement humide.\nMassez très doucement en mouvements circulaires (1 minute max).\nLaissez poser 15 minutes\nRincez à l\'eau tiède.',
+      tip: '💡 Astuce : Évitez l\'eau trop chaude pour le rinçage',
       image: '/blog3.png',
       accent: '#C4A77D',
-      link: '/products/poudre-eclaircissante',
+      link: '/products?category=Poudre',
     },
   ];
 
@@ -123,7 +123,7 @@ export default function ProductionProcess() {
                 <h3 className="font-serif text-xl md:text-2xl text-[#2C3E2D] mb-3 group-hover:text-[#7C9A6B] transition-colors duration-300">
                   {tip.title}
                 </h3>
-                <p className="text-sm md:text-base text-[#6B7B6D] leading-relaxed mb-4">
+                <p className="text-sm md:text-base text-[#6B7B6D] leading-relaxed mb-4 whitespace-pre-line">
                   {tip.description}
                 </p>
                 

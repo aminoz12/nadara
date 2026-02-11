@@ -2,7 +2,7 @@ import type { AppProps } from 'next/app';
 import { IntlProvider } from 'next-intl';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import { Layout } from '@/components';
+import { Layout, SplashScreen } from '@/components';
 import { CartProvider } from '@/contexts/CartContext';
 import '@/styles/globals.css';
 
@@ -22,6 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <IntlProvider messages={messages} locale={locale}>
       <CartProvider>
+        <SplashScreen />
         <Layout>
           <Component {...pageProps} />
         </Layout>
