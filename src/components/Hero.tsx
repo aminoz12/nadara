@@ -236,7 +236,7 @@ export default function Hero() {
             transition={{ delay: 1.5, duration: 0.8 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5"
           >
-            <Link href="/products" className="w-full sm:w-auto">
+            <Link href="/products/" className="w-full sm:w-auto">
               <motion.button
                 className="group relative w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 bg-cream-50 text-charcoal-900 font-sans font-medium text-sm tracking-wide uppercase overflow-hidden rounded-sm"
                 whileHover={{ scale: 1.02 }}
@@ -248,7 +248,7 @@ export default function Hero() {
                 </span>
               </motion.button>
             </Link>
-            <Link href="/about" className="w-full sm:w-auto">
+            <Link href="/about/" className="w-full sm:w-auto">
               <motion.button
                 className="group relative w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 border-2 border-cream-50 text-cream-50 font-sans font-medium text-sm tracking-wide uppercase overflow-hidden rounded-sm"
                 whileHover={{ scale: 1.02 }}

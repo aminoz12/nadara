@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { GetStaticProps } from 'next';
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { AnimatedProductCard, Filters } from '@/components';
 import { fadeInUp, staggerContainer } from '@/components/variants';
@@ -14,6 +15,7 @@ interface ProductsPageProps {
 }
 
 export default function ProductsPage({ products, categories }: ProductsPageProps) {
+  const t = useTranslations();
   const router = useRouter();
   const { category: queryCategory } = router.query;
 
@@ -68,15 +70,15 @@ export default function ProductsPage({ products, categories }: ProductsPageProps
   return (
     <>
       <Head>
-        <title>Shop All Products | Nadara</title>
+        <title>{t('productsPage.title')} | Nadara</title>
         <meta
           name="description"
-          content="Explore our collection of premium Moroccan skincare products. Natural oils, serums, and beauty essentials."
+          content={t('productsPage.description')}
         />
       </Head>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-cream-100">
+      <section className="pt-32 pb-6 md:pt-40 md:pb-8 bg-cream-100">
         <div className="container-custom">
           <motion.div
             initial="hidden"
@@ -86,29 +88,28 @@ export default function ProductsPage({ products, categories }: ProductsPageProps
           >
             <motion.span
               variants={fadeInUp}
-              className="text-sm font-sans tracking-[0.3em] uppercase text-olive-600 mb-4 block"
+              className="text-sm font-sans tracking-[0.3em] uppercase text-olive-600 mb-3 block"
             >
-              Our Collection
+              {t('productsPage.subtitle')}
             </motion.span>
             <motion.h1
               variants={fadeInUp}
-              className="heading-xl text-charcoal-900 mb-6"
+              className="heading-xl text-charcoal-900 mb-3"
             >
-              Shop <span className="italic">All Products</span>
+              {t('productsPage.title')}
             </motion.h1>
             <motion.p
               variants={fadeInUp}
               className="body-lg text-charcoal-600"
             >
-              Discover our carefully curated selection of premium skincare,
-              crafted from the finest Moroccan botanicals.
+              {t('productsPage.description')}
             </motion.p>
           </motion.div>
         </div>
       </section>
 
       {/* Products Section */}
-      <section className="section-padding bg-cream-50">
+      <section className="pt-8 pb-12 sm:pt-10 sm:pb-16 md:pt-12 md:pb-24 lg:pb-32 bg-cream-50">
         <div className="container-custom">
           <Filters
             categories={categories}
@@ -128,8 +129,8 @@ export default function ProductsPage({ products, categories }: ProductsPageProps
             animate={{ opacity: 1 }}
             className="text-sm text-charcoal-500 font-sans mt-8 mb-8"
           >
-            Showing {filteredProducts.length} product
-            {filteredProducts.length !== 1 ? 's' : ''}
+            {t('products.showing')} {filteredProducts.length}{' '}
+            {filteredProducts.length === 1 ? t('products.product') : t('products.products')}
           </motion.p>
 
           {/* Products Grid */}
@@ -155,10 +156,10 @@ export default function ProductsPage({ products, categories }: ProductsPageProps
               className="text-center py-20"
             >
               <p className="text-xl font-serif text-charcoal-600 mb-4">
-                No products found
+                {t('products.noProducts')}
               </p>
               <p className="text-charcoal-500">
-                Try adjusting your filters to find what you&apos;re looking for.
+                {t('products.adjustFilters')}
               </p>
             </motion.div>
           )}

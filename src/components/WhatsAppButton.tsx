@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 interface WhatsAppButtonProps {
   productName?: string;
@@ -14,6 +15,7 @@ export default function WhatsAppButton({
   className = '',
   variant = 'primary',
 }: WhatsAppButtonProps) {
+  const t = useTranslations('cart');
   const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '1234567890';
   
   const message = productName
@@ -91,7 +93,7 @@ export default function WhatsAppButton({
         height={20}
         className="w-5 h-5 object-contain"
       />
-      <span>Order via WhatsApp</span>
+      <span>{t('checkout')}</span>
     </motion.a>
   );
 }

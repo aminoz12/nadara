@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { ChevronDown, X, SlidersHorizontal } from 'lucide-react';
 
 interface FiltersProps {
@@ -27,21 +28,22 @@ export default function Filters({
   showPopularOnly,
   setShowPopularOnly,
 }: FiltersProps) {
+  const t = useTranslations();
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   const sortOptions = [
-    { value: 'default', label: 'Featured' },
-    { value: 'price-low', label: 'Price: Low to High' },
-    { value: 'price-high', label: 'Price: High to Low' },
-    { value: 'name', label: 'Alphabetical' },
+    { value: 'default', label: t('filters.featured') },
+    { value: 'price-low', label: t('filters.priceLow') },
+    { value: 'price-high', label: t('filters.priceHigh') },
+    { value: 'name', label: t('filters.alphabetical') },
   ];
 
   const priceRanges = [
-    { value: [0, 200] as [number, number], label: 'All Prices' },
-    { value: [0, 50] as [number, number], label: 'Under 50 MAD' },
-    { value: [50, 100] as [number, number], label: '50 - 100 MAD' },
-    { value: [100, 200] as [number, number], label: 'Over 100 MAD' },
+    { value: [0, 200] as [number, number], label: t('filters.allPrices') },
+    { value: [0, 50] as [number, number], label: t('filters.under50') },
+    { value: [50, 100] as [number, number], label: t('filters.50to100') },
+    { value: [100, 200] as [number, number], label: t('filters.over100') },
   ];
 
   const FilterDropdown = ({
@@ -132,7 +134,7 @@ export default function Filters({
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                {category}
+                {category === 'All' ? t('filters.all') : category}
               </motion.button>
             ))}
           </div>
@@ -146,14 +148,14 @@ export default function Filters({
               className="w-4 h-4 accent-olive-600"
             />
             <span className="text-sm font-sans text-charcoal-700">
-              Bestsellers Only
+              {t('filters.bestsellersOnly')}
             </span>
           </label>
         </div>
 
         <div className="flex items-center gap-4">
           <FilterDropdown
-            label="Price"
+            label={t('filters.price')}
             value={JSON.stringify(priceRange)}
             options={priceRanges.map((r) => ({
               value: r.value,
@@ -163,7 +165,7 @@ export default function Filters({
             id="price"
           />
           <FilterDropdown
-            label="Sort"
+            label={t('filters.sort')}
             value={sortBy}
             options={sortOptions}
             onChange={setSortBy}
@@ -177,7 +179,7 @@ export default function Filters({
               animate={{ opacity: 1, scale: 1 }}
             >
               <X className="w-4 h-4" />
-              Clear ({activeFiltersCount})
+              {t('filters.clear')} ({activeFiltersCount})
             </motion.button>
           )}
         </div>
@@ -190,7 +192,7 @@ export default function Filters({
           className="flex items-center gap-2 px-4 py-3 w-full border border-beige-200 rounded-sm"
         >
           <SlidersHorizontal className="w-5 h-5 text-charcoal-600" />
-          <span className="font-sans text-charcoal-700">Filters & Sort</span>
+          <span className="font-sans text-charcoal-700">{t('filters.filtersSort')}</span>
           {activeFiltersCount > 0 && (
             <span className="ml-auto bg-olive-600 text-white text-xs px-2 py-1 rounded-full">
               {activeFiltersCount}
@@ -216,7 +218,7 @@ export default function Filters({
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="flex items-center justify-between mb-8">
-                  <h3 className="font-serif text-xl">Filters</h3>
+                  <h3 className="font-serif text-xl">{t('filters.filtersSort')}</h3>
                   <button onClick={() => setIsMobileOpen(false)}>
                     <X className="w-6 h-6 text-charcoal-600" />
                   </button>
@@ -226,7 +228,7 @@ export default function Filters({
                   {/* Categories */}
                   <div>
                     <h4 className="font-sans text-sm tracking-wider uppercase text-charcoal-500 mb-3">
-                      Category
+                      {t('filters.category')}
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {['All', ...categories].map((category) => (
@@ -239,7 +241,7 @@ export default function Filters({
                               : 'bg-white text-charcoal-700 border border-beige-200'
                           }`}
                         >
-                          {category}
+                          {category === 'All' ? t('filters.all') : category}
                         </button>
                       ))}
                     </div>
@@ -248,7 +250,7 @@ export default function Filters({
                   {/* Price Range */}
                   <div>
                     <h4 className="font-sans text-sm tracking-wider uppercase text-charcoal-500 mb-3">
-                      Price Range
+                      {t('filters.priceRange')}
                     </h4>
                     <div className="space-y-2">
                       {priceRanges.map((range) => (
@@ -271,7 +273,7 @@ export default function Filters({
                   {/* Sort */}
                   <div>
                     <h4 className="font-sans text-sm tracking-wider uppercase text-charcoal-500 mb-3">
-                      Sort By
+                      {t('filters.sortBy')}
                     </h4>
                     <div className="space-y-2">
                       {sortOptions.map((option) => (
@@ -299,7 +301,7 @@ export default function Filters({
                       className="w-5 h-5 accent-olive-600"
                     />
                     <span className="font-sans text-charcoal-700">
-                      Show Bestsellers Only
+                      {t('filters.bestsellersOnly')}
                     </span>
                   </label>
                 </div>
@@ -310,13 +312,13 @@ export default function Filters({
                       onClick={clearFilters}
                       className="flex-1 py-3 text-sm font-sans uppercase tracking-wide border border-charcoal-300"
                     >
-                      Clear All
+                      {t('filters.clearAll')}
                     </button>
                     <button
                       onClick={() => setIsMobileOpen(false)}
                       className="flex-1 py-3 text-sm font-sans uppercase tracking-wide bg-olive-700 text-white"
                     >
-                      Apply
+                      {t('filters.apply')}
                     </button>
                   </div>
                 </div>
