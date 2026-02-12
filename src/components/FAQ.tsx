@@ -18,7 +18,7 @@ export default function FAQ() {
     {
       icon: Truck,
       question: 'Quels sont vos délais de livraison et conditions de retour ?',
-      answer: ' Nous expédions sous 24-48h. La livraison prend 2-5 jours ouvrables selon la destination. ',
+      answer: ' Nous expédions sous 24-48h. La livraison prend 24-48 heures selon la destination. ',
     },
     {
       icon: Leaf,

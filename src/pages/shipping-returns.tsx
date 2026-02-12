@@ -7,7 +7,7 @@ export default function ShippingReturnsPage() {
   return (
     <>
       <Head>
-        <title>Infos de Livraison & Retours | Nadara</title>
+        <title> Infos de Livraison | Nadara</title>
         <meta
           name="description"
           content="Informations sur la livraison et les retours de vos produits Nadara."
@@ -33,7 +33,7 @@ export default function ShippingReturnsPage() {
               variants={fadeInUp}
               className="heading-xl text-charcoal-900 mb-6"
             >
-              Infos de Livraison & <span className="italic">Retours</span>
+              Infos de Livraison
             </motion.h1>
             <motion.p variants={fadeInUp} className="body-lg text-charcoal-600">
               Tout ce que vous devez savoir sur la livraison et les retours de vos produits Nadara
@@ -77,7 +77,7 @@ export default function ShippingReturnsPage() {
                   <ul className="space-y-2 text-charcoal-600 font-sans">
                     <li className="flex items-start gap-2">
                       <span className="text-olive-600 mt-1">•</span>
-                      <span><strong>Maroc :</strong> 2-5 jours ouvrables</span>
+                      <span><strong>Maroc :</strong> 24-48 heures</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-olive-600 mt-1">•</span>
@@ -89,10 +89,15 @@ export default function ShippingReturnsPage() {
                 <div>
                   <h3 className="font-serif text-xl text-charcoal-900 mb-3 flex items-center gap-2">
                     <MapPin className="w-5 h-5 text-olive-600" />
-                    Zones de Livraison
+                    Zones et frais de Livraison
                   </h3>
+                  
                   <p className="text-charcoal-600 font-sans leading-relaxed">
-                    Nous livrons partout au Maroc et dans le monde entier. Les frais de livraison sont calculés lors de la commande selon votre localisation.
+                    Nous livrons partout au Maroc et dans le monde entier.
+                    <br />
+                    Les frais de livraison sont calculés lors de la commande selon votre localisation.
+                    <br />
+                    La Livraison est gratuite à partir de 300 MAD.
                   </p>
                 </div>
 
@@ -108,76 +113,6 @@ export default function ShippingReturnsPage() {
               </div>
             </motion.div>
 
-            {/* Returns Info */}
-            <motion.div
-              variants={fadeInUp}
-              className="bg-white p-8 md:p-12 rounded-2xl shadow-sm"
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 bg-terracotta-100 rounded-full flex items-center justify-center">
-                  <RefreshCw className="w-7 h-7 text-terracotta-600" />
-                </div>
-                <h2 className="font-serif text-3xl text-charcoal-900">
-                  Retours
-                </h2>
-              </div>
-
-              <div className="space-y-6">
-                <div>
-                  <h3 className="font-serif text-xl text-charcoal-900 mb-3 flex items-center gap-2">
-                    <ShieldCheck className="w-5 h-5 text-terracotta-600" />
-                    Politique de Retour
-                  </h3>
-                  <p className="text-charcoal-600 font-sans leading-relaxed mb-4">
-                    Nous acceptons les retours sous <strong>14 jours</strong> après réception de votre commande, à condition que :
-                  </p>
-                  <ul className="space-y-2 text-charcoal-600 font-sans mb-4">
-                    <li className="flex items-start gap-2">
-                      <span className="text-terracotta-600 mt-1">•</span>
-                      <span>Les produits sont non utilisés et dans leur emballage d'origine</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-terracotta-600 mt-1">•</span>
-                      <span>Les produits n'ont pas été ouverts ou endommagés</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-terracotta-600 mt-1">•</span>
-                      <span>La demande de retour est effectuée dans les délais</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="font-serif text-xl text-charcoal-900 mb-3">
-                    Processus de Retour
-                  </h3>
-                  <ol className="space-y-3 text-charcoal-600 font-sans">
-                    <li className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-6 h-6 bg-terracotta-100 text-terracotta-600 rounded-full flex items-center justify-center text-sm font-bold">1</span>
-                      <span>Contactez-nous via WhatsApp ou email pour initier le retour</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-6 h-6 bg-terracotta-100 text-terracotta-600 rounded-full flex items-center justify-center text-sm font-bold">2</span>
-                      <span>Nous vous fournirons les instructions et l'adresse de retour</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-6 h-6 bg-terracotta-100 text-terracotta-600 rounded-full flex items-center justify-center text-sm font-bold">3</span>
-                      <span>Expédiez le colis avec le numéro de suivi fourni</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-6 h-6 bg-terracotta-100 text-terracotta-600 rounded-full flex items-center justify-center text-sm font-bold">4</span>
-                      <span>Une fois reçu et vérifié, nous procéderons au remboursement sous 5-7 jours ouvrables</span>
-                    </li>
-                  </ol>
-                </div>
-
-                <div className="bg-cream-100 p-6 rounded-lg">
-                  <p className="text-charcoal-700 font-sans leading-relaxed">
-                    <strong>Note :</strong> Les frais de retour sont à la charge du client, sauf en cas de produit défectueux ou d'erreur de notre part. Dans ce cas, nous couvrons tous les frais.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -202,7 +137,7 @@ export default function ShippingReturnsPage() {
               variants={fadeInUp}
               className="body-md text-cream-200 mb-8"
             >
-              Si vous avez des questions concernant la livraison ou les retours, n'hésitez pas à nous contacter via WhatsApp. Notre équipe est là pour vous aider.
+              Si vous avez des questions concernant la livraison, n'hésitez pas à nous contacter via WhatsApp. Notre équipe est là pour vous aider.
             </motion.p>
             <motion.a
               variants={fadeInUp}

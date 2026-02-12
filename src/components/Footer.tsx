@@ -21,7 +21,6 @@ export default function Footer() {
     ],
     support: [
       { label: t('footer.shippingInfo'), href: '/shipping-returns' },
-      { label: t('footer.returns'), href: '/shipping-returns' },
       { label: t('footer.faq'), href: '/#faq' },
     ],
   };

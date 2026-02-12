@@ -108,7 +108,7 @@ export default function Collections({ collections }: CollectionsProps) {
                   >
                     {collection.name}
                   </motion.h3>
-                  <p className="text-xs md:text-sm text-charcoal-500 mb-2 md:mb-4 line-clamp-2 max-w-[150px] md:max-w-[200px] hidden sm:block">
+                  <p className="text-xs md:text-sm text-charcoal-500 mb-2 md:mb-4 line-clamp-2 max-w-[150px] md:max-w-[200px]">
                     {collection.description}
                   </p>
                   <motion.span

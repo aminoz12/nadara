@@ -21,7 +21,7 @@ const packs = [
   },
   {
     id: 2,
-    name: 'Pack Soin Profond',
+    name: ' Coffret - Précieux Duo',
     slug: 'pack-soin-profond',
     description: 'Baume + sérum + eau de rose gratuit',
     showGiftIcon: true,
@@ -89,17 +89,13 @@ export default function Packs() {
           variants={staggerContainer}
           className="text-center mb-10 md:mb-16"
         >
-          <motion.span
-            variants={fadeInUp}
-            className="text-xs md:text-sm font-sans tracking-[0.2em] md:tracking-[0.3em] uppercase text-olive-600 mb-3 md:mb-4 block"
-          >
-            Découvrir Nos Packs
-          </motion.span>
           <motion.h2
             variants={fadeInUp}
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-charcoal-900 mb-3 md:mb-4"
           >
-            Découvrir Nos Packs
+            Découvrir plusieurs produits Nadara en un seul
+            <br />
+            coffret
           </motion.h2>
           <motion.p
             variants={fadeInUp}

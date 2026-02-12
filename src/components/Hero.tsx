@@ -58,7 +58,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 10000);
+    }, 7000);
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -181,7 +181,7 @@ export default function Hero() {
 
       {/* Content - first slide: pushed down on mobile; second slide: pushed down more on mobile only */}
       <motion.div
-        className="relative z-10 container-custom text-center px-4 sm:px-6 pt-[28rem] sm:pt-[32rem] md:pt-0"
+        className="relative z-10 container-custom text-center px-4 sm:px-6 pt-[calc(14rem+5px)] sm:pt-64 md:pt-0"
         style={{ opacity, y: textY }}
       >
         <motion.div className="max-w-5xl mx-auto">
@@ -196,10 +196,10 @@ export default function Hero() {
                 className="contents"
               >
                 {/* Main Title with Letter Animation */}
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-medium mb-2 md:mb-4 overflow-hidden leading-tight" style={{ color: '#0d7133' }}>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-medium text-cream-50 mb-2 md:mb-4 overflow-hidden leading-tight">
                   <AnimatedText text={t('hero.title1')} />
                 </h1>
-                <h1 className="text-lg sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-medium mb-8 md:mb-14 overflow-hidden leading-tight whitespace-nowrap sm:whitespace-normal" style={{ color: '#0d7133' }}>
+                <h1 className="text-lg sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-medium text-cream-50 mb-8 md:mb-14 overflow-hidden leading-tight whitespace-nowrap sm:whitespace-normal">
                   <motion.span
                     initial={{ opacity: 0, y: 80 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -217,7 +217,7 @@ export default function Hero() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="mb-8 md:mb-14 pt-[20rem] sm:pt-96 md:pt-0"
+                className="mb-8 md:mb-14 pt-40 sm:pt-48 md:pt-0"
               >
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-medium text-cream-50 leading-tight mb-2 md:mb-4">
                   {t('hero.serumTitle1')}
