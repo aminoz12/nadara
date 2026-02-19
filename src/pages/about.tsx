@@ -60,8 +60,8 @@ export default function AboutPage() {
       >
         <motion.div className="absolute inset-0" style={{ y }}>
           <Image
-            src="https://images.unsplash.com/photo-1600428877878-1a0fd85beda8?w=1920&q=80"
-            alt="Paysage marocain"
+            src="/cover1.jpg"
+            alt="Nadara - Notre Histoire"
             fill
             className="object-cover"
             priority
