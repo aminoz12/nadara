@@ -52,7 +52,7 @@ export default function Hero() {
   
   const images = [
     '/cover1.png',
-    '/serumcover.jpg'
+    '/serumcover.jpeg'
   ];
 
   useEffect(() => {
