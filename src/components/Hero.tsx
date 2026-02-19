@@ -51,7 +51,7 @@ export default function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const images = [
-    '/cover1.jpg',
+    '/cover1.png',
     '/serumcover.jpg'
   ];
 
