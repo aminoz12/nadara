@@ -58,7 +58,7 @@
     "sustainableDesc": "We support local communities and use eco-friendly packaging for a better planet."
   },
   "ingredients": {
-    "title": "Ingredients & Benefits",
+    "title": "Ingredients & bienfaits",
     "subtitle": "Nature's Finest",
     "description": "We source the purest botanical treasures from Morocco and beyond.",
     "antiAging": "Anti-Aging",
@@ -103,7 +103,7 @@
     "deliveryReturns": "What are your delivery & return policies?",
     "deliveryReturnsAnswer": "We offer worldwide shipping! Standard delivery takes 5-10 business days, while express shipping arrives in 2-4 business days. We accept returns within 30 days of delivery for unopened products in their original packaging. Shipping is free on orders over $75.",
     "ingredientsTransparency": "How transparent are you about ingredients?",
-    "ingredientsTransparencyAnswer": "Complete transparency is at the heart of what we do. Every product page lists the full INCI ingredient list, along with the origin and benefits of each key ingredient. We source directly from certified organic farms in Morocco and maintain full traceability. All our ingredients are 100% natural, cruelty-free, and sustainably sourced.",
+    "ingredientsTransparencyAnswer": "Complete transparency is at the heart of what we do. Every product page lists the full INCI ingredient list, along with the origin and bienfaits of each key ingredient. We source directly from certified organic farms in Morocco and maintain full traceability. All our ingredients are 100% natural, cruelty-free, and sustainably sourced.",
     "contactCTA": "Still have questions? We're here to help!",
     "chatWhatsApp": "Chat with us on WhatsApp →"
   },
@@ -196,7 +196,7 @@
   },
   "productDetail": {
     "backToProducts": "Back to Products",
-    "benefits": "Benefits",
+    "bienfaits": "bienfaits",
     "ingredients": "Ingredients",
     "youMayAlsoLike": "You May Also Like",
     "natural": "100%",

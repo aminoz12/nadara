@@ -100,7 +100,7 @@ nadara/
 |-------|-------------|
 | `/` | Home page with hero, collections, bestsellers, values, testimonials |
 | `/products` | Product listing with filters (category, price, popularity) |
-| `/products/[slug]` | Product detail with gallery, benefits, ingredients, WhatsApp CTA |
+| `/products/[slug]` | Product detail with gallery, bienfaits, ingredients, WhatsApp CTA |
 | `/about` | Brand story with timeline, values, sustainability |
 | `/contact` | Contact methods, FAQ, WhatsApp integration |
 
@@ -160,7 +160,7 @@ Edit `data/products.json`:
   "images": ["url1", "url2", "url3"],
   "shortDescription": "Product description",
   "category": "Skincare",
-  "benefits": ["Benefit 1", "Benefit 2"],
+  "bienfaits": ["Benefit 1", "Benefit 2"],
   "ingredients": "Ingredient list",
   "popular": true
 }

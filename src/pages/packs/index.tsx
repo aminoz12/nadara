@@ -140,7 +140,7 @@ export default function PacksPage({ packs }: PacksPageProps) {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* bienfaits Section */}
       <section className="py-12 md:py-16 bg-olive-50">
         <div className="container-custom">
           <motion.div

@@ -85,13 +85,13 @@ export default function ProductPage({
               {/* Add to Cart & WhatsApp Buttons */}
               <ProductActions product={product} />
 
-              {/* Benefits */}
+              {/* bienfaits */}
               <div className="border-t border-beige-200 pt-8 mb-8">
                 <h3 className="font-serif text-lg text-charcoal-900 mb-4">
-                  Benefits
+                  bienfaits
                 </h3>
                 <ul className="space-y-3">
-                  {product.benefits.map((benefit, index) => (
+                  {product.bienfaits.map((benefit, index) => (
                     <motion.li
                       key={index}
                       initial={{ opacity: 0, x: -20 }}

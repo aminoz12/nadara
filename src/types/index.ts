@@ -6,7 +6,7 @@ export interface Product {
   images: string[];
   shortDescription: string;
   category: string;
-  benefits: string[];
+  bienfaits: string[];
   ingredients: string;
   popular: boolean;
   usageInstructions?: string[];
@@ -39,7 +39,7 @@ export interface Pack {
   shortDescription: string;
   category: string;
   items: string[];
-  benefits: string[];
+  bienfaits: string[];
   ingredients: string;
   popular: boolean;
   usageInstructions?: string[];

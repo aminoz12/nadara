@@ -111,13 +111,13 @@ export default function PackPage({
               {/* Add to Cart & WhatsApp Buttons */}
               <ProductActions product={pack as any} />
 
-              {/* Benefits */}
+              {/* bienfaits */}
               <div className="border-t border-beige-200 pt-8 mb-8">
                 <h3 className="font-serif text-lg text-charcoal-900 mb-4">
                   Avantages
                 </h3>
                 <ul className="space-y-3">
-                  {pack.benefits.map((benefit, index) => (
+                  {pack.bienfaits.map((benefit, index) => (
                     <motion.li
                       key={index}
                       initial={{ opacity: 0, x: -20 }}

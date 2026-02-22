@@ -69,7 +69,7 @@ const ingredients = [
 export default function Ingredients() {
   const t = useTranslations();
 
-  const benefits = [
+  const bienfaits = [
     {
       icon: Sparkles,
       title: t('ingredients.antiAging'),
@@ -212,7 +212,7 @@ export default function Ingredients() {
           ))}
         </motion.div>
 
-        {/* Benefits */}
+        {/* bienfaits */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -220,7 +220,7 @@ export default function Ingredients() {
           variants={staggerContainer}
           className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
         >
-          {benefits.map((benefit, index) => (
+          {bienfaits.map((benefit, index) => (
             <motion.div
               key={benefit.title}
               variants={fadeInUp}
