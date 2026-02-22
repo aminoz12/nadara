@@ -235,7 +235,7 @@ export default function Hero() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="mb-8 md:mb-14 pt-52 sm:pt-60 md:pt-0"
+                className="mb-8 md:mb-14 pt-64 sm:pt-80 md:pt-0"
               >
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-medium text-cream-50 leading-tight mb-2 md:mb-4">
                   {t('hero.serumTitle1')}
