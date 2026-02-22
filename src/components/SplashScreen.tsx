@@ -44,7 +44,8 @@ export function SplashScreen() {
             fontSize: '32px',
           }}
         >
-          Chaque produit, fait main avec amour pour prendre soin de vous
+          Bienvenue dans l'univers Nadara.<br />
+          Là où la nature, la tradition et la passion se rencontrent pour prendre soin de vous.
         </p>
       </div>
     </div>
