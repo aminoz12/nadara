@@ -48,7 +48,7 @@ const ingredients = [
       'Poudre d\'Argile rose – Nettoie en douceur, purifie, adoucit, illumine le teint, idéale peaux sensibles et mixtes',
       'Poudre du Ghassoul (Rhassoul) – Absorbe l\'excès de sébum, purifie, reminéralise, rend la peau et les cheveux doux et souples',
     ],
-    image: '/ing3.png',
+    image: '/ing4.png',
   },
   {
     name: 'Actifs cosmétiques',
@@ -62,7 +62,7 @@ const ingredients = [
       'Acide hyaluronique – Hydratation intense, repulpe la peau, réduit l\'apparence des ridules',
       'Collagène & Elastine – Améliore l\'élasticité, fermeté et tonicité de la peau',
     ],
-    image: '/ing4.png',
+    image: '/ing3.png',
   },
 ];
 
