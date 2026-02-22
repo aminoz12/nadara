@@ -52,7 +52,7 @@ export default function Hero() {
   
   const images = [
     '/cover1.jpg',
-    '/serumcover.jpeg'
+    { mobile: '/serumcover.jpeg', desktop: '/serumlaptop.jpeg' },
   ];
 
   useEffect(() => {
@@ -83,17 +83,35 @@ export default function Hero() {
         style={{ y }}
       >
         <AnimatePresence mode="wait">
-          <motion.div
-            key={currentImageIndex}
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${images[currentImageIndex]})`,
-            }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
-          />
+          {currentImageIndex === 0 ? (
+            <motion.div
+              key={0}
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${images[0]})` }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+            />
+          ) : (
+            <motion.div
+              key={1}
+              className="absolute inset-0"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+            >
+              <div
+                className="absolute inset-0 bg-cover bg-center md:hidden"
+                style={{ backgroundImage: 'url(/serumcover.jpeg)' }}
+              />
+              <div
+                className="absolute inset-0 bg-cover bg-center hidden md:block"
+                style={{ backgroundImage: 'url(/serumlaptop.jpeg)' }}
+              />
+            </motion.div>
+          )}
         </AnimatePresence>
       </motion.div>
 
@@ -217,7 +235,7 @@ export default function Hero() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="mb-8 md:mb-14 pt-40 sm:pt-48 md:pt-0"
+                className="mb-8 md:mb-14 pt-52 sm:pt-60 md:pt-0"
               >
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-medium text-cream-50 leading-tight mb-2 md:mb-4">
                   {t('hero.serumTitle1')}
