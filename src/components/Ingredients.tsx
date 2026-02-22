@@ -8,17 +8,61 @@ import { useTranslations } from 'next-intl';
 
 const ingredients = [
   {
-    name: 'Nigelle',
-    origin: 'Maroc',
-    description: 'La graine noire aux mille vertus. Antioxydante, anti-inflammatoire et purifiante, la nigelle régénère la peau et renforce les cheveux.',
+    name: 'Huiles végétales',
+    origin: 'Naturel',
+    description: 'Nadara utilise des huiles végétales 100 % naturelles et certifiées par l\'ONSSA, pressées à froid afin de préserver toutes leurs propriétés nutritives et actives. Ces huiles apportent hydratation, réparation et protection à la peau et aux cheveux, tout en respectant l\'environnement et la pureté des ingrédients.',
+    advantagesLabel: 'Huiles utilisées par Nadara',
     advantages: [
-      'Antioxydante puissante',
-      'Anti-inflammatoire naturelle',
-      'Purifie et régénère la peau',
-      'Renforce les cheveux',
-      'Riche en acides gras essentiels'
+      'Huile d\'argan – régénérante, anti-âge, cheveux brillants',
+      'Huile de ricin – fortifiante, pousse des cheveux et cils',
+      'Huile d\'amande douce – adoucissante, nourrissante, idéale pour peaux sensibles',
+      'Huile de coco – protectrice, nourrissante, rend la peau souple',
+      'Huile de tournesol – riche en vitamine E, hydratante et protectrice',
+      'Huile de nigelle – régénérante, stimule la pousse des cheveux, apaise les irritations, anti-inflammatoire et cicatrisante',
     ],
-    image: '/nigelle.png',
+    image: '/ing1.png',
+  },
+  {
+    name: 'Beurres végétaux',
+    origin: 'Naturel',
+    description: 'Nadara utilise des beurres végétaux 100 % naturels, riches en acides gras essentiels, vitamines et antioxydants. Ces beurres apportent nutrition, protection et douceur à la peau et aux cheveux, tout en étant adaptés à toutes les peaux, même sensibles.',
+    advantagesLabel: 'Beurres utilisés par Nadara',
+    advantages: [
+      'Beurre de karité – Nourrit, régénère, protège, idéal pour les peaux sèches et cheveux abîmés',
+      'Beurre de cacao – Hydrate, adoucit, antioxydant, parfum naturel chocolaté',
+    ],
+    image: '/ing2.png',
+  },
+  {
+    name: 'Poudres naturelles',
+    origin: 'Naturel',
+    description: 'Nadara sélectionne des poudres naturelles marocaines et indiennes de haute qualité, riches en minéraux et actifs végétaux. Ces poudres sont utilisées pour nourrir, purifier, éclaircir et sublimer la peau et les cheveux, dans des formulations naturelles et artisanales.',
+    advantagesLabel: 'Poudres utilisées par Nadara',
+    advantagesEmoji: '🌿',
+    advantages: [
+      'Poudre de Shikakai – Nettoyant naturel doux, facilite le démêlage, cheveux brillants et souples',
+      'Poudre de Kapoor Kachli – Stimule la pousse des cheveux, renforce la racine, cheveux plus épais',
+      'Poudre de Neem – Antibactérien et apaisant, lutte contre les pellicules, protège le cuir chevelu',
+      'Poudre de Reetha (Soapnut) – Nettoie naturellement, mousse légère, cheveux doux et propres, purifiant',
+      'Poudre d\'Hibiscus – Nourrit et colore légèrement, cheveux doux et brillants',
+      'Poudre d\'Argile rose – Nettoie en douceur, purifie, adoucit, illumine le teint, idéale peaux sensibles et mixtes',
+      'Poudre du Ghassoul (Rhassoul) – Absorbe l\'excès de sébum, purifie, reminéralise, rend la peau et les cheveux doux et souples',
+    ],
+    image: '/ing3.png',
+  },
+  {
+    name: 'Actifs cosmétiques',
+    origin: 'Naturel',
+    description: 'Nadara sélectionne des actifs cosmétiques naturels et performants pour enrichir ses soins visage, corps et cheveux. Ces ingrédients ciblés apportent nutrition, hydratation, réparation et protection tout en respectant la peau et l\'environnement.',
+    advantagesLabel: 'Actifs utilisés par Nadara',
+    advantagesEmoji: '🌿',
+    advantages: [
+      'Vitamine B5 (Panthénol) – Hydrate, répare, apaise irritations et rougeurs',
+      'Vitamine E – Antioxydante, protège contre le vieillissement cutané, nourrit la peau',
+      'Acide hyaluronique – Hydratation intense, repulpe la peau, réduit l\'apparence des ridules',
+      'Collagène & Elastine – Améliore l\'élasticité, fermeté et tonicité de la peau',
+    ],
+    image: '/ing4.png',
   },
   {
     name: 'Huile de Colza',
@@ -31,7 +75,7 @@ const ingredients = [
       'Adoucit et hydrate',
       'Protège la barrière cutanée'
     ],
-    image: '/colza.png',
+    image: '/ing1.png',
   },
   {
     name: 'Argile Rose',
@@ -44,7 +88,7 @@ const ingredients = [
       'Illumine le teint',
       'Régule la production de sébum'
     ],
-    image: '/argile.png',
+    image: '/ing2.png',
   },
   {
     name: 'Reetha',
@@ -57,7 +101,7 @@ const ingredients = [
       'Soie et douceur',
       'Sans sulfates agressifs'
     ],
-    image: '/reetha.png',
+    image: '/ing3.png',
   },
 ];
 
@@ -191,6 +235,9 @@ export default function Ingredients() {
 
               {/* Answer/Advantages Section */}
               <div className="p-4 md:p-6 pt-0 bg-cream-50">
+                {'advantagesLabel' in ingredient && ingredient.advantagesLabel && (
+                  <p className="text-sm font-sans font-medium text-olive-700 mb-3">{'advantagesEmoji' in ingredient && ingredient.advantagesEmoji ? ingredient.advantagesEmoji : '🌱'} {ingredient.advantagesLabel}</p>
+                )}
                 <ul className="space-y-2">
                   {ingredient.advantages.map((advantage, advIndex) => (
                     <li key={advIndex} className="flex items-start gap-2 text-sm md:text-base text-charcoal-700 font-sans">
