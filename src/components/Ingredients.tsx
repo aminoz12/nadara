@@ -64,45 +64,6 @@ const ingredients = [
     ],
     image: '/ing4.png',
   },
-  {
-    name: 'Huile de Colza',
-    origin: 'Naturel',
-    description: 'Huile végétale riche en oméga-3 et vitamine E. Nourrit en profondeur, adoucit la peau et protège la barrière cutanée.',
-    advantages: [
-      'Riche en oméga-3',
-      'Source de vitamine E',
-      'Nourrit en profondeur',
-      'Adoucit et hydrate',
-      'Protège la barrière cutanée'
-    ],
-    image: '/ing1.png',
-  },
-  {
-    name: 'Argile Rose',
-    origin: 'Maroc',
-    description: 'Argile douce et purifiante idéale pour les peaux sensibles. Nettoie en douceur, matifie et illumine le teint naturellement.',
-    advantages: [
-      'Purifiante et nettoyante',
-      'Idéale pour peaux sensibles',
-      'Matifie la peau',
-      'Illumine le teint',
-      'Régule la production de sébum'
-    ],
-    image: '/ing2.png',
-  },
-  {
-    name: 'Reetha',
-    origin: 'Inde',
-    description: 'Fruit du Savons à froidnier, naturellement moussant. Nettoie en douceur les cheveux, les rend brillants et soyeux sans agresser.',
-    advantages: [
-      'Nettoyant naturel',
-      'Mousse douce et abondante',
-      'Rend les cheveux brillants',
-      'Soie et douceur',
-      'Sans sulfates agressifs'
-    ],
-    image: '/ing3.png',
-  },
 ];
 
 export default function Ingredients() {
