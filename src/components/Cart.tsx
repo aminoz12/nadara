@@ -5,6 +5,7 @@ import { X, Plus, Minus, ShoppingBag, MessageCircle } from 'lucide-react';
 import { useCart } from '@/contexts/CartContext';
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
+import { getLocalizedProduct } from '@/types';
 
 export default function Cart() {
   const {
@@ -25,7 +26,8 @@ export default function Cart() {
     let message = t('whatsapp.orderMessage');
 
     items.forEach((item, index) => {
-      message += `${index + 1}. ${item.product.name}\n`;
+      const name = getLocalizedProduct(item.product, locale as 'fr' | 'en' | 'ar').name;
+      message += `${index + 1}. ${name}\n`;
       message += `   ${t('cart.quantity')}: ${item.quantity}\n`;
       message += `   ${t('cart.unitPrice')}: ${item.product.price} MAD\n`;
       message += `   ${t('cart.subtotal')}: ${item.product.price * item.quantity} MAD\n\n`;
@@ -93,7 +95,9 @@ export default function Cart() {
                 </div>
               ) : (
                 <div className="space-y-4">
-                  {items.map((item) => (
+                  {items.map((item) => {
+                    const localized = getLocalizedProduct(item.product, locale as 'fr' | 'en' | 'ar');
+                    return (
                     <motion.div
                       key={item.product.id}
                       initial={{ opacity: 0, y: 20 }}
@@ -103,14 +107,14 @@ export default function Cart() {
                       <div className="relative w-20 h-20 rounded overflow-hidden flex-shrink-0">
                         <Image
                           src={item.product.images[0]}
-                          alt={item.product.name}
+                          alt={localized.name}
                           fill
                           className="object-cover"
                         />
                       </div>
                       <div className="flex-1 min-w-0">
                         <h3 className="font-serif text-sm text-charcoal-900 mb-1 truncate">
-                          {item.product.name}
+                          {localized.name}
                         </h3>
                         <p className="text-xs text-charcoal-500 mb-2 font-price">
                           {item.product.price} MAD
@@ -146,7 +150,8 @@ export default function Cart() {
                         </div>
                       </div>
                     </motion.div>
-                  ))}
+                    );
+                  })}
                 </div>
               )}
             </div>

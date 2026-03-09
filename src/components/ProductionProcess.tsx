@@ -3,9 +3,11 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import { fadeInUp, staggerContainer } from './variants';
 
 export default function ProductionProcess() {
+  const t = useTranslations('process');
   const skincareTips = [
     {
       title: 'Routine Quotidienne',
@@ -58,20 +60,19 @@ export default function ProductionProcess() {
             variants={fadeInUp}
             className="inline-block text-xs md:text-sm font-medium tracking-[0.25em] uppercase text-[#7C9A6B] mb-4 px-4 py-2 bg-[#7C9A6B]/10 rounded-full"
           >
-            Conseils Beauté
+            {t('beautyTipsLabel')}
           </motion.span>
           <motion.h2
             variants={fadeInUp}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-[#2C3E2D] mb-5 leading-tight"
           >
-            Prenez Soin de Votre Peau
+            {t('beautyTipsTitle')}
           </motion.h2>
           <motion.p
             variants={fadeInUp}
             className="text-base md:text-lg lg:text-xl text-[#5A6B5C] max-w-2xl mx-auto leading-relaxed"
           >
-            Découvrez nos conseils experts pour une routine skincare efficace, 
-            sublimée par nos produits naturels artisanaux
+            {t('beautyTipsSubtitle')}
           </motion.p>
         </motion.div>
 

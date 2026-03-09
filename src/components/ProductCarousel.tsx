@@ -9,6 +9,7 @@ import { Product } from '@/types';
 import { fadeInUp, staggerContainer } from './variants';
 import { useTranslations } from 'next-intl';
 import { useCart } from '@/contexts/CartContext';
+import { useLocalizedProduct } from '@/hooks/useLocalizedProduct';
 
 interface ProductCarouselProps {
   title: string;
@@ -19,6 +20,7 @@ interface ProductCarouselProps {
 function CarouselProductCard({ product, index, isVisible }: { product: Product; index: number; isVisible: boolean }) {
   const { addToCart } = useCart();
   const t = useTranslations();
+  const localized = useLocalizedProduct(product);
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -62,7 +64,7 @@ function CarouselProductCard({ product, index, isVisible }: { product: Product; 
                 >
                   <Image
                     src={product.images[0]}
-                    alt={product.name}
+                    alt={localized.name}
                     fill
                     className="object-cover"
                     sizes="(max-width: 640px) 240px, (max-width: 768px) 260px, (max-width: 1024px) 300px, 320px"
@@ -102,13 +104,13 @@ function CarouselProductCard({ product, index, isVisible }: { product: Product; 
               {/* Content */}
               <div className="p-3 md:p-5 flex-1 flex flex-col">
                 <span className="text-[10px] md:text-xs font-sans tracking-wider uppercase text-olive-600 mb-1 md:mb-2 block">
-                  {product.category}
+                  {localized.category}
                 </span>
                 <h3 className="font-serif text-base md:text-lg lg:text-xl text-charcoal-900 mb-1 md:mb-2 group-hover:text-olive-700 transition-colors line-clamp-1">
-                  {product.name}
+                  {localized.name}
                 </h3>
                 <p className="text-xs md:text-sm text-charcoal-500 line-clamp-2 mb-2 md:mb-3 hidden sm:block flex-1">
-                  {product.shortDescription}
+                  {localized.shortDescription}
                 </p>
                 <div className="flex items-center justify-between mb-2 md:mb-3">
                   <p className="font-price text-lg md:text-xl text-charcoal-900">

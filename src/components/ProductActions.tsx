@@ -5,6 +5,7 @@ import { ShoppingBag } from 'lucide-react';
 import { Product } from '@/types';
 import { useCart } from '@/contexts/CartContext';
 import { useTranslations } from 'next-intl';
+import { useLocalizedProduct } from '@/hooks/useLocalizedProduct';
 import WhatsAppButton from './WhatsAppButton';
 
 interface ProductActionsProps {
@@ -14,6 +15,7 @@ interface ProductActionsProps {
 export default function ProductActions({ product }: ProductActionsProps) {
   const { addToCart } = useCart();
   const t = useTranslations();
+  const localized = useLocalizedProduct(product);
 
   return (
     <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -26,7 +28,7 @@ export default function ProductActions({ product }: ProductActionsProps) {
         <ShoppingBag className="w-5 h-5" />
         {t('products.addToCart')}
       </motion.button>
-      <WhatsAppButton productName={product.name} className="flex-1" />
+      <WhatsAppButton productName={localized.name} className="flex-1" />
     </div>
   );
 }

@@ -4,152 +4,139 @@
     "name": "Coffret - Rituel Beauté Cheveux",
     "slug": "pack-essentiel-cheveux",
     "price": 129,
-    "images": [
-      "/pack1.jpeg"
-    ],
+    "images": ["/pack1.jpeg"],
     "shortDescription": "1 Shampoing solide au choix + Leave-in",
     "category": "Pack",
-    "items": [
-      "1 Shampoing solide au choix",
-      "Leave-in"
-    ],
-    "bienfaits": [
-      "Duo essentiel pour cheveux nourris",
-      "Shampoing solide 0% sulfate",
-      "Leave-in hydratant à la noix de coco",
-      "Économique et pratique",
-      "100% naturel"
-    ],
+    "items": ["1 Shampoing solide au choix", "Leave-in"],
+    "bienfaits": ["Duo essentiel pour cheveux nourris", "Shampoing solide 0% sulfate", "Leave-in hydratant à la noix de coco", "Économique et pratique", "100% naturel"],
     "ingredients": "Shampoings Solides: Tensioactif SCI, Aqua, Huiles essentielles. Leave-in: Huile de coco vierge, Vitamine E",
     "popular": true,
-    "usageInstructions": [
-      "Utiliser le shampoing solide 2-3 fois par semaine",
-      "Appliquer le leave-in sur cheveux humides après le shampoing",
-      "Conserver les produits à l'abri de l'humidité"
-    ]
+    "usageInstructions": ["Utiliser le shampoing solide 2-3 fois par semaine", "Appliquer le leave-in sur cheveux humides après le shampoing", "Conserver les produits à l'abri de l'humidité"],
+    "name_en": "Hair Beauty Ritual Set",
+    "name_ar": "باقة روتين جمال الشعر",
+    "shortDescription_en": "1 Solid shampoo of your choice + Leave-in",
+    "shortDescription_ar": "شامبو صلب من اختيارك + ليف إن",
+    "category_en": "Pack",
+    "category_ar": "باقة",
+    "items_en": ["1 Solid shampoo of your choice", "Leave-in"],
+    "items_ar": ["شامبو صلب من اختيارك", "ليف إن"],
+    "bienfaits_en": ["Essential duo for nourished hair", "0% sulfate solid shampoo", "Coconut leave-in hydrator", "Economical and practical", "100% natural"],
+    "bienfaits_ar": ["ثنائي أساسي لشعر مغذى", "شامبو صلب 0% كبريتات", "ليف إن مرطب بجوز الهند", "اقتصادي وعملي", "100% طبيعي"],
+    "ingredients_en": "Solid Shampoos: SCI surfactant, Aqua, Essential oils. Leave-in: Virgin coconut oil, Vitamin E",
+    "ingredients_ar": "شامبو صلب: عامل فعال SCI، ماء، زيوت عطرية. ليف إن: زيت جوز هند بكر، فيتامين E",
+    "usageInstructions_en": ["Use solid shampoo 2-3 times per week", "Apply leave-in on damp hair after shampooing", "Store products away from moisture"],
+    "usageInstructions_ar": ["استخدمي الشامبو الصلب 2-3 مرات أسبوعياً", "طبقي الليف إن على الشعر الرطب بعد الشامبو", "احفظي المنتجات بعيداً عن الرطوبة"]
   },
   {
     "id": 2,
-    "name": " Coffret - Précieux Duo",
+    "name": "Coffret - Précieux Duo",
     "slug": "pack-soin-profond",
     "price": 145,
-    "images": [
-      "/PACK2.jpg"
-    ],
+    "images": ["/PACK2.jpg"],
     "shortDescription": "Baume + sérum + eau de rose gratuit. Une routine complète pour nourrir et régénérer votre peau en profondeur.",
     "category": "Pack",
-    "items": [
-      "1 Baume capillaire",
-      "Sérum Acide Hyaluronique & Collagène",
-      "Eau de Rose OFFERT"
-    ],
-    "bienfaits": [
-      "Soin intensif pour la peau",
-      "Baume nourrissant multi-usage",
-      "Sérum anti-âge à l'acide hyaluronique",
-      "Eau de rose tonifiante OFFERTE",
-      "Hydratation longue durée"
-    ],
+    "items": ["1 Baume capillaire", "Sérum Acide Hyaluronique & Collagène", "Eau de Rose OFFERT"],
+    "bienfaits": ["Soin intensif pour la peau", "Baume nourrissant multi-usage", "Sérum anti-âge à l'acide hyaluronique", "Eau de rose tonifiante OFFERTE", "Hydratation longue durée"],
     "ingredients": "Baume: Beurre de karité, Huiles végétales. Sérum: Acide hyaluronique, Collagène, Vitamine E. Eau de rose: 100% pure eau florale de rose",
     "popular": true,
-    "usageInstructions": [
-      "Appliquer le sérum matin et soir sur peau propre",
-      "Utiliser le baume en soin de nuit ou sur zones sèches",
-      "Vaporiser l'eau de rose comme tonique après le nettoyage"
-    ]
+    "usageInstructions": ["Appliquer le sérum matin et soir sur peau propre", "Utiliser le baume en soin de nuit ou sur zones sèches", "Vaporiser l'eau de rose comme tonique après le nettoyage"],
+    "name_en": "Precious Duo Set",
+    "name_ar": "باقة الثنائي الثمين",
+    "shortDescription_en": "Balm + serum + rose water free. A complete routine to nourish and regenerate your skin.",
+    "shortDescription_ar": "بلسم + مصل + ماء ورد مجاني. روتين كامل لتغذية وبعثرة بشرتك.",
+    "category_en": "Pack",
+    "category_ar": "باقة",
+    "items_en": ["1 Body balm", "Hyaluronic Acid & Collagen Serum", "Rose Water FREE"],
+    "items_ar": ["بلسم جسم", "مصل حمض الهيالورونيك والكولاجين", "ماء ورد مجاني"],
+    "bienfaits_en": ["Intensive skin care", "Multi-use nourishing balm", "Anti-ageing hyaluronic serum", "Toning rose water FREE", "Long-lasting hydration"],
+    "bienfaits_ar": ["عناية مكثفة للبشرة", "بلسم مغذٍ متعدد الاستخدام", "مصل مضاد للشيخوخة بحمض الهيالورونيك", "ماء ورد منعش مجاني", "ترطيب طويل المدى"],
+    "ingredients_en": "Balm: Shea butter, Vegetable oils. Serum: Hyaluronic acid, Collagen, Vitamin E. Rose water: 100% pure floral rose water",
+    "ingredients_ar": "بلسم: زبدة شيا، زيوت نباتية. مصل: حمض هيالورونيك، كولاجين، فيتامين E. ماء ورد: ماء ورد نقي 100%",
+    "usageInstructions_en": ["Apply serum morning and evening on clean skin", "Use balm as night care or on dry areas", "Spritz rose water as toner after cleansing"],
+    "usageInstructions_ar": ["طبقي المصل صباحاً ومساءً على بشرة نظيفة", "استخدمي البلسم كعناية ليلية أو على المناطق الجافة", "رشي ماء الورد كتونر بعد التنظيف"]
   },
   {
     "id": 3,
     "name": "Coffret - Rituel Purifiant",
     "slug": "pack-routine-cheveux",
     "price": 245,
-    "images": [
-      "/PACK3.jpg"
-    ],
+    "images": ["/PACK3.jpg"],
     "shortDescription": "Savon au choix + 2 Shampoings solides au choix + Leave-in",
     "category": "Pack",
-    "items": [
-      "1 Savon au choix",
-      "2 Shampoings solides au choix",
-      "Leave-in"
-    ],
-    "bienfaits": [
-      "Routine capillaire complète",
-      "Savons à froid artisanal pour le corps",
-      "2 shampoings pour alterner selon vos besoins",
-      "Leave-in hydratant",
-      "Économie de plus de 30%"
-    ],
+    "items": ["1 Savon au choix", "2 Shampoings solides au choix", "Leave-in"],
+    "bienfaits": ["Routine capillaire complète", "Savons à froid artisanal pour le corps", "2 shampoings pour alterner selon vos besoins", "Leave-in hydratant", "Économie de plus de 30%"],
     "ingredients": "Savons à froid: Huiles végétales, Beurre de karité. Shampoings: Tensioactif SCI, Huiles essentielles. Leave-in: Huile de coco vierge",
     "popular": true,
-    "usageInstructions": [
-      "Utiliser le Savons à froid pour le corps quotidiennement",
-      "Alterner les shampoings selon l'état de vos cheveux",
-      "Appliquer le leave-in sur les longueurs et pointes"
-    ]
+    "usageInstructions": ["Utiliser le Savons à froid pour le corps quotidiennement", "Alterner les shampoings selon l'état de vos cheveux", "Appliquer le leave-in sur les longueurs et pointes"],
+    "name_en": "Purifying Ritual Set",
+    "name_ar": "باقة روتين التطهير",
+    "shortDescription_en": "Soap of your choice + 2 Solid shampoos of your choice + Leave-in",
+    "shortDescription_ar": "صابون من اختيارك + شامبوان صلبان من اختيارك + ليف إن",
+    "category_en": "Pack",
+    "category_ar": "باقة",
+    "items_en": ["1 Soap of your choice", "2 Solid shampoos of your choice", "Leave-in"],
+    "items_ar": ["صابون من اختيارك", "شامبوان صلبان من اختيارك", "ليف إن"],
+    "bienfaits_en": ["Complete hair routine", "Artisan cold-process soap for body", "2 shampoos to alternate as needed", "Hydrating leave-in", "Over 30% savings"],
+    "bienfaits_ar": ["روتين شعر كامل", "صابون بارد حرفي للجسم", "شامبوان للتناوب حسب الحاجة", "ليف إن مرطب", "توفير أكثر من 30%"],
+    "ingredients_en": "Cold process soaps: Vegetable oils, Shea butter. Shampoos: SCI surfactant, Essential oils. Leave-in: Virgin coconut oil",
+    "ingredients_ar": "صابون بارد: زيوت نباتية، زبدة شيا. شامبو: عامل فعال SCI، زيوت عطرية. ليف إن: زيت جوز هند بكر",
+    "usageInstructions_en": ["Use cold-process soap for body daily", "Alternate shampoos depending on your hair", "Apply leave-in on lengths and ends"],
+    "usageInstructions_ar": ["استخدمي الصابون البارد للجسم يومياً", "بدلي الشامبو حسب حالة شعرك", "طبقي الليف إن على الطول والأطراف"]
   },
   {
     "id": 4,
     "name": "Coffret - Savons Précieux",
     "slug": "pack-decouverte-Savons à froids",
     "price": 199,
-    "images": [
-      "/PACK4.jpg"
-    ],
+    "images": ["/PACK4.jpg"],
     "shortDescription": "4 Savons au choix",
     "category": "Pack",
-    "items": [
-      "Savon à froid Charbon Actif",
-      "Savon à froid Miel & Avoine",
-      "Savon à froid Nigelle & Argile",
-      "Savon à froid Café"
-    ],
-    "bienfaits": [
-      "4 Savons à froids artisanaux différents",
-      "Saponification à froid",
-      "Sans colorant, sans conservateur",
-      "Sans huile de palme",
-      "Idéal pour découvrir nos Savons à froids"
-    ],
+    "items": ["Savon à froid Charbon Actif", "Savon à froid Miel & Avoine", "Savon à froid Nigelle & Argile", "Savon à froid Café"],
+    "bienfaits": ["4 Savons à froids artisanaux différents", "Saponification à froid", "Sans colorant, sans conservateur", "Sans huile de palme", "Idéal pour découvrir nos Savons à froids"],
     "ingredients": "Huile d'olive, Huile colza, Beurre de karité, Huile de coco, Huile ricin, actifs naturels variés (Charbon, Miel, Avoine, Nigelle, Argile, Café)",
     "popular": true,
-    "usageInstructions": [
-      "Conserver à l'abri de la lumière et de l'humidité",
-      "Faire sécher après chaque utilisation",
-      "Utiliser sur visage et corps selon le type de Savons à froid"
-    ]
+    "usageInstructions": ["Conserver à l'abri de la lumière et de l'humidité", "Faire sécher après chaque utilisation", "Utiliser sur visage et corps selon le type de Savons à froid"],
+    "name_en": "Precious Soaps Set",
+    "name_ar": "باقة الصابون الثمين",
+    "shortDescription_en": "4 Soaps of your choice",
+    "shortDescription_ar": "4 صابونات من اختيارك",
+    "category_en": "Pack",
+    "category_ar": "باقة",
+    "items_en": ["Cold process soap Activated Charcoal", "Cold process soap Honey & Oat", "Cold process soap Black Seed & Pink Clay", "Cold process soap Coffee"],
+    "items_ar": ["صابون بارد فحم نشط", "صابون بارد عسل وشوفان", "صابون بارد حبة سوداء وطين وردي", "صابون بارد قهوة"],
+    "bienfaits_en": ["4 different artisan cold-process soaps", "Cold process saponification", "No dye, no preservative", "No palm oil", "Ideal to discover our soaps"],
+    "bienfaits_ar": ["4 صابونات باردة حرفية مختلفة", "تصبن بارد", "بدون صبغة أو مواد حافظة", "بدون زيت نخل", "مثالي لاكتشاف صابوناتنا"],
+    "ingredients_en": "Olive oil, Rapeseed oil, Shea butter, Coconut oil, Castor oil, various natural actives (Charcoal, Honey, Oat, Black seed, Clay, Coffee)",
+    "ingredients_ar": "زيت زيتون، زيت كانولا، زبدة شيا، زيت جوز الهند، زيت خروع، فعالات طبيعية (فحم، عسل، شوفان، حبة سوداء، طين، قهوة)",
+    "usageInstructions_en": ["Store away from light and moisture", "Dry after each use", "Use on face and body according to soap type"],
+    "usageInstructions_ar": ["احفظي بعيداً عن الضوء والرطوبة", "جففي بعد كل استخدام", "استخدمي على الوجه والجسم حسب نوع الصابون"]
   },
   {
     "id": 5,
     "name": "Coffret - Rituel de Bien-Être",
     "slug": "pack-complet-visage",
     "price": 329,
-    "images": [
-      "/PACK5.jpg"
-    ],
+    "images": ["/PACK5.jpg"],
     "shortDescription": "Savon au choix + Shampoing solide au choix + Leave-in + Sérum + Eau de rose offert",
     "category": "Pack",
-    "items": [
-      "1 Savon au choix",
-      "1 Shampoing solide au choix",
-      "Leave-in",
-      "Sérum Acide Hyaluronique & Collagène",
-      "Eau de Rose offert"
-    ],
-    "bienfaits": [
-      "Pack le plus complet",
-      "Routine visage et cheveux",
-      "5 produits premium",
-      "Eau de rose OFFERTE",
-      "Économie exceptionnelle"
-    ],
+    "items": ["1 Savon au choix", "1 Shampoing solide au choix", "Leave-in", "Sérum Acide Hyaluronique & Collagène", "Eau de Rose offert"],
+    "bienfaits": ["Pack le plus complet", "Routine visage et cheveux", "5 produits premium", "Eau de rose OFFERTE", "Économie exceptionnelle"],
     "ingredients": "Savons à froid et shampoings solides artisanaux, Sérum à l'acide hyaluronique et collagène, Leave-in à l'huile de coco, Eau florale de rose 100% pure",
     "popular": true,
-    "usageInstructions": [
-      "Nettoyer le visage avec le Savons à froid matin et soir",
-      "Appliquer le sérum après le nettoyage",
-      "Utiliser le shampoing solide et leave-in pour les cheveux",
-      "Tonifier avec l'eau de rose"
-    ]
+    "usageInstructions": ["Nettoyer le visage avec le Savons à froid matin et soir", "Appliquer le sérum après le nettoyage", "Utiliser le shampoing solide et leave-in pour les cheveux", "Tonifier avec l'eau de rose"],
+    "name_en": "Wellness Ritual Set",
+    "name_ar": "باقة روتين العناية",
+    "shortDescription_en": "Soap of your choice + Solid shampoo of your choice + Leave-in + Serum + Rose water included",
+    "shortDescription_ar": "صابون من اختيارك + شامبو صلب من اختيارك + ليف إن + مصل + ماء ورد مشمول",
+    "category_en": "Pack",
+    "category_ar": "باقة",
+    "items_en": ["1 Soap of your choice", "1 Solid shampoo of your choice", "Leave-in", "Hyaluronic Acid & Collagen Serum", "Rose Water included"],
+    "items_ar": ["صابون من اختيارك", "شامبو صلب من اختيارك", "ليف إن", "مصل حمض الهيالورونيك والكولاجين", "ماء ورد مشمول"],
+    "bienfaits_en": ["Most complete pack", "Face and hair routine", "5 premium products", "Rose water INCLUDED", "Exceptional savings"],
+    "bienfaits_ar": ["أكثر باقة اكتمالاً", "روتين وجه وشعر", "5 منتجات مميزة", "ماء ورد مشمول", "توفير استثنائي"],
+    "ingredients_en": "Cold process soaps and artisan solid shampoos, Hyaluronic acid and collagen serum, Coconut leave-in, 100% pure rose floral water",
+    "ingredients_ar": "صابون بارد وشامبو صلب حرفي، مصل حمض الهيالورونيك والكولاجين، ليف إن جوز الهند، ماء ورد نقي 100%",
+    "usageInstructions_en": ["Cleanse face with cold-process soap morning and evening", "Apply serum after cleansing", "Use solid shampoo and leave-in for hair", "Tone with rose water"],
+    "usageInstructions_ar": ["نظفي الوجه بالصابون البارد صباحاً ومساءً", "طبقي المصل بعد التنظيف", "استخدمي الشامبو الصلب والليف إن للشعر", "عطري بماء الورد"]
   }
 ]

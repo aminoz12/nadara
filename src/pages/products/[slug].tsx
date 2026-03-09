@@ -2,10 +2,12 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { ArrowLeft, Check, Leaf, Info } from 'lucide-react';
 import { ProductGallery, AnimatedProductCard, ProductActions } from '@/components';
 import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from '@/components/variants';
 import { Product } from '@/types';
+import { useLocalizedProduct } from '@/hooks/useLocalizedProduct';
 import productsData from '../../../data/products.json';
 
 interface ProductPageProps {
@@ -17,11 +19,13 @@ export default function ProductPage({
   product,
   relatedProducts,
 }: ProductPageProps) {
+  const t = useTranslations('productDetail');
+  const localized = useLocalizedProduct(product);
   return (
     <>
       <Head>
-        <title>{product.name} | Nadara</title>
-        <meta name="description" content={product.shortDescription} />
+        <title>{localized.name} | Nadara</title>
+        <meta name="description" content={localized.shortDescription} />
       </Head>
 
       {/* Breadcrumb */}
@@ -33,11 +37,11 @@ export default function ProductPage({
             transition={{ duration: 0.5 }}
           >
             <Link
-              href="/products"
+              href="/products/"
               className="inline-flex items-center gap-2 text-sm font-sans text-charcoal-600 hover:text-charcoal-900 transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
-              Back to Products
+              {t('backToProducts')}
             </Link>
           </motion.div>
         </div>
@@ -55,7 +59,7 @@ export default function ProductPage({
             >
               <ProductGallery
                 images={product.images}
-                productName={product.name}
+                productName={localized.name}
               />
             </motion.div>
 
@@ -67,11 +71,11 @@ export default function ProductPage({
               className="lg:pt-8"
             >
               <span className="text-sm font-sans tracking-[0.2em] uppercase text-olive-600 mb-3 block">
-                {product.category}
+                {localized.category}
               </span>
 
               <h1 className="heading-lg text-charcoal-900 mb-4">
-                {product.name}
+                {localized.name}
               </h1>
 
               <p className="font-price text-3xl text-charcoal-900 mb-6">
@@ -79,19 +83,19 @@ export default function ProductPage({
               </p>
 
               <p className="body-md text-charcoal-600 mb-8">
-                {product.shortDescription}
+                {localized.shortDescription}
               </p>
 
               {/* Add to Cart & WhatsApp Buttons */}
               <ProductActions product={product} />
 
-              {/* bienfaits */}
+              {/* Benefits */}
               <div className="border-t border-beige-200 pt-8 mb-8">
                 <h3 className="font-serif text-lg text-charcoal-900 mb-4">
-                  bienfaits
+                  {t('bienfaits')}
                 </h3>
                 <ul className="space-y-3">
-                  {product.bienfaits.map((benefit, index) => (
+                  {localized.bienfaits.map((benefit, index) => (
                     <motion.li
                       key={index}
                       initial={{ opacity: 0, x: -20 }}
@@ -113,25 +117,25 @@ export default function ProductPage({
                 <div className="flex items-center gap-2 mb-4">
                   <Leaf className="w-5 h-5 text-olive-600" />
                   <h3 className="font-serif text-lg text-charcoal-900">
-                    Ingredients
+                    {t('ingredients')}
                   </h3>
                 </div>
                 <p className="text-charcoal-600 font-sans leading-relaxed">
-                  {product.ingredients}
+                  {localized.ingredients}
                 </p>
               </div>
 
               {/* Usage Instructions */}
-              {product.usageInstructions && product.usageInstructions.length > 0 && (
+              {localized.usageInstructions.length > 0 && (
                 <div className="border-t border-beige-200 pt-8">
                   <div className="flex items-center gap-2 mb-4">
                     <Info className="w-5 h-5 text-olive-600" />
                     <h3 className="font-serif text-lg text-charcoal-900">
-                      Conseils d'utilisation
+                      {t('usageInstructions')}
                     </h3>
                   </div>
                   <ul className="space-y-3">
-                    {product.usageInstructions.map((instruction, index) => (
+                    {localized.usageInstructions.map((instruction, index) => (
                       <motion.li
                         key={index}
                         initial={{ opacity: 0, x: -20 }}
@@ -149,6 +153,15 @@ export default function ProductPage({
                 </div>
               )}
 
+              {/* Equivalence (e.g. solid shampoo = 2 bottles) */}
+              {localized.equivalence && (
+                <div className="border-t border-beige-200 pt-8">
+                  <p className="text-charcoal-600 font-sans leading-relaxed">
+                    {localized.equivalence}
+                  </p>
+                </div>
+              )}
+
               {/* Trust Badges */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -159,26 +172,26 @@ export default function ProductPage({
                 <div className="grid grid-cols-3 gap-4 text-center">
                   <div>
                     <span className="block font-serif text-lg text-olive-700">
-                      100%
+                      {t('natural')}
                     </span>
                     <span className="text-xs font-sans text-olive-600 uppercase tracking-wide">
-                      Natural
+                      {t('naturalLabel')}
                     </span>
                   </div>
                   <div>
                     <span className="block font-serif text-lg text-olive-700">
-                      Cruelty
+                      {t('crueltyFree')}
                     </span>
                     <span className="text-xs font-sans text-olive-600 uppercase tracking-wide">
-                      Free
+                      {t('crueltyFreeLabel')}
                     </span>
                   </div>
                   <div>
                     <span className="block font-serif text-lg text-olive-700">
-                      Eco
+                      {t('ecoPackaging')}
                     </span>
                     <span className="text-xs font-sans text-olive-600 uppercase tracking-wide">
-                      Packaging
+                      {t('ecoPackagingLabel')}
                     </span>
                   </div>
                 </div>
@@ -203,7 +216,7 @@ export default function ProductPage({
                 variants={fadeInUp}
                 className="heading-md text-charcoal-900"
               >
-                You May Also Like
+                {t('youMayAlsoLike')}
               </motion.h2>
             </motion.div>
 

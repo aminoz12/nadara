@@ -2,11 +2,11 @@ import { useState, useMemo, useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { GetStaticProps } from 'next';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
 import { AnimatedProductCard, Filters } from '@/components';
 import { fadeInUp, staggerContainer } from '@/components/variants';
-import { Product } from '@/types';
+import { Product, getLocalizedProduct } from '@/types';
 import productsData from '../../../data/products.json';
 
 interface ProductsPageProps {
@@ -17,7 +17,13 @@ interface ProductsPageProps {
 export default function ProductsPage({ products, categories }: ProductsPageProps) {
   const t = useTranslations();
   const router = useRouter();
+  const locale = useLocale() as 'fr' | 'en' | 'ar';
   const { category: queryCategory } = router.query;
+
+  const localizedCategories = useMemo(
+    () => [...new Set(products.map((p) => getLocalizedProduct(p, locale).category))],
+    [products, locale]
+  );
 
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('default');
@@ -30,12 +36,20 @@ export default function ProductsPage({ products, categories }: ProductsPageProps
     }
   }, [queryCategory]);
 
+  useEffect(() => {
+    if (selectedCategory !== 'All' && !localizedCategories.includes(selectedCategory)) {
+      setSelectedCategory('All');
+    }
+  }, [locale, localizedCategories, selectedCategory]);
+
   const filteredProducts = useMemo(() => {
     let filtered = [...products];
 
-    // Category filter
+    // Category filter (by localized category)
     if (selectedCategory !== 'All') {
-      filtered = filtered.filter((p) => p.category === selectedCategory);
+      filtered = filtered.filter(
+        (p) => getLocalizedProduct(p, locale).category === selectedCategory
+      );
     }
 
     // Price filter
@@ -48,7 +62,7 @@ export default function ProductsPage({ products, categories }: ProductsPageProps
       filtered = filtered.filter((p) => p.popular);
     }
 
-    // Sorting
+    // Sorting (by localized name when alphabetical)
     switch (sortBy) {
       case 'price-low':
         filtered.sort((a, b) => a.price - b.price);
@@ -57,15 +71,18 @@ export default function ProductsPage({ products, categories }: ProductsPageProps
         filtered.sort((a, b) => b.price - a.price);
         break;
       case 'name':
-        filtered.sort((a, b) => a.name.localeCompare(b.name));
+        filtered.sort((a, b) =>
+          getLocalizedProduct(a, locale).name.localeCompare(
+            getLocalizedProduct(b, locale).name
+          )
+        );
         break;
       default:
-        // Keep original order (featured)
         break;
     }
 
     return filtered;
-  }, [products, selectedCategory, sortBy, priceRange, showPopularOnly]);
+  }, [products, selectedCategory, sortBy, priceRange, showPopularOnly, locale]);
 
   return (
     <>
@@ -112,7 +129,7 @@ export default function ProductsPage({ products, categories }: ProductsPageProps
       <section className="pt-8 pb-12 sm:pt-10 sm:pb-16 md:pt-12 md:pb-24 lg:pb-32 bg-cream-50">
         <div className="container-custom">
           <Filters
-            categories={categories}
+            categories={localizedCategories}
             selectedCategory={selectedCategory}
             setSelectedCategory={setSelectedCategory}
             sortBy={sortBy}

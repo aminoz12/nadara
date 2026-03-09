@@ -1,4 +1,9 @@
 {
+  "common": {
+    "ariaPrevImage": "Previous image",
+    "ariaNextImage": "Next image",
+    "ariaLoading": "Loading"
+  },
   "nav": {
     "home": "Home",
     "shop": "Shop",
@@ -58,7 +63,7 @@
     "sustainableDesc": "We support local communities and use eco-friendly packaging for a better planet."
   },
   "ingredients": {
-    "title": "Ingredients & bienfaits",
+    "title": "Ingredients & Benefits",
     "subtitle": "Nature's Finest",
     "description": "We source the purest botanical treasures from Morocco and beyond.",
     "antiAging": "Anti-Aging",
@@ -71,6 +76,9 @@
     "organicDesc": "Pure, natural ingredients with no chemicals"
   },
   "process": {
+    "beautyTipsLabel": "Beauty Tips",
+    "beautyTipsTitle": "Take Care of Your Skin",
+    "beautyTipsSubtitle": "Discover our expert tips for an effective skincare routine, enhanced by our natural artisan products",
     "title": "Our Production Process",
     "subtitle": "Artisanal Craft",
     "description": "From raw ingredients to your hands, every step is guided by tradition and care.",
@@ -103,7 +111,7 @@
     "deliveryReturns": "What are your delivery & return policies?",
     "deliveryReturnsAnswer": "We offer worldwide shipping! Standard delivery takes 5-10 business days, while express shipping arrives in 2-4 business days. We accept returns within 30 days of delivery for unopened products in their original packaging. Shipping is free on orders over $75.",
     "ingredientsTransparency": "How transparent are you about ingredients?",
-    "ingredientsTransparencyAnswer": "Complete transparency is at the heart of what we do. Every product page lists the full INCI ingredient list, along with the origin and bienfaits of each key ingredient. We source directly from certified organic farms in Morocco and maintain full traceability. All our ingredients are 100% natural, cruelty-free, and sustainably sourced.",
+    "ingredientsTransparencyAnswer": "Complete transparency is at the heart of what we do. Every product page lists the full INCI ingredient list, along with the origin and benefits of each key ingredient. We source directly from certified organic farms in Morocco and maintain full traceability. All our ingredients are 100% natural, cruelty-free, and sustainably sourced.",
     "contactCTA": "Still have questions? We're here to help!",
     "chatWhatsApp": "Chat with us on WhatsApp →"
   },
@@ -196,12 +204,14 @@
   },
   "productDetail": {
     "backToProducts": "Back to Products",
-    "bienfaits": "bienfaits",
+    "bienfaits": "Benefits",
     "ingredients": "Ingredients",
+    "usageInstructions": "Usage Instructions",
     "youMayAlsoLike": "You May Also Like",
     "natural": "100%",
     "naturalLabel": "Natural",
     "crueltyFree": "Cruelty",
+    "crueltyFreeLabel": "Free",
     "ecoPackaging": "Eco",
     "ecoPackagingLabel": "Packaging"
   },
@@ -214,9 +224,9 @@
     "bestsellersOnly": "Bestsellers Only",
     "all": "All",
     "allPrices": "All Prices",
-    "under50": "Under $50",
-    "50to100": "$50 - $100",
-    "over100": "Over $100",
+    "under50": "Under 50 MAD",
+    "50to100": "50 - 100 MAD",
+    "over100": "Over 100 MAD",
     "featured": "Featured",
     "priceLow": "Price: Low to High",
     "priceHigh": "Price: High to Low",
@@ -229,6 +239,91 @@
   "whatsapp": {
     "orderMessage": "Hello, I would like to order the following products:\n\n",
     "thankYou": "Thank you!"
+  },
+  "aboutPage": {
+    "metaTitle": "Our Story | Nadara",
+    "metaDescription": "Discover Nadara's story - premium Moroccan skincare rooted in tradition and crafted with care.",
+    "heroLabel": "Our Story",
+    "heroTitle": "Rooted in Tradition",
+    "heroSubtitle": "A journey from the ancient beauty rituals of Morocco to your daily skincare sanctuary.",
+    "intro1": "I have always believed that true beauty lies not in complicated products, but in simplicity, purity, and the treasures that nature offers us. Over the years, I discovered the richness of Moroccan traditions: vegetable powders, cold-pressed oils, and plants used by our mothers and grandmothers to care for their skin and hair. These ancient rituals, passed down with love, became a source of inspiration.",
+    "intro2": "But Nadara is not just a brand; it is a story of heart, patience, learning, and creation made by hand, product by product, with a sincere desire to offer healthy, gentle, and effective care.",
+    "intro3": "Every soap, every serum, every treatment is made in small quantities, with attention and respect, to preserve the quality and purity of the ingredients. Behind each formula lies an intention: to help every woman feel beautiful, confident, and comfortable in her skin, naturally.",
+    "intro4": "Nadara means a return to the essential, a return to true beauty—a beauty that breathes, that heals, and that reveals the natural radiance of every skin.",
+    "missionTitle": "Nadara was born to accompany every woman in her natural beauty.",
+    "missionLine1": "Not to transform, but to reveal.",
+    "missionLine2": "Not to mask, but to enhance.",
+    "timelineLabel": "Our Journey",
+    "timelineTitle": "Milestones Along the Way",
+    "story1Title": "Birth of the Idea",
+    "story1Desc": "At the start, it was not a commercial project but a sincere passion for the natural, beauty, and artisan creation. The desire to understand, learn, and create simple, healthy, and effective skincare was the first step on this adventure. And faced with the difficulties often encountered with industrial products—complex compositions, sometimes exaggerated marketing promises, sometimes very high prices, or products that are too harsh especially for sensitive skin—reflection became necessary.",
+    "story2Title": "Beginning",
+    "story2Desc": "The first months were devoted to research and experimentation. Testing recipes, discovering the benefits of vegetable powders, natural oils, and gentle actives for skin and hair. Each formula was prepared with patience, often redone, improved, and adjusted until satisfactory quality was achieved.",
+    "story3Title": "Creation of the Nadara Cooperative",
+    "story3Desc": "The choice of the name Nadara is inspired by purity, nature, gentleness, and authenticity. And so Nadara products reached customers' hands; the range expanded with new treatments: serums, natural powders, solid shampoos, body and hair creams. Quality became an absolute priority, with small-batch production to guarantee the freshness and purity of the products.",
+    "story4Title": "Online Presence",
+    "story4Desc": "Then came the time to take a new step: an online presence. The creation of the website gave Nadara a showcase, a space to tell its story, present its products, and share its vision of a more natural and conscious beauty.",
+    "relationText": "Our relationship with our customers is not limited to selling a product. It is built on trust, transparency, honest communication, and lasting commitment.",
+    "ctaTitle": "Ready to Begin Your Beauty Journey?",
+    "ctaSubtitle": "Explore our collection of premium Moroccan skincare and discover the transformative power of pure, natural ingredients.",
+    "ctaButton": "Discover Our Products"
+  },
+  "notFound": {
+    "metaTitle": "Page Not Found | Nadara",
+    "title": "Page Not Found",
+    "description": "The page you're looking for seems to have wandered off into the desert. Let us guide you back to our oasis of beauty.",
+    "goHome": "Go Home",
+    "shopProducts": "Shop Products"
+  },
+  "packsPage": {
+    "title": "Our Packs",
+    "metaDescription": "Discover multiple Nadara products in one set. Perfect for gifting or treating yourself.",
+    "subtitle": "Save with our packs",
+    "heading": "Our Packs",
+    "description": "Perfect for gifting or treating yourself. From",
+    "fromPrice": "129 MAD"
+  },
+  "packDetail": {
+    "backToPacks": "Back to Packs",
+    "packContains": "This pack contains",
+    "bienfaits": "Benefits",
+    "usageInstructions": "Usage Instructions",
+    "discoverOtherPacks": "Discover our other packs",
+    "trustNatural": "Natural",
+    "trustEconomy": "Savings",
+    "trustEconomyLabel": "Guarantee",
+    "trustEco": "Eco",
+    "trustEcoLabel": "Packaging"
+  },
+  "packsPageGrid": {
+    "products": "products",
+    "otherProducts": "other product(s)",
+    "choosePack": "Choose This Set",
+    "uniquePrice": "Unique Price",
+    "uniquePriceDesc": "Economical packs for your favorite products",
+    "perfectCombos": "Perfect Combinations",
+    "perfectCombosDesc": "Products selected to work together and maximize results",
+    "allNatural": "100% Natural",
+    "allNaturalDesc": "All our products are made with natural, artisan ingredients"
+  },
+  "shippingPage": {
+    "metaTitle": "Shipping Info | Nadara",
+    "metaDescription": "Information on delivery and returns for your Nadara products.",
+    "heroLabel": "Information",
+    "heroTitle": "Shipping & Returns",
+    "heroSubtitle": "Everything you need to know about delivery and returns for your Nadara products",
+    "shippingTitle": "Shipping",
+    "deliveryTimesTitle": "Delivery Times",
+    "deliveryTimesIntro": "We ship your orders within 24-48 hours after confirmation of your order.",
+    "morocco": "Morocco: 24-48 hours",
+    "international": "International: 7-15 business days depending on destination",
+    "zonesTitle": "Delivery Zones and Fees",
+    "zonesBody": "We deliver throughout Morocco and worldwide. Shipping fees are calculated at checkout based on your location. Free shipping from 300 MAD.",
+    "packagingTitle": "Packaging",
+    "packagingBody": "All our products are carefully packed in eco-friendly materials to ensure protection during transport. We use recyclable and environmentally friendly packaging.",
+    "ctaTitle": "Questions?",
+    "ctaSubtitle": "If you have any questions about delivery, please contact us via WhatsApp. Our team is here to help.",
+    "ctaButton": "Contact Us"
   }
 }
 

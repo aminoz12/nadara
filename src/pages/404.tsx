@@ -1,13 +1,15 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Home } from 'lucide-react';
+import { Home } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function Custom404() {
+  const t = useTranslations('notFound');
   return (
     <>
       <Head>
-        <title>Page Not Found | Nadara</title>
+        <title>{t('metaTitle')}</title>
       </Head>
 
       <section className="min-h-screen flex items-center justify-center bg-cream-50 pt-20">
@@ -28,11 +30,10 @@ export default function Custom404() {
             </motion.span>
 
             <h1 className="heading-lg text-charcoal-900 mb-4 -mt-8">
-              Page Not Found
+              {t('title')}
             </h1>
             <p className="body-md text-charcoal-600 mb-10">
-              The page you&apos;re looking for seems to have wandered off into
-              the desert. Let us guide you back to our oasis of beauty.
+              {t('description')}
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -43,16 +44,16 @@ export default function Custom404() {
                   whileTap={{ scale: 0.98 }}
                 >
                   <Home className="w-4 h-4" />
-                  Go Home
+                  {t('goHome')}
                 </motion.span>
               </Link>
-              <Link href="/products">
+              <Link href="/products/">
                 <motion.span
                   className="btn-secondary inline-flex items-center gap-2"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  Shop Products
+                  {t('shopProducts')}
                 </motion.span>
               </Link>
             </div>

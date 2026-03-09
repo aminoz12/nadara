@@ -1,4 +1,9 @@
 {
+  "common": {
+    "ariaPrevImage": "Image précédente",
+    "ariaNextImage": "Image suivante",
+    "ariaLoading": "Chargement"
+  },
   "nav": {
     "home": "Accueil",
     "shop": "Boutique",
@@ -17,7 +22,7 @@
     "story": "Notre Histoire"
   },
   "categories": {
-   
+    "title": "Catégories de Produits",
     "subtitle": "Nos Collections",
     "explore": "Explorer"
   },
@@ -71,6 +76,9 @@
     "organicDesc": "Ingrédients purs et naturels sans produits chimiques"
   },
   "process": {
+    "beautyTipsLabel": "Conseils Beauté",
+    "beautyTipsTitle": "Prenez Soin de Votre Peau",
+    "beautyTipsSubtitle": "Découvrez nos conseils experts pour une routine skincare efficace, sublimée par nos produits naturels artisanaux",
     "title": "Notre Processus de Production",
     "subtitle": "Artisanat Artisanal",
     "description": "Des ingrédients bruts à vos mains, chaque étape est guidée par la tradition et le soin.",
@@ -198,10 +206,12 @@
     "backToProducts": "Retour aux Produits",
     "bienfaits": "Avantages",
     "ingredients": "Ingrédients",
+    "usageInstructions": "Conseils d'utilisation",
     "youMayAlsoLike": "Vous Pourriez Aussi Aimé",
     "natural": "100%",
     "naturalLabel": "Naturel",
     "crueltyFree": "Sans Cruauté",
+    "crueltyFreeLabel": "Cruauté",
     "ecoPackaging": "Emballage",
     "ecoPackagingLabel": "Écologique"
   },
@@ -229,5 +239,90 @@
   "whatsapp": {
     "orderMessage": "Bonjour, je voudrais commander les produits suivants:\n\n",
     "thankYou": "Merci!"
+  },
+  "aboutPage": {
+    "metaTitle": "Notre Histoire | Nadara",
+    "metaDescription": "Découvrez l'histoire de Nadara - soins de la peau marocains premium enracinés dans la tradition et fabriqués avec soin.",
+    "heroLabel": "Notre Histoire",
+    "heroTitle": "Enracinés dans la Tradition",
+    "heroSubtitle": "Un voyage des rituels de beauté ancestraux du Maroc à votre sanctuaire de soins quotidiens.",
+    "intro1": "Depuis toujours, je crois que la vraie beauté ne se cache pas dans les produits compliqués, mais dans la simplicité, la pureté et les trésors que la nature nous offre. Au fil des années, j'ai découvert la richesse des traditions marocaines : les poudres végétales, les huiles pressées à froid, les plantes utilisées par nos mères et nos grands-mères pour prendre soin de leur peau et de leurs cheveux. Alors ces rituels anciens, transmis avec amour, sont devenus une source d'inspiration.",
+    "intro2": "Mais Nadara n'est pas seulement une marque, c'est une histoire de cœur, de patience, d'apprentissage et de création faite à la main, produit par produit, avec l'envie sincère d'offrir des soins sains, doux et efficaces.",
+    "intro3": "Chaque savon, chaque sérum, chaque soin est fabriqué en petite quantité, avec attention et respect, pour préserver la qualité et la pureté des ingrédients. Derrière chaque formule, il y a une intention : aider chaque femme à se sentir belle, confiante et bien dans sa peau, naturellement.",
+    "intro4": "Nadara signifie le retour à l'essentiel, le retour à une beauté vraie, une beauté qui respire, qui soigne et qui révèle l'éclat naturel de chaque peau.",
+    "missionTitle": "Nadara est née pour accompagner chaque femme dans sa beauté naturelle.",
+    "missionLine1": "Pas pour transformer, mais pour révéler.",
+    "missionLine2": "Pas pour masquer, mais pour sublimer.",
+    "timelineLabel": "Notre Parcours",
+    "timelineTitle": "Jalons le Long du Chemin",
+    "story1Title": "Naissance de l'idée",
+    "story1Desc": "Au départ, ce n'était pas un projet commercial, mais une passion sincère pour le naturel, la beauté et la création artisanale. L'envie de comprendre, d'apprendre et de fabriquer des soins simples, sains et efficaces a été le premier pas vers cette aventure. Et face aux difficultés souvent rencontrées avec les produits industriels, des compositions complexes, des promesses marketing parfois exagérées, des prix parfois très élevés ou bien des produits trop agressifs surtout pour les peaux sensibles, la réflexion s'est imposée.",
+    "story2Title": "Commencement",
+    "story2Desc": "Les premiers mois ont été consacrés à la recherche et à l'expérimentation. Tester des recettes, découvrir les bienfaits des poudres végétales, des huiles naturelles et des actifs doux pour la peau et les cheveux. Chaque formule était préparée avec patience, souvent recommencée, améliorée, ajustée jusqu'à obtenir une qualité satisfaisante.",
+    "story3Title": "Création de la coopérative Nadara",
+    "story3Desc": "Le choix du nom Nadara est inspiré de la pureté, la nature, la douceur et l'authenticité. Et voilà, les produits Nadara entre les mains des clients, la gamme s'est élargie avec l'arrivée de nouveaux soins : sérums, poudres naturelles, shampoings solides, crèmes pour le corps et les cheveux. La qualité est devenue une priorité absolue, avec des fabrications en petites quantités pour garantir la fraîcheur et la pureté des produits.",
+    "story4Title": "Présence en ligne",
+    "story4Desc": "Puis est venu le moment de franchir un nouveau cap : la présence en ligne. La création du site a donné à Nadara une vitrine, un espace pour raconter son histoire, présenter ses produits et partager sa vision d'une beauté plus naturelle et plus consciente.",
+    "relationText": "La relation avec nos clients ne se limite pas à la vente d'un produit. Elle repose sur la confiance, la transparence, la communication honnête et l'engagement durable.",
+    "ctaTitle": "Prêt à Commencer Votre Voyage Beauté ?",
+    "ctaSubtitle": "Explorez notre collection de soins de la peau marocains premium et découvrez le pouvoir transformateur d'ingrédients purs et naturels.",
+    "ctaButton": "Découvrir Nos Produits"
+  },
+  "notFound": {
+    "metaTitle": "Page introuvable | Nadara",
+    "title": "Page introuvable",
+    "description": "La page que vous recherchez semble s'être égarée dans le désert. Laissez-nous vous ramener à notre oasis de beauté.",
+    "goHome": "Retour à l'accueil",
+    "shopProducts": "Voir les produits"
+  },
+  "packsPage": {
+    "title": "Nos Packs",
+    "metaDescription": "Découvrir plusieurs produits Nadara en un seul coffret. Idéal pour offrir ou se faire plaisir.",
+    "subtitle": "Économisez avec nos packs",
+    "heading": "Nos Packs",
+    "description": "Idéal pour offrir ou se faire plaisir. À partir de",
+    "fromPrice": "129 MAD"
+  },
+  "packDetail": {
+    "backToPacks": "Retour aux Packs",
+    "packContains": "Ce pack contient",
+    "bienfaits": "Avantages",
+    "usageInstructions": "Conseils d'utilisation",
+    "discoverOtherPacks": "Découvrez nos autres packs",
+    "trustNatural": "Naturel",
+    "trustEconomy": "Économie",
+    "trustEconomyLabel": "Garantie",
+    "trustEco": "Eco",
+    "trustEcoLabel": "Packaging"
+  },
+  "packsPageGrid": {
+    "products": "produits",
+    "otherProducts": "autre(s) produit(s)",
+    "choosePack": "Choisir Ce Coffret",
+    "uniquePrice": "Prix Unique",
+    "uniquePriceDesc": "Des packs économiques pour vos produits préférés",
+    "perfectCombos": "Combinaisons Parfaites",
+    "perfectCombosDesc": "Des produits sélectionnés pour fonctionner ensemble et maximiser les résultats",
+    "allNatural": "100% Naturel",
+    "allNaturalDesc": "Tous nos produits sont formulés avec des ingrédients naturels et artisanaux"
+  },
+  "shippingPage": {
+    "metaTitle": "Infos de Livraison | Nadara",
+    "metaDescription": "Informations sur la livraison et les retours de vos produits Nadara.",
+    "heroLabel": "Informations",
+    "heroTitle": "Infos de Livraison",
+    "heroSubtitle": "Tout ce que vous devez savoir sur la livraison et les retours de vos produits Nadara",
+    "shippingTitle": "Livraison",
+    "deliveryTimesTitle": "Délais de Livraison",
+    "deliveryTimesIntro": "Nous expédions vos commandes sous 24-48 heures après confirmation de votre commande.",
+    "morocco": "Maroc : 24-48 heures",
+    "international": "International : 7-15 jours ouvrables selon la destination",
+    "zonesTitle": "Zones et frais de Livraison",
+    "zonesBody": "Nous livrons partout au Maroc et dans le monde entier. Les frais de livraison sont calculés lors de la commande selon votre localisation. La Livraison est gratuite à partir de 300 MAD.",
+    "packagingTitle": "Emballage",
+    "packagingBody": "Tous nos produits sont soigneusement emballés dans des matériaux écologiques pour garantir leur protection pendant le transport. Nous utilisons des emballages recyclables et respectueux de l'environnement.",
+    "ctaTitle": "Des Questions ?",
+    "ctaSubtitle": "Si vous avez des questions concernant la livraison, n'hésitez pas à nous contacter via WhatsApp. Notre équipe est là pour vous aider.",
+    "ctaButton": "Nous Contacter"
   }
 }

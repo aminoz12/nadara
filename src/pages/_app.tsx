@@ -1,23 +1,13 @@
 import type { AppProps } from 'next/app';
 import { IntlProvider } from 'next-intl';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
 import { Layout, SplashScreen } from '@/components';
 import { CartProvider } from '@/contexts/CartContext';
+import { LocaleProvider, useLocaleContext } from '@/contexts/LocaleContext';
 import '@/styles/globals.css';
 
-export default function App({ Component, pageProps }: AppProps) {
-  const router = useRouter();
-  const locale = (router.locale || router.defaultLocale || 'fr') as 'fr' | 'en' | 'ar';
-  
-  // Load messages based on locale
+function AppContent({ Component, pageProps }: AppProps) {
+  const { locale } = useLocaleContext();
   const messages = pageProps.messages || require(`../../messages/${locale}.json`);
-
-  // Update document direction and lang for RTL support
-  useEffect(() => {
-    document.documentElement.lang = locale;
-    document.documentElement.dir = locale === 'ar' ? 'rtl' : 'ltr';
-  }, [locale]);
 
   return (
     <IntlProvider messages={messages} locale={locale}>
@@ -28,5 +18,13 @@ export default function App({ Component, pageProps }: AppProps) {
         </Layout>
       </CartProvider>
     </IntlProvider>
+  );
+}
+
+export default function App(props: AppProps) {
+  return (
+    <LocaleProvider>
+      <AppContent {...props} />
+    </LocaleProvider>
   );
 }

@@ -143,7 +143,7 @@ export default function Hero() {
       <div className="absolute inset-y-0 left-0 z-20 flex items-center justify-start px-2 sm:px-4">
         <motion.button
           type="button"
-          aria-label="Image précédente"
+          aria-label={t('common.ariaPrevImage')}
           onClick={() => setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length)}
           className="flex h-12 w-12 items-center justify-center rounded-full bg-black/30 text-cream-50 backdrop-blur-sm transition hover:bg-black/50 focus:outline-none focus:ring-2 focus:ring-cream-50/50"
           whileHover={{ scale: 1.05 }}
@@ -155,7 +155,7 @@ export default function Hero() {
       <div className="absolute inset-y-0 right-0 z-20 flex items-center justify-end px-2 sm:px-4">
         <motion.button
           type="button"
-          aria-label="Image suivante"
+          aria-label={t('common.ariaNextImage')}
           onClick={() => setCurrentImageIndex((prev) => (prev + 1) % images.length)}
           className="flex h-12 w-12 items-center justify-center rounded-full bg-black/30 text-cream-50 backdrop-blur-sm transition hover:bg-black/50 focus:outline-none focus:ring-2 focus:ring-cream-50/50"
           whileHover={{ scale: 1.05 }}

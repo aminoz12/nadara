@@ -7,6 +7,7 @@ import { Product } from '@/types';
 import { ShoppingBag, Eye } from 'lucide-react';
 import { useCart } from '@/contexts/CartContext';
 import { useTranslations } from 'next-intl';
+import { useLocalizedProduct } from '@/hooks/useLocalizedProduct';
 
 interface AnimatedProductCardProps {
   product: Product;
@@ -19,6 +20,7 @@ export default function AnimatedProductCard({
 }: AnimatedProductCardProps) {
   const { addToCart } = useCart();
   const t = useTranslations();
+  const localized = useLocalizedProduct(product);
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -57,7 +59,7 @@ export default function AnimatedProductCard({
             >
               <Image
                 src={product.images[0]}
-                alt={product.name}
+                alt={localized.name}
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -139,13 +141,13 @@ export default function AnimatedProductCard({
               className="text-xs font-sans tracking-wider uppercase text-olive-600 mb-2 block"
               whileHover={{ letterSpacing: '0.15em' }}
             >
-              {product.category}
+              {localized.category}
             </motion.span>
             <h3 className="font-serif text-lg md:text-xl text-charcoal-900 mb-2 group-hover:text-olive-700 transition-colors duration-300">
-              {product.name}
+              {localized.name}
             </h3>
             <p className="text-sm text-charcoal-500 line-clamp-2 mb-3 flex-1">
-              {product.shortDescription}
+              {localized.shortDescription}
             </p>
             <div className="flex items-center justify-between mb-3">
               <motion.p 

@@ -3,18 +3,18 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { Globe, ChevronDown } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
-import { useRouter } from 'next/router';
 import { useLocale } from 'next-intl';
+import { useLocaleContext } from '@/contexts/LocaleContext';
 
 const languages = [
-  { code: 'fr', name: 'Français', flag: '🇫🇷' },
-  { code: 'en', name: 'English', flag: '🇬🇧' },
-  { code: 'ar', name: 'العربية', flag: '🇸🇦' },
+  { code: 'fr' as const, name: 'Français', flag: '🇫🇷' },
+  { code: 'en' as const, name: 'English', flag: '🇬🇧' },
+  { code: 'ar' as const, name: 'العربية', flag: '🇸🇦' },
 ];
 
 export default function LanguageSwitcher() {
-  const router = useRouter();
   const locale = useLocale() as 'fr' | 'en' | 'ar';
+  const { setLocale } = useLocaleContext();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -31,12 +31,9 @@ export default function LanguageSwitcher() {
 
   const currentLang = languages.find((lang) => lang.code === locale) || languages[0];
 
-  const changeLanguage = (newLocale: string) => {
-    router.push(router.pathname, router.asPath, { locale: newLocale });
+  const changeLanguage = (newLocale: 'fr' | 'en' | 'ar') => {
+    setLocale(newLocale);
     setIsOpen(false);
-    // Update document direction for RTL
-    document.documentElement.dir = newLocale === 'ar' ? 'rtl' : 'ltr';
-    document.documentElement.lang = newLocale;
   };
 
   return (

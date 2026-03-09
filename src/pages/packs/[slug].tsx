@@ -2,10 +2,12 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useTranslations, useLocale } from 'next-intl';
 import { ArrowLeft, Check, Package, Info, Gift } from 'lucide-react';
 import { ProductGallery, ProductActions } from '@/components';
 import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from '@/components/variants';
-import { Pack } from '@/types';
+import { Pack, getLocalizedPack } from '@/types';
+import { useLocalizedPack } from '@/hooks/useLocalizedPack';
 import packsData from '../../../data/packs.json';
 
 interface PackPageProps {
@@ -17,11 +19,14 @@ export default function PackPage({
   pack,
   relatedPacks,
 }: PackPageProps) {
+  const t = useTranslations('packDetail');
+  const localized = useLocalizedPack(pack);
+  const locale = useLocale() as 'fr' | 'en' | 'ar';
   return (
     <>
       <Head>
-        <title>{pack.name} | Nadara</title>
-        <meta name="description" content={pack.shortDescription} />
+        <title>{localized.name} | Nadara</title>
+        <meta name="description" content={localized.shortDescription} />
       </Head>
 
       {/* Breadcrumb */}
@@ -37,7 +42,7 @@ export default function PackPage({
               className="inline-flex items-center gap-2 text-sm font-sans text-charcoal-600 hover:text-charcoal-900 transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
-              Retour aux Packs
+              {t('backToPacks')}
             </Link>
           </motion.div>
         </div>
@@ -55,7 +60,7 @@ export default function PackPage({
             >
               <ProductGallery
                 images={pack.images}
-                productName={pack.name}
+                productName={localized.name}
               />
             </motion.div>
 
@@ -67,11 +72,11 @@ export default function PackPage({
               className="lg:pt-8"
             >
               <span className="text-sm font-sans tracking-[0.2em] uppercase text-olive-600 mb-3 block">
-                {pack.category}
+                {localized.category}
               </span>
 
               <h1 className="heading-lg text-charcoal-900 mb-4">
-                {pack.name}
+                {localized.name}
               </h1>
 
               <p className="font-price text-3xl text-olive-700 mb-6">
@@ -79,7 +84,7 @@ export default function PackPage({
               </p>
 
               <p className="body-md text-charcoal-600 mb-8">
-                {pack.shortDescription}
+                {localized.shortDescription}
               </p>
 
               {/* Pack Contents */}
@@ -87,11 +92,11 @@ export default function PackPage({
                 <div className="flex items-center gap-2 mb-4">
                   <Gift className="w-5 h-5 text-olive-600" />
                   <h3 className="font-serif text-lg text-charcoal-900">
-                    Ce pack contient
+                    {t('packContains')}
                   </h3>
                 </div>
                 <ul className="space-y-3">
-                  {pack.items.map((item, index) => (
+                  {localized.items.map((item, index) => (
                     <motion.li
                       key={index}
                       initial={{ opacity: 0, x: -20 }}
@@ -114,10 +119,10 @@ export default function PackPage({
               {/* bienfaits */}
               <div className="border-t border-beige-200 pt-8 mb-8">
                 <h3 className="font-serif text-lg text-charcoal-900 mb-4">
-                  Avantages
+                  {t('bienfaits')}
                 </h3>
                 <ul className="space-y-3">
-                  {pack.bienfaits.map((benefit, index) => (
+                  {localized.bienfaits.map((benefit, index) => (
                     <motion.li
                       key={index}
                       initial={{ opacity: 0, x: -20 }}
@@ -135,16 +140,16 @@ export default function PackPage({
               </div>
 
               {/* Usage Instructions */}
-              {pack.usageInstructions && pack.usageInstructions.length > 0 && (
+              {localized.usageInstructions.length > 0 && (
                 <div className="border-t border-beige-200 pt-8">
                   <div className="flex items-center gap-2 mb-4">
                     <Info className="w-5 h-5 text-olive-600" />
                     <h3 className="font-serif text-lg text-charcoal-900">
-                      Conseils d'utilisation
+                      {t('usageInstructions')}
                     </h3>
                   </div>
                   <ul className="space-y-3">
-                    {pack.usageInstructions.map((instruction, index) => (
+                    {localized.usageInstructions.map((instruction, index) => (
                       <motion.li
                         key={index}
                         initial={{ opacity: 0, x: -20 }}
@@ -175,23 +180,23 @@ export default function PackPage({
                       100%
                     </span>
                     <span className="text-xs font-sans text-olive-600 uppercase tracking-wide">
-                      Naturel
+                      {t('trustNatural')}
                     </span>
                   </div>
                   <div>
                     <span className="block font-serif text-lg text-olive-700">
-                      Économie
+                      {t('trustEconomy')}
                     </span>
                     <span className="text-xs font-sans text-olive-600 uppercase tracking-wide">
-                      Garantie
+                      {t('trustEconomyLabel')}
                     </span>
                   </div>
                   <div>
                     <span className="block font-serif text-lg text-olive-700">
-                      Eco
+                      {t('trustEco')}
                     </span>
                     <span className="text-xs font-sans text-olive-600 uppercase tracking-wide">
-                      Packaging
+                      {t('trustEcoLabel')}
                     </span>
                   </div>
                 </div>
@@ -216,12 +221,14 @@ export default function PackPage({
                 variants={fadeInUp}
                 className="heading-md text-charcoal-900"
               >
-                Découvrez nos autres packs
+                {t('discoverOtherPacks')}
               </motion.h2>
             </motion.div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-              {relatedPacks.map((relatedPack, index) => (
+              {relatedPacks.map((relatedPack, index) => {
+                const relLoc = getLocalizedPack(relatedPack, locale);
+                return (
                 <motion.div
                   key={relatedPack.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -234,13 +241,13 @@ export default function PackPage({
                       <div className="aspect-square overflow-hidden">
                         <img
                           src={relatedPack.images[0]}
-                          alt={relatedPack.name}
+                          alt={relLoc.name}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                       </div>
                       <div className="p-4">
                         <h3 className="font-serif text-lg text-charcoal-900 mb-1 group-hover:text-olive-600 transition-colors">
-                          {relatedPack.name}
+                          {relLoc.name}
                         </h3>
                         <p className="font-price text-olive-700 font-bold">
                           {relatedPack.price} MAD
@@ -249,7 +256,8 @@ export default function PackPage({
                     </div>
                   </Link>
                 </motion.div>
-              ))}
+              );
+              })}
             </div>
           </div>
         </section>
